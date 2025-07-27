@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-07-24T16:09:59.250Z",
+  "configuracao": {
+    "BASE_URL": "http://localhost:3000",
+    "LOGIN_URL": "http://localhost:3000/auth/login",
+    "BRIEFING_URL": "http://localhost:3000/briefing",
+    "DELAY_MIN": 1000,
+    "DELAY_MAX": 3000,
+    "TYPING_DELAY": 50,
+    "PAGE_TIMEOUT": 30000,
+    "MAX_RETRIES": 3,
+    "RATE_LIMIT_DELAY": 5000,
+    "SESSION_TIMEOUT": 1800000,
+    "MIN_TEXT_LENGTH": 10,
+    "MAX_TEXT_LENGTH": 500,
+    "VARIABILITY_FACTOR": 0.3,
+    "LOG_LEVEL": "INFO",
+    "SAVE_SCREENSHOTS": true,
+    "GENERATE_REPORTS": true
+  },
+  "estatisticas": {
+    "briefingsProcessados": 1,
+    "sucessos": 0,
+    "erros": 1,
+    "tempoTotal": 16721,
+    "inicioExecucao": "2025-07-24T16:09:42.529Z"
+  },
+  "resultados": [
+    {
+      "tipo": "residencial-unifamiliar",
+      "sucesso": false,
+      "erro": "Waiting for selector `.briefing-container, .briefing-form, [data-testid=\"briefing-page\"]` failed: Waiting failed: 15000ms exceeded",
+      "timestamp": "2025-07-24T16:09:59.250Z"
+    }
+  ],
+  "resumo": {
+    "totalBriefings": 1,
+    "sucessos": 0,
+    "erros": 1,
+    "taxaSucesso": "0.00%"
+  }
+}

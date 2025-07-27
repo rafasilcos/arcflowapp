@@ -1,0 +1,9 @@
+node_modules/
+build/
+dist/
+coverage/
+*.zip
+*.mp4
+*.pdf
+*.log
+.vscode/

@@ -1,0 +1,974 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// ===== ARCFLOW DATABASE SCHEMA =====
+// Otimizado para 10.000 usuários simultâneos
+// Sistema SaaS para escritórios de Arquitetura, Engenharia e Construção
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  extensions = [pg_trgm]
+}
+
+// ===== AUTENTICAÇÃO E USUÁRIOS =====
+
+// Enum para cargos profissionais (formação)
+enum CargoProfissional {
+  ARQUITETO
+  ENGENHEIRO_CIVIL
+  ENGENHEIRO_ELETRICO
+  ENGENHEIRO_MECANICO
+  ENGENHEIRO_ESTRUTURAL
+  ENGENHEIRO_SANITARIO
+  DESIGNER_INTERIORES
+  DESIGNER_GRAFICO
+  URBANISTA
+  PAISAGISTA
+  TECNICO_EDIFICACOES
+  TECNICO_SEGURANCA
+  ADMINISTRADOR
+  CONTADOR
+  ADVOGADO
+  ESTAGIARIO
+  AUXILIAR_TECNICO
+  OUTROS
+}
+
+// Enum para funções na organização (papel na equipe)
+enum FuncaoOrganizacional {
+  PROPRIETARIO
+  DIRETOR
+  GERENTE_GERAL
+  COORDENADOR_PROJETOS
+  COORDENADOR_OBRAS
+  COORDENADOR_ADMINISTRATIVO
+  COORDENADOR_FINANCEIRO
+  ARQUITETO_RESPONSAVEL
+  ENGENHEIRO_RESPONSAVEL
+  PROJETISTA_SENIOR
+  PROJETISTA_JUNIOR
+  ANALISTA_FINANCEIRO
+  ASSISTENTE_ADMINISTRATIVO
+  ASSISTENTE_TECNICO
+  ESTAGIARIO
+  CONSULTOR
+  TERCEIRIZADO
+  COLABORADOR
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String
+  avatar      String?
+  password    String
+  role        UserRole @default(USER)
+  
+  // Novo campo para separar cargo de função
+  cargo       CargoProfissional? // Formação profissional
+  funcao      FuncaoOrganizacional? // Papel na organização
+  
+  isActive    Boolean  @default(true)
+  lastLogin   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relacionamentos
+  escritorio   Escritorio? @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String?
+
+  // Projetos que o usuário participa
+  projetoUsers ProjetoUser[]
+  
+  // Atividades do usuário
+  atividades   Atividade[]
+  
+  // Sessões ativas
+  sessions     UserSession[]
+  
+  // Notificações
+  notificacoes Notificacao[]
+  
+  // Convites enviados
+  convitesEnviados Convite[]
+  
+  // Briefings responsáveis
+  briefingsResponsavel Briefing[] @relation("BriefingResponsavel")
+
+  // Orçamentos responsáveis
+  // orcamentosResponsavel Orcamento[]
+
+  @@index([email])
+  @@index([escritorioId])
+  @@index([role])
+  @@index([cargo])
+  @@index([funcao])
+  @@map("users")
+}
+
+model UserSession {
+  id           String   @id @default(cuid())
+  userId       String
+  refreshToken String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([refreshToken])
+  @@map("user_sessions")
+}
+
+enum UserRole {
+  ADMIN
+  OWNER
+  MANAGER
+  ARCHITECT
+  ENGINEER
+  DESIGNER
+  USER
+}
+
+// ===== ESCRITÓRIOS =====
+
+model Escritorio {
+  id          String   @id @default(cuid())
+  nome        String
+  cnpj        String?  @unique
+  email       String
+  telefone    String?
+  endereco    String?
+  cidade      String?
+  estado      String?
+  cep         String?
+  website     String?
+  logo        String?
+  isActive    Boolean  @default(true)
+  plano       PlanoType @default(BASIC)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relacionamentos
+  users       User[]
+  projetos    Projeto[]
+  clientes    Cliente[]
+  templates   Template[]
+  convites    Convite[]
+  briefings   Briefing[]
+  // orcamentos  Orcamento[]
+  
+  @@index([cnpj])
+  @@index([plano])
+  @@map("escritorios")
+}
+
+enum PlanoType {
+  BASIC
+  PROFESSIONAL
+  ENTERPRISE
+}
+
+// ===== CLIENTES =====
+
+model Cliente {
+  id                String   @id
+  nome              String
+  email             String   @unique
+  telefone          String?
+  tipoPessoa        String?  @map("tipo_pessoa") // 'fisica' ou 'juridica'
+  cpf               String?
+  cnpj              String?
+  profissao         String?
+  dataNascimento    DateTime? @map("data_nascimento")
+  dataFundacao      DateTime? @map("data_fundacao")
+  
+  // Endereço (campos separados)
+  enderecoCep         String? @map("endereco_cep")
+  enderecoLogradouro  String? @map("endereco_logradouro")
+  enderecoNumero      String? @map("endereco_numero")
+  enderecoComplemento String? @map("endereco_complemento")
+  enderecoBairro      String? @map("endereco_bairro")
+  enderecoCidade      String? @map("endereco_cidade")
+  enderecoUf          String? @map("endereco_uf")
+  enderecoPais        String? @map("endereco_pais") @default("Brasil")
+  
+  // Dados complexos (JSON)
+  familia           Json?
+  origem            Json?
+  preferencias      Json?
+  historicoProjetos Json? @map("historico_projetos")
+  
+  observacoes       String?
+  status            String   @default("ativo") // 'ativo', 'inativo', 'vip', 'problema'
+  isActive          Boolean  @map("is_active") @default(true)
+  deletedAt         DateTime? @map("deleted_at")
+  createdBy         String?  @map("created_by")
+  updatedBy         String?  @map("updated_by")
+  deletedBy         String?  @map("deleted_by")
+  createdAt         DateTime @map("created_at") @default(now())
+  updatedAt         DateTime @map("updated_at") @updatedAt
+
+  // Relacionamentos
+  escritorio   Escritorio @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String     @map("escritorio_id")
+  
+  projetos     Projeto[]
+  briefings    Briefing[]
+  briefingsCompostos BriefingComposto[]
+  // orcamentos   Orcamento[]
+
+  @@index([escritorioId])
+  @@index([email])
+  @@index([cpf])
+  @@index([cnpj])
+  @@index([status])
+  @@index([deletedAt])
+  @@index([isActive])
+  @@map("clientes")
+}
+
+// ===== PROJETOS =====
+
+model Projeto {
+  id          String        @id @default(cuid())
+  nome        String
+  descricao   String?
+  tipologia   TipologiaType
+  status      StatusProjeto @default(BRIEFING)
+  prioridade  PrioridadeType @default(MEDIA)
+  
+  // Datas
+  dataInicio  DateTime?
+  dataFim     DateTime?
+  prazoFinal  DateTime?
+  
+  // Financeiro
+  orcamento   Decimal?
+  valorTotal  Decimal?
+  
+  // Localização
+  endereco    String?
+  cidade      String?
+  estado      String?
+  
+  // Metadata
+  observacoes String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relacionamentos existentes
+  escritorio   Escritorio @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String
+  
+  cliente      Cliente @relation(fields: [clienteId], references: [id])
+  clienteId    String
+  
+  // Equipe do projeto
+  projetoUsers ProjetoUser[]
+  
+  // Briefings do projeto (relação many-to-many)
+  briefings    Briefing[] @relation("ProjetoBriefings")
+  
+  // Briefing Composto (novo modelo)
+  briefingComposto BriefingComposto?
+  
+  // Atividades
+  atividades   Atividade[]
+  
+  // Arquivos
+  arquivos     Arquivo[]
+  
+  // Cronômetro
+  cronometros  Cronometro[]
+  
+  // Nova relação para Templates Dinâmicos
+  projetoComposto ProjetoComposto?
+  
+  // Orçamentos do projeto
+  // orcamentos   Orcamento[]
+
+  @@index([escritorioId])
+  @@index([clienteId])
+  @@index([status])
+  @@index([tipologia])
+  @@index([prioridade])
+  @@map("projetos")
+}
+
+model ProjetoUser {
+  id        String @id @default(cuid())
+  userId    String
+  projetoId String
+  role      ProjetoRole @default(COLABORADOR)
+  createdAt DateTime @default(now())
+  
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projeto Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, projetoId])
+  @@index([userId])
+  @@index([projetoId])
+  @@map("projeto_users")
+}
+
+enum TipologiaType {
+  RESIDENCIAL
+  COMERCIAL
+  INDUSTRIAL
+  INSTITUCIONAL
+  URBANISMO
+  INTERIORES
+  PAISAGISMO
+}
+
+enum StatusProjeto {
+  BRIEFING
+  CONCEITUAL
+  ANTEPROJETO
+  EXECUTIVO
+  APROVACAO
+  EXECUCAO
+  CONCLUIDO
+  CANCELADO
+}
+
+enum PrioridadeType {
+  BAIXA
+  MEDIA
+  ALTA
+  URGENTE
+}
+
+enum ProjetoRole {
+  RESPONSAVEL
+  COLABORADOR
+  CONSULTOR
+}
+
+// ===== BRIEFING =====
+
+model Briefing {
+  id          String   @id @default(cuid())
+  nomeProjeto String   @map("nome_projeto")
+  descricao   String?
+  objetivos   String?
+  prazo       String?
+  orcamento   String?
+  status      StatusBriefing @default(EM_ANDAMENTO)
+  progresso   Int      @default(0) // 0-100
+  versao      Int      @default(1)
+  aprovado    Boolean  @default(false)
+  aprovadoEm  DateTime? @map("aprovado_em")
+  observacoes String?
+  
+  // 🎯 NOVOS CAMPOS PARA SELEÇÃO CORRETA DE TEMPLATES
+  disciplina  String?  // "arquitetura", "estrutural", "instalacoes", etc.
+  area        String?  // "residencial", "comercial", "industrial", etc.
+  tipologia   String?  // "unifamiliar", "lojas", "escritorios", etc.
+  
+  // NOVO CAMPO: Estrutura completa do briefing personalizável
+  estruturaBriefing Json? @map("estrutura_briefing")
+  
+  deletedAt   DateTime? @map("deleted_at")
+  createdBy   String   @map("created_by")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relacionamentos
+  projeto   Projeto? @relation("ProjetoBriefings", fields: [projetoId], references: [id], onDelete: SetNull)
+  projetoId String?  @map("projeto_id")
+  
+  cliente   Cliente @relation(fields: [clienteId], references: [id], onDelete: Cascade)
+  clienteId String  @map("cliente_id")
+  
+  responsavel   User @relation("BriefingResponsavel", fields: [responsavelId], references: [id])
+  responsavelId String @map("responsavel_id")
+  
+  escritorio   Escritorio @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String     @map("escritorio_id")
+  
+  // Templates de briefing associados
+  templates BriefingTemplate[]
+  respostas BriefingResposta[]
+  
+  // Orçamentos gerados a partir deste briefing
+  // orcamentos Orcamento[]
+
+  @@index([escritorioId])
+  @@index([clienteId])
+  @@index([responsavelId])
+  @@index([status])
+  @@index([deletedAt])
+  @@index([disciplina])
+  @@index([area])
+  @@index([tipologia])
+  @@map("briefings")
+}
+
+model BriefingTemplate {
+  id          String   @id @default(cuid())
+  templateId  String   @map("template_id") // ID do tipo de briefing (ex: "residencial-unifamiliar")
+  nome        String
+  categoria   String   // "residencial", "comercial", "estrutural", etc.
+  status      StatusBriefingTemplate @default(PENDENTE)
+  progresso   Int      @default(0) // 0-100
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relacionamento com briefing principal
+  briefing   Briefing @relation(fields: [briefingId], references: [id], onDelete: Cascade)
+  briefingId String   @map("briefing_id")
+  
+  // Perguntas do template
+  perguntas BriefingPergunta[]
+  respostas BriefingResposta[]
+
+  @@index([briefingId])
+  @@index([templateId])
+  @@index([categoria])
+  @@index([status])
+  @@map("briefing_templates")
+}
+
+model BriefingPergunta {
+  id          String   @id @default(cuid())
+  titulo      String
+  descricao   String?
+  tipo        TipoPergunta // 'texto', 'textarea', 'multipla_escolha', 'numero', 'data'
+  obrigatoria Boolean  @default(false)
+  opcoes      String[] // Para perguntas de múltipla escolha
+  ordem       Int      @default(0)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // Relacionamento com template
+  template   BriefingTemplate @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  templateId String           @map("template_id")
+  
+  // Respostas desta pergunta
+  respostas BriefingResposta[]
+
+  @@index([templateId])
+  @@index([ordem])
+  @@map("briefing_perguntas")
+}
+
+model BriefingResposta {
+  id                 String   @id @default(cuid())
+  resposta           String
+  createdBy          String   @map("created_by")
+  createdAt          DateTime @default(now()) @map("created_at")
+  updatedAt          DateTime @updatedAt @map("updated_at")
+
+  // Relacionamentos
+  briefing           Briefing @relation(fields: [briefingId], references: [id], onDelete: Cascade)
+  briefingId         String   @map("briefing_id")
+  
+  template           BriefingTemplate @relation(fields: [briefingTemplateId], references: [id], onDelete: Cascade)
+  briefingTemplateId String           @map("briefing_template_id")
+  
+  pergunta           BriefingPergunta @relation(fields: [perguntaId], references: [id], onDelete: Cascade)
+  perguntaId         String           @map("pergunta_id")
+
+  @@unique([briefingId, briefingTemplateId, perguntaId])
+  @@index([briefingId])
+  @@index([briefingTemplateId])
+  @@index([perguntaId])
+  @@map("briefing_respostas")
+}
+
+enum StatusBriefing {
+  EM_ANDAMENTO         // Briefing sendo preenchido (padrão)
+  CONCLUIDO            // Briefing finalizado → Gera orçamento
+  EM_EDICAO            // Cliente solicitou alterações
+  ORCAMENTO_ELABORACAO // Briefing foi para orçamento
+  PROJETO_INICIADO     // Orçamento aprovado → Projeto iniciado
+  
+  // Status legados para compatibilidade (remover depois)
+  RASCUNHO
+  PENDENTE
+  APROVADO
+  REJEITADO
+  EXCLUIDO
+}
+
+enum StatusBriefingTemplate {
+  PENDENTE
+  EM_ANDAMENTO
+  CONCLUIDO
+}
+
+enum TipoPergunta {
+  TEXTO
+  TEXTAREA
+  MULTIPLA_ESCOLHA
+  NUMERO
+  DATA
+  ARQUIVO
+}
+
+// ===== TEMPLATES =====
+
+model Template {
+  id          String   @id @default(cuid())
+  nome        String
+  descricao   String?
+  tipologia   TipologiaType
+  dados       Json     // Estrutura do template
+  isPublic    Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  
+  // Campos para Templates Dinâmicos
+  categoria     String?   // 'arquitetura' | 'estrutural' | 'instalacoes' | 'paisagismo' | 'interiores'
+  isComposto    Boolean   @default(false) // Se pode ser combinado com outros templates
+  compativel    String[]  // IDs de templates compatíveis
+  conflitos     String[]  // IDs de templates que conflitam
+  complexidade  String    @default("media") // 'baixa' | 'media' | 'alta' | 'critica'
+  tempoEstimado Int?      // Tempo estimado total do template em minutos
+  numeroTarefas Int?      // Número de tarefas/atividades do template
+  versao        String    @default("1.0") // Versão do template
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relacionamentos existentes
+  escritorio   Escritorio @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String
+  
+  // Novas relações para Templates Dinâmicos
+  atividades     TemplateAtividade[] // Atividades do template
+  regrasDeteccao RegraDeteccao[]     // Regras de detecção automática
+
+  @@index([escritorioId])
+  @@index([tipologia])
+  @@index([isPublic])
+  @@index([categoria])
+  @@index([isComposto])
+  @@index([complexidade])
+  @@map("templates")
+}
+
+// ===== ATIVIDADES E CRONÔMETRO =====
+
+model Atividade {
+  id          String   @id @default(cuid())
+  titulo      String
+  descricao   String?
+  tipo        TipoAtividade
+  status      StatusAtividade @default(PENDENTE)
+  prioridade  PrioridadeType @default(MEDIA)
+  
+  // Tempo
+  tempoEstimado Int?     // em minutos
+  tempoGasto    Int?     // em minutos
+  
+  // Datas
+  dataInicio    DateTime?
+  dataFim       DateTime?
+  prazo         DateTime?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relacionamentos
+  projeto   Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  projetoId String
+  
+  user      User @relation(fields: [userId], references: [id])
+  userId    String
+  
+  cronometros Cronometro[]
+
+  @@index([projetoId])
+  @@index([userId])
+  @@index([status])
+  @@index([tipo])
+  @@map("atividades")
+}
+
+model Cronometro {
+  id          String   @id @default(cuid())
+  inicio      DateTime
+  fim         DateTime?
+  duracao     Int?     // em segundos
+  observacoes String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  // Relacionamentos
+  projeto     Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  projetoId   String
+  
+  atividade   Atividade? @relation(fields: [atividadeId], references: [id])
+  atividadeId String?
+
+  @@index([projetoId])
+  @@index([atividadeId])
+  @@index([inicio])
+  @@map("cronometros")
+}
+
+enum TipoAtividade {
+  BRIEFING
+  CONCEPCAO
+  DESENHO
+  DETALHAMENTO
+  APROVACAO
+  REVISAO
+  REUNIAO
+  PESQUISA
+  CALCULO
+  DOCUMENTACAO
+}
+
+enum StatusAtividade {
+  PENDENTE
+  EM_ANDAMENTO
+  CONCLUIDA
+  CANCELADA
+}
+
+// ===== ARQUIVOS =====
+
+model Arquivo {
+  id          String   @id @default(cuid())
+  nome        String
+  nomeOriginal String
+  tipo        String
+  tamanho     Int
+  url         String
+  pasta       String?
+  versao      Int      @default(1)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relacionamentos
+  projeto   Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  projetoId String
+
+  @@index([projetoId])
+  @@index([tipo])
+  @@index([pasta])
+  @@map("arquivos")
+}
+
+// ===== NOTIFICAÇÕES =====
+
+model Notificacao {
+  id          String   @id @default(cuid())
+  titulo      String
+  mensagem    String
+  tipo        TipoNotificacao
+  lida        Boolean  @default(false)
+  url         String?
+  createdAt   DateTime @default(now())
+
+  // Relacionamentos
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+
+  @@index([userId])
+  @@index([lida])
+  @@index([tipo])
+  @@map("notificacoes")
+}
+
+enum TipoNotificacao {
+  INFO
+  SUCESSO
+  AVISO
+  ERRO
+  PRAZO
+  APROVACAO
+  MENSAGEM
+}
+
+// ===== CONFIGURAÇÕES =====
+
+model Configuracao {
+  id          String   @id @default(cuid())
+  chave       String   @unique
+  valor       Json
+  descricao   String?
+  categoria   String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([chave])
+  @@index([categoria])
+  @@map("configuracoes")
+}
+
+// ===== SISTEMA DE TEMPLATES DINÂMICOS =====
+
+// Projeto Composto - projetos que combinam múltiplos templates
+model ProjetoComposto {
+  id              String   @id @default(cuid())
+  projetoId       String   @unique
+  tipoComposicao  String   // 'automatica' | 'manual'
+  templateIds     String[] // Array de templates aplicados
+  dependencias    Json     // Mapeamento de dependências entre templates
+  cronograma      Json     // Cronograma gerado automaticamente
+  orcamento       Json     // Orçamento consolidado por categoria
+  configuracao    Json     // Configurações específicas do projeto
+  metadados       Json?    // Dados adicionais para análise
+  totalTarefas    Int?     // Número total de tarefas geradas
+  tempoEstimado   Int?     // Tempo estimado total em minutos
+  complexidade    String?  // 'baixa' | 'media' | 'alta' | 'critica'
+  status          String   @default("ativo") // 'ativo' | 'pausado' | 'concluido'
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relacionamentos
+  projeto Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  
+  @@index([projetoId])
+  @@index([tipoComposicao])
+  @@index([status])
+  @@index([complexidade])
+  @@map("projetos_compostos")
+}
+
+// Mapeamento Template → Atividades (templates de atividades reutilizáveis)
+model TemplateAtividade {
+  id            String   @id @default(cuid())
+  templateId    String
+  titulo        String
+  descricao     String?
+  tipo          TipoAtividade
+  categoria     String   // 'arquitetura' | 'estrutural' | 'instalacoes' | 'paisagismo' | 'interiores'
+  subcategoria  String?  // Subcategoria específica
+  ordem         Int      // Ordem de execução dentro do template
+  dependencias  String[] // IDs de atividades que devem ser concluídas primeiro
+  tempoEstimado Int?     // Tempo estimado em minutos
+  complexidade  String   @default("media") // 'baixa' | 'media' | 'alta'
+  obrigatoria   Boolean  @default(true)    // Se a atividade é obrigatória
+  condicional   Json?    // Condições para ativação da atividade
+  recursos      Json?    // Recursos necessários para a atividade
+  entregaveis   Json?    // Lista de entregáveis da atividade
+  
+  // Metadata para otimização
+  frequenciaUso Int      @default(0) // Quantas vezes foi utilizada
+  tempoMedio    Int?     // Tempo médio real de execução
+  taxaSucesso   Float?   // Taxa de conclusão dentro do prazo
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relacionamentos
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  
+  @@index([templateId])
+  @@index([tipo])
+  @@index([categoria])
+  @@index([ordem])
+  @@index([obrigatoria])
+  @@map("template_atividades")
+}
+
+// Regras de Detecção de Necessidades (motor de IA para composição automática)
+model RegraDeteccao {
+  id              String   @id @default(cuid())
+  nome            String
+  descricao       String?
+  categoria       String   // 'residencial' | 'comercial' | 'industrial' | 'institucional'
+  condicao        Json     // Condições do briefing para ativar template
+  templateId      String   // Template a ser aplicado quando condição for verdadeira
+  prioridade      Int      @default(1) // Prioridade de aplicação (1 = maior)
+  peso            Float    @default(1.0) // Peso na decisão de composição
+  isActive        Boolean  @default(true)
+  isAutomatica    Boolean  @default(true) // Se aplica automaticamente ou sugere
+  
+  // Configurações avançadas
+  minimumScore    Float?   @default(0.7) // Score mínimo para ativação automática
+  conflitos       String[] // IDs de templates que conflitam com este
+  dependeTemplates String[] // Templates que devem ser incluídos junto
+  
+  // Métricas de performance
+  vezesAplicada   Int      @default(0) // Quantas vezes foi aplicada
+  taxaAcerto      Float?   // Taxa de acerto da regra
+  feedbackUsuario Json?    // Feedback dos usuários sobre a regra
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relacionamentos
+  template Template @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  
+  @@index([templateId])
+  @@index([categoria])
+  @@index([prioridade])
+  @@index([isActive])
+  @@index([isAutomatica])
+  @@map("regras_deteccao")
+}
+
+// Log de Composições para análise e otimização
+model LogComposicao {
+  id              String   @id @default(cuid())
+  projetoId       String
+  briefingData    Json     // Dados do briefing que geraram a composição
+  templatesDetectados Json // Templates detectados automaticamente
+  templatesAplicados Json  // Templates efetivamente aplicados
+  regrasAplicadas String[] // IDs das regras que foram ativadas
+  tempoProcessamento Int?   // Tempo de processamento em ms
+  scoreConfianca  Float?   // Score de confiança da composição
+  feedbackUsuario String?  // 'aceito' | 'rejeitado' | 'modificado'
+  observacoes     String?
+  createdAt       DateTime @default(now())
+
+  @@index([projetoId])
+  @@index([feedbackUsuario])
+  @@index([createdAt])
+  @@map("logs_composicao")
+}
+
+// ===== BRIEFING COMPOSTO - NOVA ESTRUTURA =====
+
+// Briefing principal composto (substitui o modelo simples)
+model BriefingComposto {
+  id          String   @id @default(cuid())
+  nome        String   // Nome do briefing composto
+  descricao   String?  // Descrição opcional
+  
+  // Seleção hierárquica
+  disciplinas String[] // Disciplinas selecionadas
+  areas       Json     // Mapeamento disciplina -> área
+  tipologias  Json     // Mapeamento disciplina -> tipologia
+  
+  // Status e progresso
+  status      StatusBriefingComposto @default(CONFIGURACAO)
+  progresso   Json     // Progresso detalhado
+  
+  // Metadatos
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String
+  
+  // Relacionamentos
+  projeto     Projeto @relation(fields: [projetoId], references: [id], onDelete: Cascade)
+  projetoId   String  @unique
+  
+  cliente     Cliente? @relation(fields: [clienteId], references: [id])
+  clienteId   String?
+  
+  // Briefings individuais que compõem este briefing
+  briefings   BriefingIndividual[]
+  
+  @@index([projetoId])
+  @@index([clienteId])
+  @@index([status])
+  @@map("briefings_compostos")
+}
+
+// Briefings individuais (cada disciplina tem o seu)
+model BriefingIndividual {
+  id          String   @id @default(cuid())
+  disciplina  String   // arquitetura, estrutural, instalacoes, etc
+  briefingId  String   // ID do briefing template
+  nome        String   // Nome do briefing individual
+  
+  // Dados do briefing
+  respostas   Json     // Respostas do briefing
+  status      StatusBriefingIndividual @default(PENDENTE)
+  progresso   Int      @default(0) // Percentual de progresso
+  ordem       Int      // Ordem de preenchimento
+  
+  // Validação
+  aprovado    Boolean  @default(false)
+  aprovadoEm  DateTime?
+  observacoes String?
+  
+  // Metadados
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  iniciadoEm  DateTime?
+  concluidoEm DateTime?
+  
+  // Relacionamentos
+  briefingComposto   BriefingComposto @relation(fields: [briefingCompostoId], references: [id], onDelete: Cascade)
+  briefingCompostoId String
+  
+  @@index([briefingCompostoId])
+  @@index([disciplina])
+  @@index([status])
+  @@index([ordem])
+  @@map("briefings_individuais")
+}
+
+// Enums para os novos modelos
+enum StatusBriefingComposto {
+  CONFIGURACAO      // Selecionando disciplinas/áreas/tipologias
+  EM_PREENCHIMENTO  // Preenchendo briefings individuais
+  CONCLUIDO         // Todos os briefings preenchidos
+  APROVADO          // Briefing aprovado pelo cliente
+  REJEITADO         // Briefing rejeitado
+}
+
+enum StatusBriefingIndividual {
+  PENDENTE          // Aguardando preenchimento
+  EM_ANDAMENTO      // Sendo preenchido
+  CONCLUIDO         // Preenchimento concluído
+  APROVADO          // Aprovado pelo responsável
+  REJEITADO         // Rejeitado e precisa ser refeito
+}
+
+// ===== SISTEMA DE CONVITES =====
+
+model Convite {
+  id          String   @id @default(cuid())
+  email       String
+  nome        String
+  
+  // Separação clara entre cargo e função
+  cargo       CargoProfissional     // Formação profissional
+  funcao      FuncaoOrganizacional  // Papel na organização
+  role        UserRole              // Permissões no sistema
+  
+  token       String   @unique
+  status      StatusConvite @default(PENDENTE)
+  expiresAt   DateTime
+  
+  // Mensagem personalizada
+  mensagemPersonalizada String?
+  
+  // Relacionamentos
+  escritorio   Escritorio @relation(fields: [escritorioId], references: [id], onDelete: Cascade)
+  escritorioId String
+  
+  enviadoPor   User @relation(fields: [enviadoPorId], references: [id])
+  enviadoPorId String
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  aceitoEm    DateTime?
+  
+  @@index([email])
+  @@index([token])
+  @@index([escritorioId])
+  @@index([status])
+  @@index([expiresAt])
+  @@index([cargo])
+  @@index([funcao])
+  @@map("convites")
+}
+
+enum StatusConvite {
+  PENDENTE
+  ACEITO
+  CANCELADO
+  EXPIRADO
+}

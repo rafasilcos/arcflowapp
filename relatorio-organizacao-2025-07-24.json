@@ -1,0 +1,711 @@
+{
+  "date": "2025-07-24T22:38:42.301Z",
+  "movedFiles": [
+    {
+      "from": "analise-banco.js",
+      "to": "scripts\\utils\\analise-banco.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "configurar-email-interativo.js",
+      "to": "scripts\\utils\\configurar-email-interativo.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "configurar-rede-automatica.js",
+      "to": "scripts\\utils\\configurar-rede-automatica.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "sistema-convites-colaboradores.js",
+      "to": "scripts\\utils\\sistema-convites-colaboradores.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "ANALISE_COMPLETA_MODULO_ORCAMENTOS_ARCFLOW.md",
+      "to": "docs\\analysis\\readme\\ANALISE_COMPLETA_MODULO_ORCAMENTOS_ARCFLOW.md",
+      "category": "docs/analysis/readme/"
+    },
+    {
+      "from": "ANALISE_CRITICA_SISTEMA_BRIEFING_ORCAMENTO.md",
+      "to": "docs\\analysis\\readme\\ANALISE_CRITICA_SISTEMA_BRIEFING_ORCAMENTO.md",
+      "category": "docs/analysis/readme/"
+    },
+    {
+      "from": "ANALISE_INCONSISTENCIAS_COMPLETA.md",
+      "to": "docs\\analysis\\readme\\ANALISE_INCONSISTENCIAS_COMPLETA.md",
+      "category": "docs/analysis/readme/"
+    },
+    {
+      "from": "ANALISE_LIMPEZA_SISTEMA.md",
+      "to": "docs\\analysis\\readme\\ANALISE_LIMPEZA_SISTEMA.md",
+      "category": "docs/analysis/readme/"
+    },
+    {
+      "from": "arquivos-para-deletar-2025-07-24.json",
+      "to": "assets\\configs\\arquivos-para-deletar-2025-07-24.json",
+      "category": "assets/configs/"
+    },
+    {
+      "from": "rede-config.json",
+      "to": "assets\\configs\\rede-config.json",
+      "category": "assets/configs/"
+    },
+    {
+      "from": "relatorio-limpeza-executada-2025-07-24.json",
+      "to": "assets\\configs\\relatorio-limpeza-executada-2025-07-24.json",
+      "category": "assets/configs/"
+    },
+    {
+      "from": "relatorio-limpeza-sistema-2025-07-24.json",
+      "to": "assets\\configs\\relatorio-limpeza-sistema-2025-07-24.json",
+      "category": "assets/configs/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753377676301.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753377676301.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753378160747.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753378160747.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753378720171.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753378720171.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753379473724.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753379473724.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753379703593.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753379703593.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753380115013.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753380115013.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753381010599.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753381010599.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-completo-finalizado-1753390459541.png",
+      "to": "assets\\images\\briefings\\briefing-completo-finalizado-1753390459541.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-etapa-2-1753377954062.png",
+      "to": "assets\\images\\briefings\\briefing-etapa-2-1753377954062.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-etapa-3-1753377961606.png",
+      "to": "assets\\images\\briefings\\briefing-etapa-3-1753377961606.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-preenchido-1753376684671.png",
+      "to": "assets\\images\\briefings\\briefing-preenchido-1753376684671.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753379700764.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753379700764.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753380031547.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753380031547.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753380551477.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753380551477.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753380912040.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753380912040.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753381987972.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753381987972.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753382474619.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753382474619.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-1-1753390442649.png",
+      "to": "assets\\images\\briefings\\briefing-secao-1-1753390442649.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-10-1753380081591.png",
+      "to": "assets\\images\\briefings\\briefing-secao-10-1753380081591.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-10-1753380971333.png",
+      "to": "assets\\images\\briefings\\briefing-secao-10-1753380971333.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-11-1753380087278.png",
+      "to": "assets\\images\\briefings\\briefing-secao-11-1753380087278.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-11-1753380977863.png",
+      "to": "assets\\images\\briefings\\briefing-secao-11-1753380977863.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-12-1753380092769.png",
+      "to": "assets\\images\\briefings\\briefing-secao-12-1753380092769.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-12-1753380984438.png",
+      "to": "assets\\images\\briefings\\briefing-secao-12-1753380984438.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-13-1753380098510.png",
+      "to": "assets\\images\\briefings\\briefing-secao-13-1753380098510.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-13-1753380990864.png",
+      "to": "assets\\images\\briefings\\briefing-secao-13-1753380990864.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-14-1753380104007.png",
+      "to": "assets\\images\\briefings\\briefing-secao-14-1753380104007.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-14-1753380997462.png",
+      "to": "assets\\images\\briefings\\briefing-secao-14-1753380997462.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-15-1753380109547.png",
+      "to": "assets\\images\\briefings\\briefing-secao-15-1753380109547.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-15-1753381003956.png",
+      "to": "assets\\images\\briefings\\briefing-secao-15-1753381003956.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-2-1753380037429.png",
+      "to": "assets\\images\\briefings\\briefing-secao-2-1753380037429.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-2-1753380561341.png",
+      "to": "assets\\images\\briefings\\briefing-secao-2-1753380561341.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-2-1753380918691.png",
+      "to": "assets\\images\\briefings\\briefing-secao-2-1753380918691.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-2-1753382019971.png",
+      "to": "assets\\images\\briefings\\briefing-secao-2-1753382019971.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-2-1753382503258.png",
+      "to": "assets\\images\\briefings\\briefing-secao-2-1753382503258.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-3-1753380042891.png",
+      "to": "assets\\images\\briefings\\briefing-secao-3-1753380042891.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-3-1753380567905.png",
+      "to": "assets\\images\\briefings\\briefing-secao-3-1753380567905.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-3-1753380925219.png",
+      "to": "assets\\images\\briefings\\briefing-secao-3-1753380925219.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-4-1753380048507.png",
+      "to": "assets\\images\\briefings\\briefing-secao-4-1753380048507.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-4-1753380574411.png",
+      "to": "assets\\images\\briefings\\briefing-secao-4-1753380574411.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-4-1753380931877.png",
+      "to": "assets\\images\\briefings\\briefing-secao-4-1753380931877.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-5-1753380053958.png",
+      "to": "assets\\images\\briefings\\briefing-secao-5-1753380053958.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-5-1753380580996.png",
+      "to": "assets\\images\\briefings\\briefing-secao-5-1753380580996.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-5-1753380938411.png",
+      "to": "assets\\images\\briefings\\briefing-secao-5-1753380938411.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-6-1753380059474.png",
+      "to": "assets\\images\\briefings\\briefing-secao-6-1753380059474.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-6-1753380945053.png",
+      "to": "assets\\images\\briefings\\briefing-secao-6-1753380945053.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-7-1753380065006.png",
+      "to": "assets\\images\\briefings\\briefing-secao-7-1753380065006.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-7-1753380951579.png",
+      "to": "assets\\images\\briefings\\briefing-secao-7-1753380951579.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-8-1753380070483.png",
+      "to": "assets\\images\\briefings\\briefing-secao-8-1753380070483.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-8-1753380958222.png",
+      "to": "assets\\images\\briefings\\briefing-secao-8-1753380958222.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-9-1753380076118.png",
+      "to": "assets\\images\\briefings\\briefing-secao-9-1753380076118.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "briefing-secao-9-1753380964760.png",
+      "to": "assets\\images\\briefings\\briefing-secao-9-1753380964760.png",
+      "category": "assets/images/briefings/"
+    },
+    {
+      "from": "CORRECAO_BOTAO_GERAR_ORCAMENTO.md",
+      "to": "docs\\reports\\readme\\CORRECAO_BOTAO_GERAR_ORCAMENTO.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "CORRECAO_SALVAMENTO_ORCAMENTOS_COMPLETA.md",
+      "to": "docs\\reports\\readme\\CORRECAO_SALVAMENTO_ORCAMENTOS_COMPLETA.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "RELATORIO_ANALISE_COMPLETA_SISTEMA_BRIEFINGS.md",
+      "to": "docs\\reports\\readme\\RELATORIO_ANALISE_COMPLETA_SISTEMA_BRIEFINGS.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "RESUMO_CORRECOES_ORCAMENTOS_APLICADAS.md",
+      "to": "docs\\reports\\readme\\RESUMO_CORRECOES_ORCAMENTOS_APLICADAS.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "RESUMO_CORRECOES_ORCAMENTOS_COMPLETO.md",
+      "to": "docs\\reports\\readme\\RESUMO_CORRECOES_ORCAMENTOS_COMPLETO.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "RESUMO_SISTEMA_PREENCHIMENTO_BRIEFINGS.md",
+      "to": "docs\\reports\\readme\\RESUMO_SISTEMA_PREENCHIMENTO_BRIEFINGS.md",
+      "category": "docs/reports/readme/"
+    },
+    {
+      "from": "debug-briefing-estrutura-1753376154065.png",
+      "to": "assets\\images\\debug\\debug-briefing-estrutura-1753376154065.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-etapa-1-1753377762391.png",
+      "to": "assets\\images\\debug\\debug-etapa-1-1753377762391.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-etapa-2-1753377774319.png",
+      "to": "assets\\images\\debug\\debug-etapa-2-1753377774319.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-login-1-1753376547872.png",
+      "to": "assets\\images\\debug\\debug-login-1-1753376547872.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-login-2-preenchido-1753376551195.png",
+      "to": "assets\\images\\debug\\debug-login-2-preenchido-1753376551195.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-login-3-apos-submit-1753376554515.png",
+      "to": "assets\\images\\debug\\debug-login-3-apos-submit-1753376554515.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-login-4-sucesso-1753376559618.png",
+      "to": "assets\\images\\debug\\debug-login-4-sucesso-1753376559618.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-login-5-briefing-1753376560923.png",
+      "to": "assets\\images\\debug\\debug-login-5-briefing-1753376560923.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753376490892.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753376490892.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753376657174.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753376657174.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753377625834.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753377625834.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753378120435.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753378120435.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753378680053.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753378680053.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-navegacao-1753379414042.png",
+      "to": "assets\\images\\debug\\debug-navegacao-1753379414042.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-tipologia-1-1753378281840.png",
+      "to": "assets\\images\\debug\\debug-tipologia-1-1753378281840.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-tipologia-2-1753378284211.png",
+      "to": "assets\\images\\debug\\debug-tipologia-2-1753378284211.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-tipologia-3-1753378286459.png",
+      "to": "assets\\images\\debug\\debug-tipologia-3-1753378286459.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-tipologia-4-1753378289721.png",
+      "to": "assets\\images\\debug\\debug-tipologia-4-1753378289721.png",
+      "category": "assets/images/debug/"
+    },
+    {
+      "from": "debug-briefing-urls.js",
+      "to": "scripts\\debug\\debug-briefing-urls.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-completo.js",
+      "to": "scripts\\debug\\debug-completo.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-convites.js",
+      "to": "scripts\\debug\\debug-convites.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-estrutura-briefing.js",
+      "to": "scripts\\debug\\debug-estrutura-briefing.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-login-arcflow.js",
+      "to": "scripts\\debug\\debug-login-arcflow.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-tipologias-briefing.js",
+      "to": "scripts\\debug\\debug-tipologias-briefing.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-correcoes-orcamentos.js",
+      "to": "scripts\\debug\\teste-correcoes-orcamentos.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-rapido-fluxo.js",
+      "to": "scripts\\debug\\teste-rapido-fluxo.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-sistema-briefings.js",
+      "to": "scripts\\debug\\teste-sistema-briefings.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-sistema-completo.js",
+      "to": "scripts\\debug\\teste-sistema-completo.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-sistema-convites-completo.js",
+      "to": "scripts\\debug\\teste-sistema-convites-completo.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "teste-sistema-email-completo.js",
+      "to": "scripts\\debug\\teste-sistema-email-completo.js",
+      "category": "scripts/debug/"
+    },
+    {
+      "from": "debug-convites.ps1",
+      "to": "scripts\\deployment\\debug-convites.ps1",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "reiniciar-backend.bat",
+      "to": "scripts\\deployment\\reiniciar-backend.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "resolver-erro-500.bat",
+      "to": "scripts\\deployment\\resolver-erro-500.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "start-backend.bat",
+      "to": "scripts\\deployment\\start-backend.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "start-frontend.bat",
+      "to": "scripts\\deployment\\start-frontend.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "stop-all.bat",
+      "to": "scripts\\deployment\\stop-all.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "test-convites-simples.ps1",
+      "to": "scripts\\deployment\\test-convites-simples.ps1",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "testar-sistema.bat",
+      "to": "scripts\\deployment\\testar-sistema.bat",
+      "category": "scripts/deployment/"
+    },
+    {
+      "from": "erro-briefing-1753375487361.png",
+      "to": "assets\\images\\errors\\erro-briefing-1753375487361.png",
+      "category": "assets/images/errors/"
+    },
+    {
+      "from": "erro-briefing-1753375865773.png",
+      "to": "assets\\images\\errors\\erro-briefing-1753375865773.png",
+      "category": "assets/images/errors/"
+    },
+    {
+      "from": "erro-briefing-1753376385997.png",
+      "to": "assets\\images\\errors\\erro-briefing-1753376385997.png",
+      "category": "assets/images/errors/"
+    },
+    {
+      "from": "erro-briefing-1753376491257.png",
+      "to": "assets\\images\\errors\\erro-briefing-1753376491257.png",
+      "category": "assets/images/errors/"
+    },
+    {
+      "from": "erro-briefing-completo-1753377480997.png",
+      "to": "assets\\images\\errors\\erro-briefing-completo-1753377480997.png",
+      "category": "assets/images/errors/"
+    },
+    {
+      "from": "executar-briefings-real.js",
+      "to": "scripts\\briefings\\executar-briefings-real.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "sistema-briefing-especifico-corrigido.js",
+      "to": "scripts\\briefings\\sistema-briefing-especifico-corrigido.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "sistema-briefing-especifico.js",
+      "to": "scripts\\briefings\\sistema-briefing-especifico.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "sistema-briefing-robusto.js",
+      "to": "scripts\\briefings\\sistema-briefing-robusto.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "sistema-preenchimento-automatico-briefings.js",
+      "to": "scripts\\briefings\\sistema-preenchimento-automatico-briefings.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "sistema-preenchimento-briefings-final.js",
+      "to": "scripts\\briefings\\sistema-preenchimento-briefings-final.js",
+      "category": "scripts/briefings/"
+    },
+    {
+      "from": "interface-configuracao-briefings.html",
+      "to": "assets\\configs\\interface-configuracao-briefings.html",
+      "category": "assets/configs/"
+    },
+    {
+      "from": "MANUAL_USUARIO_SISTEMA_BRIEFINGS.md",
+      "to": "docs\\manuals\\readme\\MANUAL_USUARIO_SISTEMA_BRIEFINGS.md",
+      "category": "docs/manuals/readme/"
+    },
+    {
+      "from": "MAPEAMENTO_COMPLETO_SISTEMA_ATUAL.md",
+      "to": "docs\\manuals\\readme\\MAPEAMENTO_COMPLETO_SISTEMA_ATUAL.md",
+      "category": "docs/manuals/readme/"
+    },
+    {
+      "from": "NOVA_ESTRUTURA_SISTEMA_ARCFLOW.md",
+      "to": "docs\\manuals\\readme\\NOVA_ESTRUTURA_SISTEMA_ARCFLOW.md",
+      "category": "docs/manuals/readme/"
+    },
+    {
+      "from": "perguntas-etapa-1-1753377664202.png",
+      "to": "assets\\images\\navigation\\perguntas-etapa-1-1753377664202.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "perguntas-etapa-1-1753378160600.png",
+      "to": "assets\\images\\navigation\\perguntas-etapa-1-1753378160600.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "perguntas-etapa-1-1753378719897.png",
+      "to": "assets\\images\\navigation\\perguntas-etapa-1-1753378719897.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "perguntas-etapa-1-1753379468709.png",
+      "to": "assets\\images\\navigation\\perguntas-etapa-1-1753379468709.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "perguntas-etapa-2-1753377676009.png",
+      "to": "assets\\images\\navigation\\perguntas-etapa-2-1753377676009.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "selecao-briefing-1753377658733.png",
+      "to": "assets\\images\\navigation\\selecao-briefing-1753377658733.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "selecao-briefing-1753378155268.png",
+      "to": "assets\\images\\navigation\\selecao-briefing-1753378155268.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "selecao-briefing-1753378714722.png",
+      "to": "assets\\images\\navigation\\selecao-briefing-1753378714722.png",
+      "category": "assets/images/navigation/"
+    },
+    {
+      "from": "start-arcflow.js",
+      "to": "scripts\\utils\\start-arcflow.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "test-dashboard-debug.md",
+      "to": "scripts\\utils\\test-dashboard-debug.md",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "test-db.js",
+      "to": "scripts\\utils\\test-db.js",
+      "category": "scripts/utils/"
+    },
+    {
+      "from": "test-fluxo-completo.js",
+      "to": "scripts\\utils\\test-fluxo-completo.js",
+      "category": "scripts/utils/"
+    }
+  ],
+  "createdDirs": [
+    "docs/api/readme",
+    "docs/auth/readme/screenshots",
+    "docs/briefings/readme/screenshots",
+    "docs/orcamentos/readme/screenshots",
+    "docs/clientes/readme",
+    "docs/deployment/readme/scripts",
+    "docs/analysis/readme/data",
+    "docs/reports/readme",
+    "docs/manuals/readme",
+    "assets/images/briefings",
+    "assets/images/debug",
+    "assets/images/errors",
+    "assets/images/navigation",
+    "assets/images/ui",
+    "assets/configs",
+    "scripts/briefings",
+    "scripts/debug",
+    "scripts/deployment",
+    "scripts/utils",
+    "temp/logs",
+    "temp/backups",
+    "temp/reports"
+  ],
+  "errors": [],
+  "backupLocation": "organizacao-backup-2025-07-24",
+  "summary": {
+    "totalMoved": 135,
+    "totalDirs": 22,
+    "totalErrors": 0
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2025-07-24T16:01:30.744Z",
+    "level": "INFO",
+    "message": "🚀 Inicializando Sistema de Preenchimento Automático"
+  },
+  {
+    "timestamp": "2025-07-24T16:01:31.129Z",
+    "level": "INFO",
+    "message": "✅ Sistema inicializado com sucesso"
+  },
+  {
+    "timestamp": "2025-07-24T16:01:31.129Z",
+    "level": "INFO",
+    "message": "🔐 Realizando login no sistema"
+  },
+  {
+    "timestamp": "2025-07-24T16:01:41.970Z",
+    "level": "ERROR",
+    "message": "❌ Erro no login:",
+    "args": [
+      {
+        "name": "TimeoutError"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-07-24T16:01:41.972Z",
+    "level": "INFO",
+    "message": "🔚 Finalizando sistema"
+  },
+  {
+    "timestamp": "2025-07-24T16:01:42.268Z",
+    "level": "INFO",
+    "message": "✅ Sistema finalizado com sucesso"
+  }
+]

@@ -1,0 +1,2446 @@
+{
+  "date": "2025-07-24",
+  "summary": {
+    "totalFiles": 397,
+    "totalSize": "3.27 MB",
+    "potentialSavings": "778.98 KB",
+    "savingsPercentage": 23
+  },
+  "categories": {
+    "MIGRAÇÃO - MANTER POR ENQUANTO": {
+      "count": 20,
+      "size": "160.58 KB",
+      "files": [
+        {
+          "name": "adicionar-colunas-briefing.js",
+          "path": "adicionar-colunas-briefing.js",
+          "size": "3.52 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "adicionar-colunas-orcamentos.js",
+          "path": "adicionar-colunas-orcamentos.js",
+          "size": "3.06 KB",
+          "modified": "2025-07-12"
+        },
+        {
+          "name": "adicionar-rota-salvar-completo.js",
+          "path": "adicionar-rota-salvar-completo.js",
+          "size": "5.53 KB",
+          "modified": "2025-07-03"
+        },
+        {
+          "name": "adicionar-rotas-usuarios.js",
+          "path": "adicionar-rotas-usuarios.js",
+          "size": "2.86 KB",
+          "modified": "2025-07-04"
+        },
+        {
+          "name": "criar-escritorio-completo.js",
+          "path": "criar-escritorio-completo.js",
+          "size": "4.88 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "criar-escritorio-e-corrigir.js",
+          "path": "criar-escritorio-e-corrigir.js",
+          "size": "4.5 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "criar-estrutura-orcamento-manual.js",
+          "path": "criar-estrutura-orcamento-manual.js",
+          "size": "10.2 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "criar-tabela-briefings.js",
+          "path": "criar-tabela-briefings.js",
+          "size": "3.93 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "criar-tabela-orcamentos.js",
+          "path": "criar-tabela-orcamentos.js",
+          "size": "2.76 KB",
+          "modified": "2025-07-12"
+        },
+        {
+          "name": "criar-tabelas-orcamento-simples.js",
+          "path": "criar-tabelas-orcamento-simples.js",
+          "size": "4.51 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "criar-tabelas-supabase-simples.js",
+          "path": "criar-tabelas-supabase-simples.js",
+          "size": "30.86 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "criar-tabelas-supabase.js",
+          "path": "criar-tabelas-supabase.js",
+          "size": "27.12 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "executar-migracao-dados-extraidos.js",
+          "path": "executar-migracao-dados-extraidos.js",
+          "size": "4.52 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "executar-migracao-orcamento.js",
+          "path": "executar-migracao-orcamento.js",
+          "size": "3.83 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "executar-migracao-supabase.js",
+          "path": "executar-migracao-supabase.js",
+          "size": "6.71 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "executar-migracao-triggers.js",
+          "path": "executar-migracao-triggers.js",
+          "size": "3.73 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "executar-migration-pricing.js",
+          "path": "executar-migration-pricing.js",
+          "size": "6.33 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "executar-otimizacoes-performance.js",
+          "path": "executar-otimizacoes-performance.js",
+          "size": "11.92 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "executar-testes-integracao.js",
+          "path": "executar-testes-integracao.js",
+          "size": "14.02 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "migrar-respostas-metadata-para-tabela.js",
+          "path": "migrar-respostas-metadata-para-tabela.js",
+          "size": "5.8 KB",
+          "modified": "2025-07-18"
+        }
+      ]
+    },
+    "DESCONHECIDO - ANALISAR MANUALMENTE": {
+      "count": 159,
+      "size": "1.28 MB",
+      "files": [
+        {
+          "name": "analisar-arquivos-limpeza.js",
+          "path": "analisar-arquivos-limpeza.js",
+          "size": "11.19 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "analisar-briefings-reais.js",
+          "path": "analisar-briefings-reais.js",
+          "size": "10.99 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "analisar-query-insert.js",
+          "path": "analisar-query-insert.js",
+          "size": "2.12 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "analise-banco.js",
+          "path": "analise-banco.js",
+          "size": "2.78 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "ANALISE_CAMPOS_CLIENTE.md",
+          "path": "ANALISE_CAMPOS_CLIENTE.md",
+          "size": "4.71 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "ANALISE_PROBLEMAS_PRECIFICACAO.md",
+          "path": "ANALISE_PROBLEMAS_PRECIFICACAO.md",
+          "size": "5.99 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "ANALISE_PROBLEMA_BRIEFINGS_RESPOSTAS_VAZIAS.md",
+          "path": "ANALISE_PROBLEMA_BRIEFINGS_RESPOSTAS_VAZIAS.md",
+          "size": "5.58 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "apagar-briefings-admin.js",
+          "path": "apagar-briefings-admin.js",
+          "size": "4.18 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "aplicar-correcao-briefing.js",
+          "path": "aplicar-correcao-briefing.js",
+          "size": "3.44 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "atualizar-status-briefing.js",
+          "path": "atualizar-status-briefing.js",
+          "size": "3.07 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "correcao-cirurgica-briefings.js",
+          "path": "correcao-cirurgica-briefings.js",
+          "size": "3.28 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "correcao-completa-uuids.js",
+          "path": "correcao-completa-uuids.js",
+          "size": "1 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "CORRECAO_SALVAMENTO_ORCAMENTOS_COMPLETA.md",
+          "path": "CORRECAO_SALVAMENTO_ORCAMENTOS_COMPLETA.md",
+          "size": "3.8 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "create-auth-tables-final.js",
+          "path": "create-auth-tables-final.js",
+          "size": "7.52 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "create-auth-tables-simple.js",
+          "path": "create-auth-tables-simple.js",
+          "size": "8.01 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "create-auth-tables.js",
+          "path": "create-auth-tables.js",
+          "size": "986 Bytes",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "create-test-user.js",
+          "path": "create-test-user.js",
+          "size": "2.39 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "dados-realistas-briefings.js",
+          "path": "dados-realistas-briefings.js",
+          "size": "17.15 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cacheService.js",
+          "path": "dist\\cacheService.js",
+          "size": "2.5 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "BudgetBreakdown.js",
+          "path": "dist\\components\\BudgetBreakdown.js",
+          "size": "15.35 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "BudgetIntegrationExample.js",
+          "path": "dist\\components\\BudgetIntegrationExample.js",
+          "size": "13.27 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "BudgetPreview.js",
+          "path": "dist\\components\\BudgetPreview.js",
+          "size": "15.29 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "ConfigurationPanel.js",
+          "path": "dist\\components\\ConfigurationPanel.js",
+          "size": "19.13 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "DataRequestModal.js",
+          "path": "dist\\components\\DataRequestModal.js",
+          "size": "9.76 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "HistoryViewer.js",
+          "path": "dist\\components\\HistoryViewer.js",
+          "size": "13.17 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "index.js",
+          "path": "dist\\components\\index.js",
+          "size": "1.62 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "database-simple.js",
+          "path": "dist\\config\\database-simple.js",
+          "size": "7.77 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "database.js",
+          "path": "dist\\config\\database.js",
+          "size": "4.12 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "logger.js",
+          "path": "dist\\config\\logger.js",
+          "size": "4.45 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "redis.js",
+          "path": "dist\\config\\redis.js",
+          "size": "7.35 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "socket.js",
+          "path": "dist\\config\\socket.js",
+          "size": "12.08 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "auth.js",
+          "path": "dist\\middleware\\auth.js",
+          "size": "7.54 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefingTriggerMiddleware.js",
+          "path": "dist\\middleware\\briefingTriggerMiddleware.js",
+          "size": "3.71 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "budgetErrorHandler.js",
+          "path": "dist\\middleware\\budgetErrorHandler.js",
+          "size": "9.65 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "enterprise.js",
+          "path": "dist\\middleware\\enterprise.js",
+          "size": "10.87 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "errorHandler.js",
+          "path": "dist\\middleware\\errorHandler.js",
+          "size": "8.27 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "performanceMiddleware.js",
+          "path": "dist\\middleware\\performanceMiddleware.js",
+          "size": "7.99 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "validateOrcamento.js",
+          "path": "dist\\middleware\\validateOrcamento.js",
+          "size": "11.95 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "realDataService.js",
+          "path": "dist\\realDataService.js",
+          "size": "8.25 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "arquivos.js",
+          "path": "dist\\routes\\arquivos.js",
+          "size": "1.64 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "atividades.js",
+          "path": "dist\\routes\\atividades.js",
+          "size": "3.73 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "auth.js",
+          "path": "dist\\routes\\auth.js",
+          "size": "11.93 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefings-completos.js",
+          "path": "dist\\routes\\briefings-completos.js",
+          "size": "11.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefings-compostos.js",
+          "path": "dist\\routes\\briefings-compostos.js",
+          "size": "2.74 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefings-frontend.js",
+          "path": "dist\\routes\\briefings-frontend.js",
+          "size": "4.56 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefings-salvos.js",
+          "path": "dist\\routes\\briefings-salvos.js",
+          "size": "6.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefings.js",
+          "path": "dist\\routes\\briefings.js",
+          "size": "58.09 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "clientes-details.js",
+          "path": "dist\\routes\\clientes-details.js",
+          "size": "2.3 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "clientes-simple.js",
+          "path": "dist\\routes\\clientes-simple.js",
+          "size": "3.21 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "clientes.js",
+          "path": "dist\\routes\\clientes.js",
+          "size": "9.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "database-simple.js",
+          "path": "dist\\routes\\config\\database-simple.js",
+          "size": "7.77 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "logger.js",
+          "path": "dist\\routes\\config\\logger.js",
+          "size": "4.45 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "configuracoes-orcamento.js",
+          "path": "dist\\routes\\configuracoes-orcamento.js",
+          "size": "8.24 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "convites-simples.js",
+          "path": "dist\\routes\\convites-simples.js",
+          "size": "8.31 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "convites.js",
+          "path": "dist\\routes\\convites.js",
+          "size": "14.58 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cronometros.js",
+          "path": "dist\\routes\\cronometros.js",
+          "size": "16.3 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "dashboard.js",
+          "path": "dist\\routes\\dashboard.js",
+          "size": "2.57 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "enterprise.js",
+          "path": "dist\\routes\\enterprise.js",
+          "size": "15.12 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "historico-orcamentos.js",
+          "path": "dist\\routes\\historico-orcamentos.js",
+          "size": "7.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "auth.js",
+          "path": "dist\\routes\\middleware\\auth.js",
+          "size": "7.54 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "monitoring-dashboard.js",
+          "path": "dist\\routes\\monitoring-dashboard.js",
+          "size": "11.07 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "notificacoes.js",
+          "path": "dist\\routes\\notificacoes.js",
+          "size": "1.55 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "orcamentos-inteligentes.js",
+          "path": "dist\\routes\\orcamentos-inteligentes.js",
+          "size": "22.12 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "orcamentos-validacao-exemplo.js",
+          "path": "dist\\routes\\orcamentos-validacao-exemplo.js",
+          "size": "9.92 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "orcamentos.js",
+          "path": "dist\\routes\\orcamentos.js",
+          "size": "15.65 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "projetos-simple.js",
+          "path": "dist\\routes\\projetos-simple.js",
+          "size": "3.61 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "projetos.js",
+          "path": "dist\\routes\\projetos.js",
+          "size": "16.49 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cacheService.js",
+          "path": "dist\\routes\\services\\cacheService.js",
+          "size": "2.5 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "realDataService.js",
+          "path": "dist\\routes\\services\\realDataService.js",
+          "size": "8.03 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "simple-routes.js",
+          "path": "dist\\routes\\simple-routes.js",
+          "size": "1.72 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "triggers-monitor.js",
+          "path": "dist\\routes\\triggers-monitor.js",
+          "size": "7.79 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "users-details.js",
+          "path": "dist\\routes\\users-details.js",
+          "size": "1.98 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "users.js",
+          "path": "dist\\routes\\users.js",
+          "size": "15.29 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "asyncHandler.js",
+          "path": "dist\\routes\\utils\\asyncHandler.js",
+          "size": "252 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "limpezaAutomatica.js",
+          "path": "dist\\scripts\\limpezaAutomatica.js",
+          "size": "6.22 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server.js",
+          "path": "dist\\server.js",
+          "size": "8.43 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "adaptiveParser.js",
+          "path": "dist\\services\\adaptiveParser.js",
+          "size": "18.57 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "alertingService.js",
+          "path": "dist\\services\\alertingService.js",
+          "size": "10.12 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "auditoriaService.js",
+          "path": "dist\\services\\auditoriaService.js",
+          "size": "10.27 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefingAnalysisEngine.js",
+          "path": "dist\\services\\briefingAnalysisEngine.js",
+          "size": "19.96 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefingCompostoService.js",
+          "path": "dist\\services\\briefingCompostoService.js",
+          "size": "11.22 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "briefingToOrcamentoService.js",
+          "path": "dist\\services\\briefingToOrcamentoService.js",
+          "size": "44.41 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "budgetCalculationService.js",
+          "path": "dist\\services\\budgetCalculationService.js",
+          "size": "20.17 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cacheService.js",
+          "path": "dist\\services\\cacheService.js",
+          "size": "2.5 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "compressionService.js",
+          "path": "dist\\services\\compressionService.js",
+          "size": "11.48 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "configurationManagementService.js",
+          "path": "dist\\services\\configurationManagementService.js",
+          "size": "18.39 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "BudgetErrors.js",
+          "path": "dist\\services\\errors\\BudgetErrors.js",
+          "size": "6.34 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "fallbackService.js",
+          "path": "dist\\services\\fallbackService.js",
+          "size": "15.49 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "historicoOrcamentoService.js",
+          "path": "dist\\services\\historicoOrcamentoService.js",
+          "size": "14.39 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "loggingService.js",
+          "path": "dist\\services\\loggingService.js",
+          "size": "4.28 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "metricsCollectorService.js",
+          "path": "dist\\services\\metricsCollectorService.js",
+          "size": "9.18 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "paginationService.js",
+          "path": "dist\\services\\paginationService.js",
+          "size": "14.28 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "parallelProcessingService.js",
+          "path": "dist\\services\\parallelProcessingService.js",
+          "size": "13.04 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "performanceMonitorService.js",
+          "path": "dist\\services\\performanceMonitorService.js",
+          "size": "10.58 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "queueService.js",
+          "path": "dist\\services\\queueService.js",
+          "size": "9.49 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "realDataService.js",
+          "path": "dist\\services\\realDataService.js",
+          "size": "8.03 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "reportingService.js",
+          "path": "dist\\services\\reportingService.js",
+          "size": "11.8 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "index.js",
+          "path": "dist\\services\\templatesEngine\\index.js",
+          "size": "811 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "NecessidadesDetector.js",
+          "path": "dist\\services\\templatesEngine\\NecessidadesDetector.js",
+          "size": "8.08 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "ProjetoCompositor.js",
+          "path": "dist\\services\\templatesEngine\\ProjetoCompositor.js",
+          "size": "15.35 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "TemplatesEngine.js",
+          "path": "dist\\services\\templatesEngine\\TemplatesEngine.js",
+          "size": "8.2 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "triggerService.js",
+          "path": "dist\\services\\triggerService.js",
+          "size": "9.89 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "validationService.js",
+          "path": "dist\\services\\validationService.js",
+          "size": "13.58 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "enterprise.js",
+          "path": "dist\\types\\enterprise.js",
+          "size": "115 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "asyncHandler.js",
+          "path": "dist\\utils\\asyncHandler.js",
+          "size": "252 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "auditoria.js",
+          "path": "dist\\utils\\auditoria.js",
+          "size": "6.76 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "index.js",
+          "path": "dist\\workers\\index.js",
+          "size": "6.91 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "notificationWorker.js",
+          "path": "dist\\workers\\notificationWorker.js",
+          "size": "14.05 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "orcamentoWorker.js",
+          "path": "dist\\workers\\orcamentoWorker.js",
+          "size": "8.79 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "excluir-orcamentos-casa-real.js",
+          "path": "excluir-orcamentos-casa-real.js",
+          "size": "4.82 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "fix-admin-uuid.js",
+          "path": "fix-admin-uuid.js",
+          "size": "1 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "fix-redis-errors.js",
+          "path": "fix-redis-errors.js",
+          "size": "9.61 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "fix-table-simple.js",
+          "path": "fix-table-simple.js",
+          "size": "2.26 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "GUIA-DESENVOLVIMENTO-SEGURO.md",
+          "path": "GUIA-DESENVOLVIMENTO-SEGURO.md",
+          "size": "2.86 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "GUIA-TESTE-SISTEMA-ORCAMENTOS-COMPLETO.md",
+          "path": "GUIA-TESTE-SISTEMA-ORCAMENTOS-COMPLETO.md",
+          "size": "4.16 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "habilitar-botao-orcamento.js",
+          "path": "habilitar-botao-orcamento.js",
+          "size": "3.89 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "iniciar-backend-seguro.js",
+          "path": "iniciar-backend-seguro.js",
+          "size": "4.67 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "iniciar-servidor.js",
+          "path": "iniciar-servidor.js",
+          "size": "4.9 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "iniciar-workers.js",
+          "path": "iniciar-workers.js",
+          "size": "4.04 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "INTEGRATION_DOCUMENTATION.md",
+          "path": "INTEGRATION_DOCUMENTATION.md",
+          "size": "14.19 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "jest.config.js",
+          "path": "jest.config.js",
+          "size": "1.66 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "limpar-dados-antigos.js",
+          "path": "limpar-dados-antigos.js",
+          "size": "4.18 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "limpar-e-iniciar.js",
+          "path": "limpar-e-iniciar.js",
+          "size": "1.89 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "limpar-rate-limit.js",
+          "path": "limpar-rate-limit.js",
+          "size": "1.66 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "limpar-refresh-tokens.js",
+          "path": "limpar-refresh-tokens.js",
+          "size": "1.15 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "list-users-simple.js",
+          "path": "list-users-simple.js",
+          "size": "2.26 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "login-e-testar.js",
+          "path": "login-e-testar.js",
+          "size": "4.38 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "mapeamento-briefings-orcamento.js",
+          "path": "mapeamento-briefings-orcamento.js",
+          "size": "8.48 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "migrate-clientes-table.js",
+          "path": "migrate-clientes-table.js",
+          "size": "5.04 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "payment-routes.js",
+          "path": "payment-routes.js",
+          "size": "10.05 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "PERFORMANCE_OPTIMIZATIONS.md",
+          "path": "PERFORMANCE_OPTIMIZATIONS.md",
+          "size": "8.91 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "README-PREENCHIMENTO-BRIEFINGS.md",
+          "path": "README-PREENCHIMENTO-BRIEFINGS.md",
+          "size": "9.11 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "README.md",
+          "path": "README.md",
+          "size": "7.96 KB",
+          "modified": "2025-06-26"
+        },
+        {
+          "name": "reset-database.js",
+          "path": "reset-database.js",
+          "size": "10.18 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "run-integration-tests.js",
+          "path": "run-integration-tests.js",
+          "size": "6.92 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "script-preenchimento-briefings.js",
+          "path": "script-preenchimento-briefings.js",
+          "size": "14.65 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "SOLUCAO-DEFINITIVA-BRIEFINGS.md",
+          "path": "SOLUCAO-DEFINITIVA-BRIEFINGS.md",
+          "size": "3.25 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "solucao-definitiva-uuid.js",
+          "path": "solucao-definitiva-uuid.js",
+          "size": "6.51 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "SOLUCAO-FINAL-BRIEFINGS.md",
+          "path": "SOLUCAO-FINAL-BRIEFINGS.md",
+          "size": "3.47 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "SOLUCAO-LOOP-AUTENTICACAO.md",
+          "path": "SOLUCAO-LOOP-AUTENTICACAO.md",
+          "size": "9.02 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "README.md",
+          "path": "src\\components\\README.md",
+          "size": "6.21 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "auth-rate-limit.js",
+          "path": "src\\middleware\\auth-rate-limit.js",
+          "size": "7.76 KB",
+          "modified": "2025-07-12"
+        },
+        {
+          "name": "jwt-cache-fallback.js",
+          "path": "src\\middleware\\jwt-cache-fallback.js",
+          "size": "4.51 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "jwt-cache.js",
+          "path": "src\\middleware\\jwt-cache.js",
+          "size": "11.14 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "monitoring.js",
+          "path": "src\\middleware\\monitoring.js",
+          "size": "11.02 KB",
+          "modified": "2025-07-12"
+        },
+        {
+          "name": "README-validacao.md",
+          "path": "src\\services\\README-validacao.md",
+          "size": "7.88 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cpfCache.js",
+          "path": "src\\utils\\cpfCache.js",
+          "size": "3.05 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "analysisWorker.js",
+          "path": "src\\workers\\analysisWorker.js",
+          "size": "16.02 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "start-server.js",
+          "path": "start-server.js",
+          "size": "885 Bytes",
+          "modified": "2025-07-04"
+        },
+        {
+          "name": "TESTE-SISTEMA-RESTAURADO.md",
+          "path": "TESTE-SISTEMA-RESTAURADO.md",
+          "size": "6.15 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "README.md",
+          "path": "tests\\integration\\README.md",
+          "size": "6.45 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "run-all-tests.js",
+          "path": "tests\\integration\\run-all-tests.js",
+          "size": "15.49 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "jest.integration.config.js",
+          "path": "tests\\jest.integration.config.js",
+          "size": "2.11 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "globalSetup.js",
+          "path": "tests\\setup\\globalSetup.js",
+          "size": "5.78 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "globalTeardown.js",
+          "path": "tests\\setup\\globalTeardown.js",
+          "size": "2.69 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "setupTests.js",
+          "path": "tests\\setup\\setupTests.js",
+          "size": "8.2 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "testSequencer.js",
+          "path": "tests\\setup\\testSequencer.js",
+          "size": "1.55 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "update-clientes-table.js",
+          "path": "update-clientes-table.js",
+          "size": "5.62 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "ver-orcamentos.js",
+          "path": "ver-orcamentos.js",
+          "size": "841 Bytes",
+          "modified": "2025-07-12"
+        }
+      ]
+    },
+    "CONFIGURAÇÃO - ANALISAR": {
+      "count": 89,
+      "size": "328.44 KB",
+      "files": [
+        {
+          "name": "check-clientes-table.js",
+          "path": "check-clientes-table.js",
+          "size": "2.55 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "check-escritorios-table.js",
+          "path": "check-escritorios-table.js",
+          "size": "1.76 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "check-status.js",
+          "path": "check-status.js",
+          "size": "645 Bytes",
+          "modified": "2025-07-11"
+        },
+        {
+          "name": "check-tables.js",
+          "path": "check-tables.js",
+          "size": "1.28 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "check-user-escritorio.js",
+          "path": "check-user-escritorio.js",
+          "size": "3.48 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "check-users-table.js",
+          "path": "check-users-table.js",
+          "size": "4.31 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "corrigir-area-briefings.js",
+          "path": "corrigir-area-briefings.js",
+          "size": "9.96 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "corrigir-briefings-teste.js",
+          "path": "corrigir-briefings-teste.js",
+          "size": "10.12 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "corrigir-created-by.js",
+          "path": "corrigir-created-by.js",
+          "size": "2.63 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-escritorio-clientes.js",
+          "path": "corrigir-escritorio-clientes.js",
+          "size": "4.01 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-escritorio-usuario.js",
+          "path": "corrigir-escritorio-usuario.js",
+          "size": "3.03 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "corrigir-inconsistencia-escritorios.js",
+          "path": "corrigir-inconsistencia-escritorios.js",
+          "size": "4.74 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-multi-tenancy.js",
+          "path": "corrigir-multi-tenancy.js",
+          "size": "4.49 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-post-briefings.js",
+          "path": "corrigir-post-briefings.js",
+          "size": "1.76 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-rate-limit-agora.js",
+          "path": "corrigir-rate-limit-agora.js",
+          "size": "1.87 KB",
+          "modified": "2025-07-11"
+        },
+        {
+          "name": "corrigir-responsavel-final.js",
+          "path": "corrigir-responsavel-final.js",
+          "size": "1.83 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-responsavel-id.js",
+          "path": "corrigir-responsavel-id.js",
+          "size": "1.27 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-tabela-orcamentos.js",
+          "path": "corrigir-tabela-orcamentos.js",
+          "size": "4.02 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "corrigir-tipos-orcamentos.js",
+          "path": "corrigir-tipos-orcamentos.js",
+          "size": "5.19 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "corrigir-uuid-admin.js",
+          "path": "corrigir-uuid-admin.js",
+          "size": "1 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "corrigir-uuid.js",
+          "path": "corrigir-uuid.js",
+          "size": "2.28 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "investigar-briefings.js",
+          "path": "investigar-briefings.js",
+          "size": "3.17 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "investigar-problema-escritorio.js",
+          "path": "investigar-problema-escritorio.js",
+          "size": "3.6 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "investigar-respostas.js",
+          "path": "investigar-respostas.js",
+          "size": "3.78 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "investigar-tabela-briefings.js",
+          "path": "investigar-tabela-briefings.js",
+          "size": "4.39 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "testar-api-briefings.js",
+          "path": "testar-api-briefings.js",
+          "size": "2.55 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "testar-api-clientes-com-token.js",
+          "path": "testar-api-clientes-com-token.js",
+          "size": "3.29 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "testar-api-gerar-orcamento.js",
+          "path": "testar-api-gerar-orcamento.js",
+          "size": "4.32 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-api-orcamento-especifico.js",
+          "path": "testar-api-orcamento-especifico.js",
+          "size": "3.08 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-api-respostas.js",
+          "path": "testar-api-respostas.js",
+          "size": "1.96 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-briefings-ok.js",
+          "path": "testar-briefings-ok.js",
+          "size": "911 Bytes",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "testar-briefings.js",
+          "path": "testar-briefings.js",
+          "size": "1.19 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "testar-cargos-portugueses.js",
+          "path": "testar-cargos-portugueses.js",
+          "size": "3.7 KB",
+          "modified": "2025-07-05"
+        },
+        {
+          "name": "testar-cliente-rapido.js",
+          "path": "testar-cliente-rapido.js",
+          "size": "2.74 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "testar-conexao-banco.js",
+          "path": "testar-conexao-banco.js",
+          "size": "5.52 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-convites-corrigido.js",
+          "path": "testar-convites-corrigido.js",
+          "size": "1.86 KB",
+          "modified": "2025-07-05"
+        },
+        {
+          "name": "testar-convites-novo.js",
+          "path": "testar-convites-novo.js",
+          "size": "868 Bytes",
+          "modified": "2025-07-05"
+        },
+        {
+          "name": "testar-correcao-final.js",
+          "path": "testar-correcao-final.js",
+          "size": "6.39 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-credenciais.js",
+          "path": "testar-credenciais.js",
+          "size": "4.55 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-dados-banco-fixed.js",
+          "path": "testar-dados-banco-fixed.js",
+          "size": "4.2 KB",
+          "modified": "2025-07-11"
+        },
+        {
+          "name": "testar-dados-banco.js",
+          "path": "testar-dados-banco.js",
+          "size": "4.05 KB",
+          "modified": "2025-07-11"
+        },
+        {
+          "name": "testar-dashboard-completo.js",
+          "path": "testar-dashboard-completo.js",
+          "size": "4.36 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-login-admin.js",
+          "path": "testar-login-admin.js",
+          "size": "2.72 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "testar-login-simples.js",
+          "path": "testar-login-simples.js",
+          "size": "3.31 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-nova-estrutura-clientes.js",
+          "path": "testar-nova-estrutura-clientes.js",
+          "size": "5.54 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "testar-respostas-definitivo.js",
+          "path": "testar-respostas-definitivo.js",
+          "size": "4.59 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-respostas-fixado.js",
+          "path": "testar-respostas-fixado.js",
+          "size": "2.43 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-rota-salvar-completo.js",
+          "path": "testar-rota-salvar-completo.js",
+          "size": "2.18 KB",
+          "modified": "2025-07-03"
+        },
+        {
+          "name": "testar-simples.js",
+          "path": "testar-simples.js",
+          "size": "544 Bytes",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-supabase-direto.js",
+          "path": "testar-supabase-direto.js",
+          "size": "4.21 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "testar-usuario-existente.js",
+          "path": "testar-usuario-existente.js",
+          "size": "1.6 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "testar-usuario-generico.js",
+          "path": "testar-usuario-generico.js",
+          "size": "8.96 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "verificar-briefing-especifico.js",
+          "path": "verificar-briefing-especifico.js",
+          "size": "5.11 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-briefings-dashboard.js",
+          "path": "verificar-briefings-dashboard.js",
+          "size": "1.83 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "verificar-briefings-teste.js",
+          "path": "verificar-briefings-teste.js",
+          "size": "16.66 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-clientes-simples.js",
+          "path": "verificar-clientes-simples.js",
+          "size": "2.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-colunas-clientes.js",
+          "path": "verificar-colunas-clientes.js",
+          "size": "1.16 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "verificar-colunas-faltando.js",
+          "path": "verificar-colunas-faltando.js",
+          "size": "2.61 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "verificar-dados-reais.js",
+          "path": "verificar-dados-reais.js",
+          "size": "5.53 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-dados-teste.js",
+          "path": "verificar-dados-teste.js",
+          "size": "3.96 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-escritorios.js",
+          "path": "verificar-escritorios.js",
+          "size": "2.76 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-briefings-teste.js",
+          "path": "verificar-estrutura-briefings-teste.js",
+          "size": "3.8 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-briefings.js",
+          "path": "verificar-estrutura-briefings.js",
+          "size": "3.49 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-clientes.js",
+          "path": "verificar-estrutura-clientes.js",
+          "size": "1.81 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-escritorios.js",
+          "path": "verificar-estrutura-escritorios.js",
+          "size": "1.52 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "verificar-estrutura-orcamentos.js",
+          "path": "verificar-estrutura-orcamentos.js",
+          "size": "3.01 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-respostas-briefing.js",
+          "path": "verificar-estrutura-respostas-briefing.js",
+          "size": "5.49 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-estrutura-users.js",
+          "path": "verificar-estrutura-users.js",
+          "size": "1.54 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "verificar-migracao-sucesso.js",
+          "path": "verificar-migracao-sucesso.js",
+          "size": "5.44 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-orcamento-briefing-especifico.js",
+          "path": "verificar-orcamento-briefing-especifico.js",
+          "size": "3.83 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-orcamento-id-7.js",
+          "path": "verificar-orcamento-id-7.js",
+          "size": "4.65 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-orcamentos-existentes.js",
+          "path": "verificar-orcamentos-existentes.js",
+          "size": "4.2 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-problemas-restantes.js",
+          "path": "verificar-problemas-restantes.js",
+          "size": "2.59 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "verificar-rafael-silveira.js",
+          "path": "verificar-rafael-silveira.js",
+          "size": "3 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "verificar-sistema-briefings.js",
+          "path": "verificar-sistema-briefings.js",
+          "size": "8.83 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "verificar-sistema-completo.js",
+          "path": "verificar-sistema-completo.js",
+          "size": "6.77 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "verificar-status-briefings.js",
+          "path": "verificar-status-briefings.js",
+          "size": "3.62 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "verificar-tabela-briefings.js",
+          "path": "verificar-tabela-briefings.js",
+          "size": "1.6 KB",
+          "modified": "2025-07-03"
+        },
+        {
+          "name": "verificar-tipos-briefings.js",
+          "path": "verificar-tipos-briefings.js",
+          "size": "3.69 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "verificar-tipos-clientes-users.js",
+          "path": "verificar-tipos-clientes-users.js",
+          "size": "5.44 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "verificar-tipos-colunas.js",
+          "path": "verificar-tipos-colunas.js",
+          "size": "2.76 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-tipos-users-escritorios.js",
+          "path": "verificar-tipos-users-escritorios.js",
+          "size": "2.13 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "verificar-usuario-admin.js",
+          "path": "verificar-usuario-admin.js",
+          "size": "4.18 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "verificar-usuario-senha.js",
+          "path": "verificar-usuario-senha.js",
+          "size": "1.66 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "verificar-usuarios-admin.js",
+          "path": "verificar-usuarios-admin.js",
+          "size": "2.59 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-usuarios-correto.js",
+          "path": "verificar-usuarios-correto.js",
+          "size": "3.56 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "verificar-usuarios-existentes.js",
+          "path": "verificar-usuarios-existentes.js",
+          "size": "2.3 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "verificar-usuarios-supabase.js",
+          "path": "verificar-usuarios-supabase.js",
+          "size": "12.8 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "verificar-usuarios.js",
+          "path": "verificar-usuarios.js",
+          "size": "2.27 KB",
+          "modified": "2025-07-18"
+        }
+      ]
+    },
+    "DEBUG - PODE DELETAR": {
+      "count": 17,
+      "size": "72.34 KB",
+      "files": [
+        {
+          "name": "debug-apis.js",
+          "path": "debug-apis.js",
+          "size": "3.68 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "debug-briefing-404.js",
+          "path": "debug-briefing-404.js",
+          "size": "3.8 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "debug-briefing-completo.js",
+          "path": "debug-briefing-completo.js",
+          "size": "9.31 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "debug-briefing-error.js",
+          "path": "debug-briefing-error.js",
+          "size": "3.71 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-briefing-personalizado.js",
+          "path": "debug-briefing-personalizado.js",
+          "size": "4.98 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "debug-briefing-simple.js",
+          "path": "debug-briefing-simple.js",
+          "size": "3.91 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "debug-clientes.js",
+          "path": "debug-clientes.js",
+          "size": "3.35 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "debug-dados-briefing.js",
+          "path": "debug-dados-briefing.js",
+          "size": "1.82 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-endereco-completo.js",
+          "path": "debug-endereco-completo.js",
+          "size": "4.5 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "debug-login-completo.js",
+          "path": "debug-login-completo.js",
+          "size": "2.5 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "debug-middleware.js",
+          "path": "debug-middleware.js",
+          "size": "4.36 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "debug-orcamento-real.js",
+          "path": "debug-orcamento-real.js",
+          "size": "4.21 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-query-orcamento.js",
+          "path": "debug-query-orcamento.js",
+          "size": "4.96 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-rota-respostas.js",
+          "path": "debug-rota-respostas.js",
+          "size": "4.23 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "debug-salvamento-orcamento.js",
+          "path": "debug-salvamento-orcamento.js",
+          "size": "5.39 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-token-jwt.js",
+          "path": "debug-token-jwt.js",
+          "size": "4.55 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "debug-usuario-correto.js",
+          "path": "debug-usuario-correto.js",
+          "size": "3.08 KB",
+          "modified": "2025-07-18"
+        }
+      ]
+    },
+    "TEMPORÁRIO - PODE DELETAR": {
+      "count": 6,
+      "size": "147.04 KB",
+      "files": [
+        {
+          "name": "auth-working.js",
+          "path": "dist\\routes\\auth-working.js",
+          "size": "9.55 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "clientes-working.js",
+          "path": "dist\\routes\\clientes-working.js",
+          "size": "24.36 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "cronometros-working.js",
+          "path": "dist\\routes\\cronometros-working.js",
+          "size": "992 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "projetos-working.js",
+          "path": "dist\\routes\\projetos-working.js",
+          "size": "1.42 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server-simple-temp.js",
+          "path": "server-simple-temp.js",
+          "size": "56.02 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "server-working.js",
+          "path": "server-working.js",
+          "size": "54.72 KB",
+          "modified": "2025-07-02"
+        }
+      ]
+    },
+    "TESTE - PODE DELETAR": {
+      "count": 90,
+      "size": "559.6 KB",
+      "files": [
+        {
+          "name": "test-data.js",
+          "path": "dist\\routes\\routes\\test-data.js",
+          "size": "4.03 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "test-data.js",
+          "path": "dist\\routes\\test-data.js",
+          "size": "4.03 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server-redis-test.js",
+          "path": "server-redis-test.js",
+          "size": "16.25 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "server-test.js",
+          "path": "server-test.js",
+          "size": "878 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "test-data-simple.js",
+          "path": "src\\routes\\test-data-simple.js",
+          "size": "737 Bytes",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "test-api-clientes-final.js",
+          "path": "test-api-clientes-final.js",
+          "size": "4.04 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-api-completo-debug.js",
+          "path": "test-api-completo-debug.js",
+          "size": "7.46 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "test-api-completo.js",
+          "path": "test-api-completo.js",
+          "size": "3.59 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-api-quick.js",
+          "path": "test-api-quick.js",
+          "size": "3.59 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-apis-now.js",
+          "path": "test-apis-now.js",
+          "size": "2.37 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-auth-api.js",
+          "path": "test-auth-api.js",
+          "size": "4.25 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-auth-complete.js",
+          "path": "test-auth-complete.js",
+          "size": "8.8 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-briefing-data.js",
+          "path": "test-briefing-data.js",
+          "size": "1.71 KB",
+          "modified": "2025-07-04"
+        },
+        {
+          "name": "test-briefing.js",
+          "path": "test-briefing.js",
+          "size": "1.82 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "test-briefings-api.js",
+          "path": "test-briefings-api.js",
+          "size": "1.41 KB",
+          "modified": "2025-07-11"
+        },
+        {
+          "name": "test-buscar-briefing.js",
+          "path": "test-buscar-briefing.js",
+          "size": "5.32 KB",
+          "modified": "2025-07-09"
+        },
+        {
+          "name": "test-cliente-simples.js",
+          "path": "test-cliente-simples.js",
+          "size": "2.62 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "test-clientes-api-final.js",
+          "path": "test-clientes-api-final.js",
+          "size": "5.87 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-clientes-api.js",
+          "path": "test-clientes-api.js",
+          "size": "5.11 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-clientes-crud.js",
+          "path": "test-clientes-crud.js",
+          "size": "4.65 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-clientes-simples.js",
+          "path": "test-clientes-simples.js",
+          "size": "1.5 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-com-auth.js",
+          "path": "test-com-auth.js",
+          "size": "4 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "test-complete-fix.js",
+          "path": "test-complete-fix.js",
+          "size": "7.45 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-complete-system.js",
+          "path": "test-complete-system.js",
+          "size": "10.8 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-complete.js",
+          "path": "test-complete.js",
+          "size": "2.78 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-cpf.js",
+          "path": "test-cpf.js",
+          "size": "1.4 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "test-dashboard-briefing.js",
+          "path": "test-dashboard-briefing.js",
+          "size": "6.47 KB",
+          "modified": "2025-07-06"
+        },
+        {
+          "name": "test-db.js",
+          "path": "test-db.js",
+          "size": "774 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "test-enterprise.js",
+          "path": "test-enterprise.js",
+          "size": "11.09 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "test-estruturas-api.js",
+          "path": "test-estruturas-api.js",
+          "size": "6.94 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "test-frontend-real.js",
+          "path": "test-frontend-real.js",
+          "size": "3.74 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "test-login-direto.js",
+          "path": "test-login-direto.js",
+          "size": "1.42 KB",
+          "modified": "2025-06-29"
+        },
+        {
+          "name": "test-login-quick.js",
+          "path": "test-login-quick.js",
+          "size": "911 Bytes",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-orcamento-fix.js",
+          "path": "test-orcamento-fix.js",
+          "size": "4.84 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "test-pg-redis.js",
+          "path": "test-pg-redis.js",
+          "size": "1.59 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "test-plans-debug.js",
+          "path": "test-plans-debug.js",
+          "size": "2.7 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "test-postgres-simple.js",
+          "path": "test-postgres-simple.js",
+          "size": "634 Bytes",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "test-query-clientes.js",
+          "path": "test-query-clientes.js",
+          "size": "3.53 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "test-redis-connection.js",
+          "path": "test-redis-connection.js",
+          "size": "1.98 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "test-rota-respostas.js",
+          "path": "test-rota-respostas.js",
+          "size": "4.31 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "test-server-start.js",
+          "path": "test-server-start.js",
+          "size": "1.22 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "test-simple-connection.js",
+          "path": "test-simple-connection.js",
+          "size": "1.17 KB",
+          "modified": "2025-06-27"
+        },
+        {
+          "name": "teste-api-users.js",
+          "path": "teste-api-users.js",
+          "size": "1.9 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-apis-configuracoes-orcamento.js",
+          "path": "teste-apis-configuracoes-orcamento.js",
+          "size": "12.73 KB",
+          "modified": "2025-07-21"
+        },
+        {
+          "name": "teste-apis-orcamentos-inteligentes.js",
+          "path": "teste-apis-orcamentos-inteligentes.js",
+          "size": "14.51 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-auth-debug.js",
+          "path": "teste-auth-debug.js",
+          "size": "4.44 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-auth-me.js",
+          "path": "teste-auth-me.js",
+          "size": "3.4 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-auth-rapido.js",
+          "path": "teste-auth-rapido.js",
+          "size": "2.63 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-briefing-analysis-engine.js",
+          "path": "teste-briefing-analysis-engine.js",
+          "size": "12.69 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-briefing-corrigido.js",
+          "path": "teste-briefing-corrigido.js",
+          "size": "2.87 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-briefing-simples.js",
+          "path": "teste-briefing-simples.js",
+          "size": "1.75 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-briefing-template-correto.js",
+          "path": "teste-briefing-template-correto.js",
+          "size": "6.68 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "teste-briefings.js",
+          "path": "teste-briefings.js",
+          "size": "80 Bytes",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-budget-calculation-service.js",
+          "path": "teste-budget-calculation-service.js",
+          "size": "23.75 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-cliente-completo.js",
+          "path": "teste-cliente-completo.js",
+          "size": "5.7 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-clientes-debug.js",
+          "path": "teste-clientes-debug.js",
+          "size": "4.44 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-clientes-rapido.js",
+          "path": "teste-clientes-rapido.js",
+          "size": "3.19 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-conexao-banco.js",
+          "path": "teste-conexao-banco.js",
+          "size": "2.05 KB",
+          "modified": "2025-06-28"
+        },
+        {
+          "name": "teste-conexao-simples.js",
+          "path": "teste-conexao-simples.js",
+          "size": "1.17 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "teste-configuration-management-service-simples.js",
+          "path": "teste-configuration-management-service-simples.js",
+          "size": "10.03 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-configuration-management-service.js",
+          "path": "teste-configuration-management-service.js",
+          "size": "20.51 KB",
+          "modified": "2025-07-21"
+        },
+        {
+          "name": "teste-correcoes-completas.js",
+          "path": "teste-correcoes-completas.js",
+          "size": "1.81 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "teste-cpf-tempo-real-completo.js",
+          "path": "teste-cpf-tempo-real-completo.js",
+          "size": "7.98 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "teste-dados-briefing.js",
+          "path": "teste-dados-briefing.js",
+          "size": "1.81 KB",
+          "modified": "2025-07-03"
+        },
+        {
+          "name": "teste-env-direto.js",
+          "path": "teste-env-direto.js",
+          "size": "2.78 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "teste-final-apis.js",
+          "path": "teste-final-apis.js",
+          "size": "3.47 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-final-correcoes.js",
+          "path": "teste-final-correcoes.js",
+          "size": "2.92 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "teste-historico-versionamento.js",
+          "path": "teste-historico-versionamento.js",
+          "size": "14.81 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-login-completo.js",
+          "path": "teste-login-completo.js",
+          "size": "3.71 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "teste-login-simples.js",
+          "path": "teste-login-simples.js",
+          "size": "1.12 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-orcamentos-completo.js",
+          "path": "teste-orcamentos-completo.js",
+          "size": "13.74 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "teste-precificacao-realista.js",
+          "path": "teste-precificacao-realista.js",
+          "size": "10.98 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "teste-rapido-cpf-api.js",
+          "path": "teste-rapido-cpf-api.js",
+          "size": "3.68 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "teste-rapido-respostas.js",
+          "path": "teste-rapido-respostas.js",
+          "size": "1014 Bytes",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "teste-rota-simples.js",
+          "path": "teste-rota-simples.js",
+          "size": "1.82 KB",
+          "modified": "2025-07-08"
+        },
+        {
+          "name": "teste-servidor-admin.js",
+          "path": "teste-servidor-admin.js",
+          "size": "2.16 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "teste-servidor-funcionando.js",
+          "path": "teste-servidor-funcionando.js",
+          "size": "2.53 KB",
+          "modified": "2025-07-10"
+        },
+        {
+          "name": "teste-simples.js",
+          "path": "teste-simples.js",
+          "size": "1.59 KB",
+          "modified": "2025-07-07"
+        },
+        {
+          "name": "teste-sistema-triggers.js",
+          "path": "teste-sistema-triggers.js",
+          "size": "7.01 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-templates-dinamicos.js",
+          "path": "teste-templates-dinamicos.js",
+          "size": "4.79 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "teste-triggers-completo.js",
+          "path": "teste-triggers-completo.js",
+          "size": "10.67 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "teste-verificacao-cpf-duplicado.js",
+          "path": "teste-verificacao-cpf-duplicado.js",
+          "size": "4.26 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "budget-integration.test.js",
+          "path": "tests\\integration\\budget-integration.test.js",
+          "size": "14.5 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "concurrency.test.js",
+          "path": "tests\\integration\\concurrency.test.js",
+          "size": "20.38 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "custom-briefing.test.js",
+          "path": "tests\\integration\\custom-briefing.test.js",
+          "size": "17.07 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "end-to-end-complete.test.js",
+          "path": "tests\\integration\\end-to-end-complete.test.js",
+          "size": "25.75 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "error-recovery.test.js",
+          "path": "tests\\integration\\error-recovery.test.js",
+          "size": "21.84 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "orcamentos-integration.test.js",
+          "path": "tests\\integration\\orcamentos-integration.test.js",
+          "size": "20.25 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "budget-performance.test.js",
+          "path": "tests\\performance\\budget-performance.test.js",
+          "size": "15.63 KB",
+          "modified": "2025-07-17"
+        },
+        {
+          "name": "pricing.test.js",
+          "path": "tests\\unit\\pricing.test.js",
+          "size": "15.37 KB",
+          "modified": "2025-07-18"
+        }
+      ]
+    },
+    "BACKUP - ANALISAR": {
+      "count": 11,
+      "size": "195.31 KB",
+      "files": [
+        {
+          "name": "server-performance.js",
+          "path": "dist\\server-performance.js",
+          "size": "60 Bytes",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server-updated.js",
+          "path": "dist\\server-updated.js",
+          "size": "8.08 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server-complete.js",
+          "path": "server-complete.js",
+          "size": "27.36 KB",
+          "modified": "2025-07-16"
+        },
+        {
+          "name": "server-definitivo-uuid.js",
+          "path": "server-definitivo-uuid.js",
+          "size": "7.09 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "server-escalavel-producao.js",
+          "path": "server-escalavel-producao.js",
+          "size": "9.43 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "server-escalavel-redis.js",
+          "path": "server-escalavel-redis.js",
+          "size": "19.77 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "server-escalavel.js",
+          "path": "server-escalavel.js",
+          "size": "4.19 KB",
+          "modified": "2025-06-30"
+        },
+        {
+          "name": "server-rede-local.js",
+          "path": "server-rede-local.js",
+          "size": "8.33 KB",
+          "modified": "2025-07-06"
+        },
+        {
+          "name": "server-redis-escalavel.js",
+          "path": "server-redis-escalavel.js",
+          "size": "14.34 KB",
+          "modified": "2025-07-01"
+        },
+        {
+          "name": "server-simple-backup-uuid.js",
+          "path": "server-simple-backup-uuid.js",
+          "size": "54.72 KB",
+          "modified": "2025-07-02"
+        },
+        {
+          "name": "server-simple-backup.js",
+          "path": "server-simple-backup.js",
+          "size": "41.94 KB",
+          "modified": "2025-06-29"
+        }
+      ]
+    },
+    "CRÍTICO - NUNCA DELETAR": {
+      "count": 5,
+      "size": "581.32 KB",
+      "files": [
+        {
+          "name": "package-lock.json",
+          "path": "package-lock.json",
+          "size": "306 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "package.json",
+          "path": "package.json",
+          "size": "3.33 KB",
+          "modified": "2025-07-18"
+        },
+        {
+          "name": "server-simple-BACKUP-ORIGINAL.js",
+          "path": "server-simple-BACKUP-ORIGINAL.js",
+          "size": "135.43 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "server-simple.js",
+          "path": "server-simple.js",
+          "size": "135.43 KB",
+          "modified": "2025-07-24"
+        },
+        {
+          "name": "tsconfig.json",
+          "path": "tsconfig.json",
+          "size": "1.12 KB",
+          "modified": "2025-06-26"
+        }
+      ]
+    }
+  },
+  "recommendations": {
+    "canDelete": 113,
+    "shouldKeep": 25,
+    "needsReview": 259
+  }
+}

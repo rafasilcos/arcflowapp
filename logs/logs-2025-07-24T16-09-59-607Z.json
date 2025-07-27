@@ -1,0 +1,82 @@
+[
+  {
+    "timestamp": "2025-07-24T16:09:27.339Z",
+    "level": "INFO",
+    "message": "🚀 Inicializando Sistema de Preenchimento Automático"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:27.730Z",
+    "level": "INFO",
+    "message": "✅ Sistema inicializado com sucesso"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:27.731Z",
+    "level": "INFO",
+    "message": "🔐 Realizando login no sistema"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:42.528Z",
+    "level": "INFO",
+    "message": "✅ Login realizado com sucesso"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:42.529Z",
+    "level": "INFO",
+    "message": "📋 Iniciando processamento de briefings"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:42.529Z",
+    "level": "INFO",
+    "message": "📝 Processando briefing 1/1: residencial-unifamiliar"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:58.968Z",
+    "level": "ERROR",
+    "message": "❌ Erro no processamento do briefing residencial-unifamiliar:",
+    "args": [
+      {
+        "name": "TimeoutError"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.249Z",
+    "level": "ERROR",
+    "message": "❌ Erro ao processar briefing residencial-unifamiliar:",
+    "args": [
+      {
+        "name": "TimeoutError"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.250Z",
+    "level": "INFO",
+    "message": "📊 Gerando relatório final"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.251Z",
+    "level": "INFO",
+    "message": "📋 Relatório salvo: relatorio-briefings-1753373399250.json"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.251Z",
+    "level": "INFO",
+    "message": "🎉 Processamento concluído!"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.252Z",
+    "level": "INFO",
+    "message": "📊 Estatísticas: 0 sucessos, 1 erros"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.252Z",
+    "level": "INFO",
+    "message": "🔚 Finalizando sistema"
+  },
+  {
+    "timestamp": "2025-07-24T16:09:59.607Z",
+    "level": "INFO",
+    "message": "✅ Sistema finalizado com sucesso"
+  }
+]

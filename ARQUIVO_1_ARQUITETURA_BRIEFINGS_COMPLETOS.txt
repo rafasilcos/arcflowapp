@@ -1,0 +1,2454 @@
+ARQUIVO 1 - DISCIPLINA: ARQUITETURA
+TODOS OS BRIEFINGS COMPLETOS COM TODAS AS PERGUNTAS
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: RESIDENCIAL
+TIPOLOGIA: CASA UNIFAMILIAR
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o seu nome completo?
+2. Qual é o seu telefone principal?
+3. Qual é o seu e-mail?
+4. Qual é o seu endereço completo?
+5. Qual é a sua profissão?
+6. Qual é o seu estado civil?
+7. Quantas pessoas moram na residência?
+8. Quais são as idades dos moradores?
+9. Há previsão de mudança na composição familiar nos próximos 5 anos?
+10. Algum morador possui necessidades especiais de acessibilidade?
+
+SEÇÃO 2: TERRENO E LOCALIZAÇÃO
+11. Qual é o endereço completo do terreno?
+12. Qual é a área total do terreno (m²)?
+13. Quais são as dimensões do terreno (frente x fundo)?
+14. Qual é a topografia do terreno (plano, aclive, declive)?
+15. Qual é a orientação solar do terreno (norte, sul, leste, oeste)?
+16. Há construções vizinhas? Descreva.
+17. Qual é o tipo de solo predominante?
+18. Há árvores no terreno que devem ser preservadas?
+19. Qual é a infraestrutura disponível (água, luz, esgoto, gás)?
+20. Há restrições legais ou do condomínio para construção?
+21. Qual é o gabarito máximo permitido?
+22. Quais são os recuos obrigatórios?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível para o projeto?
+24. Este orçamento inclui o projeto arquitetônico?
+25. Este orçamento inclui projetos complementares?
+26. Este orçamento inclui a construção?
+27. Este orçamento inclui mobiliário?
+28. Como será o financiamento da obra?
+29. Há prazo limite para conclusão da obra?
+30. Há recursos para imprevistos (reserva de contingência)?
+
+SEÇÃO 4: PROGRAMA ARQUITETÔNICO
+31. Quantos quartos são necessários?
+32. Quantos banheiros são necessários?
+33. Quantas suítes são necessárias?
+34. É necessário escritório/home office?
+35. É necessária sala de estar?
+36. É necessária sala de jantar?
+37. É necessária sala de TV/família?
+38. Qual o tipo de cozinha desejada (americana, separada, gourmet)?
+39. É necessária área de serviço?
+40. É necessário quarto de empregada?
+41. É necessária garagem? Para quantos carros?
+42. É necessária área gourmet/churrasqueira?
+43. É necessária piscina?
+44. É necessário jardim?
+45. Há outros ambientes específicos necessários?
+
+SEÇÃO 5: ESTILO E ESTÉTICA
+46. Qual estilo arquitetônico é preferido?
+47. Há referências visuais ou projetos que admira?
+48. Prefere linhas retas ou curvas?
+49. Prefere ambientes integrados ou compartimentados?
+50. Qual a paleta de cores preferida?
+51. Há materiais de preferência para fachada?
+52. Há materiais de preferência para pisos?
+53. Há materiais de preferência para paredes?
+54. Prefere muita ou pouca iluminação natural?
+55. Há elementos decorativos específicos desejados?
+
+SEÇÃO 6: FUNCIONALIDADE E CONFORTO
+56. Qual é a rotina diária da família?
+57. Há preferência por ambientes mais reservados ou sociais?
+58. É importante ter vista para o jardim?
+59. É importante ter privacidade dos vizinhos?
+60. Há necessidade de isolamento acústico?
+61. Qual é a importância da ventilação natural?
+62. Há preferência por ambientes com pé-direito alto?
+63. É importante ter varanda ou terraço?
+64. Há necessidade de depósito/storage?
+65. É importante ter entrada social e de serviço separadas?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+66. Qual tipo de aquecimento de água é preferido?
+67. É necessário sistema de ar condicionado?
+68. É necessário sistema de aquecimento?
+69. É necessária instalação de gás?
+70. É necessário sistema de segurança?
+71. É necessária automação residencial?
+72. É necessário sistema de som ambiente?
+73. É necessária TV a cabo/internet em todos os ambientes?
+74. É necessário sistema de energia solar?
+75. É necessário sistema de captação de água da chuva?
+
+SEÇÃO 8: SUSTENTABILIDADE
+76. Há interesse em soluções sustentáveis?
+77. É importante usar materiais ecológicos?
+78. É importante ter eficiência energética?
+79. É importante ter reuso de água?
+80. Há interesse em telhado verde?
+
+SEÇÃO 9: CRONOGRAMA E APROVAÇÕES
+81. Qual é o prazo desejado para entrega do projeto?
+82. Qual é o prazo desejado para início da obra?
+83. Qual é o prazo desejado para conclusão da obra?
+84. Já foi feita consulta prévia na prefeitura?
+85. Há documentação do terreno regularizada?
+86. É necessário auxílio para aprovação na prefeitura?
+87. É necessário auxílio para aprovação no corpo de bombeiros?
+88. Há outras aprovações necessárias?
+
+SEÇÃO 10: INFORMAÇÕES COMPLEMENTARES
+89. Há alguma restrição específica não mencionada?
+90. Há algum ambiente que deve ter prioridade no projeto?
+91. Há algum ambiente que pode ser eliminado se necessário?
+92. Há preferência por algum profissional específico para a obra?
+93. Já possui algum projeto ou estudo preliminar?
+94. Há alguma experiência anterior com construção?
+95. Há alguma preocupação específica com a obra?
+96. Há algum prazo específico para mudança?
+97. Há alguma tradição familiar que deve ser considerada?
+98. Há algum hobby que requer espaço específico?
+99. Há animais de estimação? Precisam de espaço específico?
+100. Há alguma informação adicional importante?
+
+SEÇÃO 11: ACABAMENTOS E MATERIAIS
+101. Qual o padrão de acabamento desejado para pisos?
+102. Qual o padrão de acabamento desejado para paredes?
+103. Qual o padrão de acabamento desejado para tetos?
+104. Qual o padrão de acabamento desejado para esquadrias?
+105. Qual o padrão de acabamento desejado para louças e metais?
+106. Há preferência por marcas específicas?
+107. Há materiais que devem ser evitados?
+108. É importante que os materiais sejam de fácil manutenção?
+109. Há preferência por materiais nacionais ou importados?
+110. Qual a importância da durabilidade dos materiais?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+111. É necessário sistema de alarme?
+112. É necessário sistema de câmeras?
+113. É necessário controle de acesso?
+114. É necessário portão eletrônico?
+115. É necessário interfone/vídeo porteiro?
+116. Há necessidade de rampas de acesso?
+117. Há necessidade de barras de apoio?
+118. Há necessidade de portas mais largas?
+119. Há necessidade de elevador?
+120. Há outras necessidades de acessibilidade?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: RESIDENCIAL
+TIPOLOGIA: CASA UNIFAMILIAR
+PADRÃO: MÉDIO
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o seu nome completo?
+2. Qual é o seu telefone principal?
+3. Qual é o seu e-mail?
+4. Qual é o seu endereço completo?
+5. Qual é a sua profissão?
+6. Qual é o seu estado civil?
+7. Quantas pessoas moram na residência?
+8. Quais são as idades dos moradores?
+9. Há previsão de mudança na composição familiar nos próximos 5 anos?
+10. Algum morador possui necessidades especiais de acessibilidade?
+
+SEÇÃO 2: TERRENO E LOCALIZAÇÃO
+11. Qual é o endereço completo do terreno?
+12. Qual é a área total do terreno (m²)?
+13. Quais são as dimensões do terreno (frente x fundo)?
+14. Qual é a topografia do terreno (plano, aclive, declive)?
+15. Qual é a orientação solar do terreno (norte, sul, leste, oeste)?
+16. Há construções vizinhas? Descreva.
+17. Qual é o tipo de solo predominante?
+18. Há árvores no terreno que devem ser preservadas?
+19. Qual é a infraestrutura disponível (água, luz, esgoto, gás)?
+20. Há restrições legais ou do condomínio para construção?
+21. Qual é o gabarito máximo permitido?
+22. Quais são os recuos obrigatórios?
+23. Qual é a declividade do terreno em percentual?
+24. Há nascentes ou cursos d'água no terreno?
+25. Qual é a qualidade do solo para fundações?
+26. Há histórico de enchentes na região?
+27. Qual é a velocidade e direção dos ventos predominantes?
+28. Há ruídos externos que devem ser considerados?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+29. Qual é o orçamento total disponível para o projeto?
+30. Este orçamento inclui o projeto arquitetônico?
+31. Este orçamento inclui projetos complementares?
+32. Este orçamento inclui a construção?
+33. Este orçamento inclui mobiliário?
+34. Como será o financiamento da obra?
+35. Há prazo limite para conclusão da obra?
+36. Há recursos para imprevistos (reserva de contingência)?
+37. Qual percentual do orçamento pode ser destinado a acabamentos?
+38. Há interesse em financiamento verde/sustentável?
+
+SEÇÃO 4: PROGRAMA ARQUITETÔNICO
+39. Quantos quartos são necessários?
+40. Quantos banheiros são necessários?
+41. Quantas suítes são necessárias?
+42. É necessário escritório/home office?
+43. É necessária sala de estar?
+44. É necessária sala de jantar?
+45. É necessária sala de TV/família?
+46. Qual o tipo de cozinha desejada (americana, separada, gourmet)?
+47. É necessária área de serviço?
+48. É necessário quarto de empregada?
+49. É necessária garagem? Para quantos carros?
+50. É necessária área gourmet/churrasqueira?
+51. É necessária piscina?
+52. É necessário jardim?
+53. Há outros ambientes específicos necessários?
+54. É necessário closet?
+55. É necessária despensa?
+56. É necessário lavabo?
+57. É necessária biblioteca?
+58. É necessário ateliê/hobby room?
+59. É necessária adega?
+60. É necessário espaço para academia?
+
+SEÇÃO 5: ESTILO E ESTÉTICA
+61. Qual estilo arquitetônico é preferido?
+62. Há referências visuais ou projetos que admira?
+63. Prefere linhas retas ou curvas?
+64. Prefere ambientes integrados ou compartimentados?
+65. Qual a paleta de cores preferida?
+66. Há materiais de preferência para fachada?
+67. Há materiais de preferência para pisos?
+68. Há materiais de preferência para paredes?
+69. Prefere muita ou pouca iluminação natural?
+70. Há elementos decorativos específicos desejados?
+71. Há preferência por elementos em madeira?
+72. Há preferência por elementos em pedra natural?
+73. Há preferência por elementos metálicos?
+74. Qual a importância da fachada para o projeto?
+75. Há preferência por coberturas específicas?
+
+SEÇÃO 6: FUNCIONALIDADE E CONFORTO
+76. Qual é a rotina diária da família?
+77. Há preferência por ambientes mais reservados ou sociais?
+78. É importante ter vista para o jardim?
+79. É importante ter privacidade dos vizinhos?
+80. Há necessidade de isolamento acústico?
+81. Qual é a importância da ventilação natural?
+82. Há preferência por ambientes com pé-direito alto?
+83. É importante ter varanda ou terraço?
+84. Há necessidade de depósito/storage?
+85. É importante ter entrada social e de serviço separadas?
+86. É importante ter circulação independente para empregados?
+87. Há necessidade de ambientes multiuso?
+88. É importante ter flexibilidade para mudanças futuras?
+89. Há preferência por ambientes com vista específica?
+90. É importante ter controle individual de temperatura por ambiente?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+91. Qual tipo de aquecimento de água é preferido?
+92. É necessário sistema de ar condicionado?
+93. É necessário sistema de aquecimento?
+94. É necessária instalação de gás?
+95. É necessário sistema de segurança?
+96. É necessária automação residencial?
+97. É necessário sistema de som ambiente?
+98. É necessária TV a cabo/internet em todos os ambientes?
+99. É necessário sistema de energia solar?
+100. É necessário sistema de captação de água da chuva?
+101. É necessário sistema de aspiração central?
+102. É necessário sistema de filtragem de água?
+103. É necessário sistema de irrigação automática?
+104. É necessário sistema de iluminação cênica?
+105. É necessário sistema de monitoramento?
+
+SEÇÃO 8: SUSTENTABILIDADE
+106. Há interesse em soluções sustentáveis?
+107. É importante usar materiais ecológicos?
+108. É importante ter eficiência energética?
+109. É importante ter reuso de água?
+110. Há interesse em telhado verde?
+111. É importante ter certificação ambiental?
+112. Há interesse em energia renovável?
+113. É importante ter gestão de resíduos?
+114. Há interesse em materiais reciclados?
+115. É importante ter ventilação natural otimizada?
+
+SEÇÃO 9: CRONOGRAMA E APROVAÇÕES
+116. Qual é o prazo desejado para entrega do projeto?
+117. Qual é o prazo desejado para início da obra?
+118. Qual é o prazo desejado para conclusão da obra?
+119. Já foi feita consulta prévia na prefeitura?
+120. Há documentação do terreno regularizada?
+121. É necessário auxílio para aprovação na prefeitura?
+122. É necessário auxílio para aprovação no corpo de bombeiros?
+123. Há outras aprovações necessárias?
+124. É necessário estudo de impacto ambiental?
+125. Há necessidade de aprovação em órgãos específicos?
+
+SEÇÃO 10: INFORMAÇÕES COMPLEMENTARES
+126. Há alguma restrição específica não mencionada?
+127. Há algum ambiente que deve ter prioridade no projeto?
+128. Há algum ambiente que pode ser eliminado se necessário?
+129. Há preferência por algum profissional específico para a obra?
+130. Já possui algum projeto ou estudo preliminar?
+131. Há alguma experiência anterior com construção?
+132. Há alguma preocupação específica com a obra?
+133. Há algum prazo específico para mudança?
+134. Há alguma tradição familiar que deve ser considerada?
+135. Há algum hobby que requer espaço específico?
+136. Há animais de estimação? Precisam de espaço específico?
+137. Há alguma informação adicional importante?
+138. Há preferência por construtora específica?
+139. Há necessidade de acompanhamento de obra?
+140. Há interesse em garantia estendida?
+
+SEÇÃO 11: ACABAMENTOS E MATERIAIS
+141. Qual o padrão de acabamento desejado para pisos?
+142. Qual o padrão de acabamento desejado para paredes?
+143. Qual o padrão de acabamento desejado para tetos?
+144. Qual o padrão de acabamento desejado para esquadrias?
+145. Qual o padrão de acabamento desejado para louças e metais?
+146. Há preferência por marcas específicas?
+147. Há materiais que devem ser evitados?
+148. É importante que os materiais sejam de fácil manutenção?
+149. Há preferência por materiais nacionais ou importados?
+150. Qual a importância da durabilidade dos materiais?
+151. Há interesse em materiais inteligentes?
+152. É importante ter garantia estendida dos materiais?
+153. Há preferência por fornecedores específicos?
+154. É importante ter rastreabilidade dos materiais?
+155. Há interesse em materiais com certificação?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+156. É necessário sistema de alarme?
+157. É necessário sistema de câmeras?
+158. É necessário controle de acesso?
+159. É necessário portão eletrônico?
+160. É necessário interfone/vídeo porteiro?
+161. Há necessidade de rampas de acesso?
+162. Há necessidade de barras de apoio?
+163. Há necessidade de portas mais largas?
+164. Há necessidade de elevador?
+165. Há outras necessidades de acessibilidade?
+166. É necessário sistema de detecção de incêndio?
+167. É necessário sistema de sprinklers?
+168. É necessário cerca elétrica?
+169. É necessário sistema de backup de energia?
+170. Há necessidade de abrigo/bunker?
+
+SEÇÃO 13: CUSTO-BENEFÍCIO
+171. Qual é a prioridade: custo inicial ou custo de manutenção?
+172. É importante ter retorno do investimento?
+173. Há interesse em valorização do imóvel?
+174. É importante ter flexibilidade para ampliações?
+175. Há interesse em tecnologias que reduzam custos operacionais?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: RESIDENCIAL
+TIPOLOGIA: CASA UNIFAMILIAR
+PADRÃO: ALTO
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o seu nome completo?
+2. Qual é o seu telefone principal?
+3. Qual é o seu e-mail?
+4. Qual é o seu endereço completo?
+5. Qual é a sua profissão?
+6. Qual é o seu estado civil?
+7. Quantas pessoas moram na residência?
+8. Quais são as idades dos moradores?
+9. Há previsão de mudança na composição familiar nos próximos 5 anos?
+10. Algum morador possui necessidades especiais de acessibilidade?
+
+SEÇÃO 2: TERRENO E LOCALIZAÇÃO
+11. Qual é o endereço completo do terreno?
+12. Qual é a área total do terreno (m²)?
+13. Quais são as dimensões do terreno (frente x fundo)?
+14. Qual é a topografia do terreno (plano, aclive, declive)?
+15. Qual é a orientação solar do terreno (norte, sul, leste, oeste)?
+16. Há construções vizinhas? Descreva.
+17. Qual é o tipo de solo predominante?
+18. Há árvores no terreno que devem ser preservadas?
+19. Qual é a infraestrutura disponível (água, luz, esgoto, gás)?
+20. Há restrições legais ou do condomínio para construção?
+21. Qual é o gabarito máximo permitido?
+22. Quais são os recuos obrigatórios?
+23. Qual é a declividade do terreno em percentual?
+24. Há nascentes ou cursos d'água no terreno?
+25. Qual é a qualidade do solo para fundações?
+26. Há histórico de enchentes na região?
+27. Qual é a velocidade e direção dos ventos predominantes?
+28. Há ruídos externos que devem ser considerados?
+29. Qual é o valor de mercado do terreno?
+30. Há potencial de valorização da região?
+31. Qual é a classificação do bairro (residencial, misto, comercial)?
+32. Há restrições ambientais específicas?
+33. É necessário estudo geotécnico detalhado?
+34. Há interferências de concessionárias?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+35. Qual é o orçamento total disponível para o projeto?
+36. Este orçamento inclui o projeto arquitetônico?
+37. Este orçamento inclui projetos complementares?
+38. Este orçamento inclui a construção?
+39. Este orçamento inclui mobiliário?
+40. Como será o financiamento da obra?
+41. Há prazo limite para conclusão da obra?
+42. Há recursos para imprevistos (reserva de contingência)?
+43. Qual percentual do orçamento pode ser destinado a acabamentos?
+44. Há interesse em financiamento verde/sustentável?
+45. Qual é o orçamento específico para automação?
+46. Qual é o orçamento específico para paisagismo?
+47. Qual é o orçamento específico para piscina e área de lazer?
+48. Há orçamento para obras de arte e decoração?
+49. É importante ter controle rigoroso de custos?
+50. Há flexibilidade orçamentária para melhorias?
+
+SEÇÃO 4: PROGRAMA ARQUITETÔNICO
+51. Quantos quartos são necessários?
+52. Quantos banheiros são necessários?
+53. Quantas suítes são necessárias?
+54. É necessário escritório/home office?
+55. É necessária sala de estar?
+56. É necessária sala de jantar?
+57. É necessária sala de TV/família?
+58. Qual o tipo de cozinha desejada (americana, separada, gourmet)?
+59. É necessária área de serviço?
+60. É necessário quarto de empregada?
+61. É necessária garagem? Para quantos carros?
+62. É necessária área gourmet/churrasqueira?
+63. É necessária piscina?
+64. É necessário jardim?
+65. Há outros ambientes específicos necessários?
+66. É necessário closet?
+67. É necessária despensa?
+68. É necessário lavabo?
+69. É necessária biblioteca?
+70. É necessário ateliê/hobby room?
+71. É necessária adega?
+72. É necessário espaço para academia?
+73. É necessário home theater?
+74. É necessário spa/sauna?
+75. É necessário escritório executivo?
+76. É necessária sala de reuniões?
+77. É necessário apartamento de hóspedes?
+78. É necessária cozinha gourmet externa?
+79. É necessário espaço para eventos?
+80. É necessária sala de jogos?
+81. É necessário estúdio de música?
+82. É necessário ateliê de arte?
+83. É necessária sala de troféus/coleções?
+84. É necessário observatório/terraço?
+85. É necessária garagem para coleção de carros?
+
+SEÇÃO 5: ESTILO E ESTÉTICA
+86. Qual estilo arquitetônico é preferido?
+87. Há referências visuais ou projetos que admira?
+88. Prefere linhas retas ou curvas?
+89. Prefere ambientes integrados ou compartimentados?
+90. Qual a paleta de cores preferida?
+91. Há materiais de preferência para fachada?
+92. Há materiais de preferência para pisos?
+93. Há materiais de preferência para paredes?
+94. Prefere muita ou pouca iluminação natural?
+95. Há elementos decorativos específicos desejados?
+96. Há preferência por elementos em madeira?
+97. Há preferência por elementos em pedra natural?
+98. Há preferência por elementos metálicos?
+99. Qual a importância da fachada para o projeto?
+100. Há preferência por coberturas específicas?
+101. É importante ter assinatura arquitetônica única?
+102. Há interesse em elementos artísticos integrados?
+103. É importante ter harmonia com a paisagem?
+104. Há preferência por materiais exclusivos?
+105. É importante ter elementos de destaque?
+
+SEÇÃO 6: FUNCIONALIDADE E CONFORTO
+106. Qual é a rotina diária da família?
+107. Há preferência por ambientes mais reservados ou sociais?
+108. É importante ter vista para o jardim?
+109. É importante ter privacidade dos vizinhos?
+110. Há necessidade de isolamento acústico?
+111. Qual é a importância da ventilação natural?
+112. Há preferência por ambientes com pé-direito alto?
+113. É importante ter varanda ou terraço?
+114. Há necessidade de depósito/storage?
+115. É importante ter entrada social e de serviço separadas?
+116. É importante ter circulação independente para empregados?
+117. Há necessidade de ambientes multiuso?
+118. É importante ter flexibilidade para mudanças futuras?
+119. Há preferência por ambientes com vista específica?
+120. É importante ter controle individual de temperatura por ambiente?
+121. É importante ter ambientes com diferentes níveis de privacidade?
+122. Há necessidade de espaços para entretenimento?
+123. É importante ter conexão visual entre ambientes?
+124. Há preferência por ambientes com iluminação cênica?
+125. É importante ter ambientes com acústica especial?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+126. Qual tipo de aquecimento de água é preferido?
+127. É necessário sistema de ar condicionado?
+128. É necessário sistema de aquecimento?
+129. É necessária instalação de gás?
+130. É necessário sistema de segurança?
+131. É necessária automação residencial?
+132. É necessário sistema de som ambiente?
+133. É necessária TV a cabo/internet em todos os ambientes?
+134. É necessário sistema de energia solar?
+135. É necessário sistema de captação de água da chuva?
+136. É necessário sistema de aspiração central?
+137. É necessário sistema de filtragem de água?
+138. É necessário sistema de irrigação automática?
+139. É necessário sistema de iluminação cênica?
+140. É necessário sistema de monitoramento?
+141. É necessário sistema de automação total (BMS)?
+142. É necessário sistema de climatização por zona?
+143. É necessário sistema de som multiroom?
+144. É necessário sistema de projeção/cinema?
+145. É necessário sistema de comunicação interna?
+146. É necessário sistema de backup de energia?
+147. É necessário sistema de tratamento de água?
+148. É necessário sistema de energia eólica?
+149. É necessário sistema de monitoramento ambiental?
+150. É necessário sistema de controle de iluminação natural?
+
+SEÇÃO 8: SUSTENTABILIDADE
+151. Há interesse em soluções sustentáveis?
+152. É importante usar materiais ecológicos?
+153. É importante ter eficiência energética?
+154. É importante ter reuso de água?
+155. Há interesse em telhado verde?
+156. É importante ter certificação ambiental?
+157. Há interesse em energia renovável?
+158. É importante ter gestão de resíduos?
+159. Há interesse em materiais reciclados?
+160. É importante ter ventilação natural otimizada?
+161. É importante ter certificação LEED ou similar?
+162. Há interesse em tecnologias de ponta sustentáveis?
+163. É importante ter neutralidade de carbono?
+164. Há interesse em sistemas de compostagem?
+165. É importante ter monitoramento de consumo?
+
+SEÇÃO 9: CRONOGRAMA E APROVAÇÕES
+166. Qual é o prazo desejado para entrega do projeto?
+167. Qual é o prazo desejado para início da obra?
+168. Qual é o prazo desejado para conclusão da obra?
+169. Já foi feita consulta prévia na prefeitura?
+170. Há documentação do terreno regularizada?
+171. É necessário auxílio para aprovação na prefeitura?
+172. É necessário auxílio para aprovação no corpo de bombeiros?
+173. Há outras aprovações necessárias?
+174. É necessário estudo de impacto ambiental?
+175. Há necessidade de aprovação em órgãos específicos?
+176. É necessário estudo de tráfego?
+177. É necessário estudo de impacto de vizinhança?
+178. Há necessidade de licenças especiais?
+179. É necessário acompanhamento jurídico?
+180. Há necessidade de seguros específicos?
+
+SEÇÃO 10: INFORMAÇÕES COMPLEMENTARES
+181. Há alguma restrição específica não mencionada?
+182. Há algum ambiente que deve ter prioridade no projeto?
+183. Há algum ambiente que pode ser eliminado se necessário?
+184. Há preferência por algum profissional específico para a obra?
+185. Já possui algum projeto ou estudo preliminar?
+186. Há alguma experiência anterior com construção?
+187. Há alguma preocupação específica com a obra?
+188. Há algum prazo específico para mudança?
+189. Há alguma tradição familiar que deve ser considerada?
+190. Há algum hobby que requer espaço específico?
+191. Há animais de estimação? Precisam de espaço específico?
+192. Há alguma informação adicional importante?
+193. Há preferência por construtora específica?
+194. Há necessidade de acompanhamento de obra?
+195. Há interesse em garantia estendida?
+196. É importante ter equipe de manutenção?
+197. Há necessidade de treinamento para sistemas?
+198. É importante ter manual de operação?
+199. Há interesse em serviços pós-obra?
+200. É importante ter relacionamento de longo prazo?
+
+SEÇÃO 11: ACABAMENTOS E MATERIAIS
+201. Qual o padrão de acabamento desejado para pisos?
+202. Qual o padrão de acabamento desejado para paredes?
+203. Qual o padrão de acabamento desejado para tetos?
+204. Qual o padrão de acabamento desejado para esquadrias?
+205. Qual o padrão de acabamento desejado para louças e metais?
+206. Há preferência por marcas específicas?
+207. Há materiais que devem ser evitados?
+208. É importante que os materiais sejam de fácil manutenção?
+209. Há preferência por materiais nacionais ou importados?
+210. Qual a importância da durabilidade dos materiais?
+211. Há interesse em materiais inteligentes?
+212. É importante ter garantia estendida dos materiais?
+213. Há preferência por fornecedores específicos?
+214. É importante ter rastreabilidade dos materiais?
+215. Há interesse em materiais com certificação?
+216. É importante ter materiais exclusivos?
+217. Há interesse em materiais customizados?
+218. É importante ter materiais de grife?
+219. Há preferência por materiais artesanais?
+220. É importante ter materiais com história/procedência?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+221. É necessário sistema de alarme?
+222. É necessário sistema de câmeras?
+223. É necessário controle de acesso?
+224. É necessário portão eletrônico?
+225. É necessário interfone/vídeo porteiro?
+226. Há necessidade de rampas de acesso?
+227. Há necessidade de barras de apoio?
+228. Há necessidade de portas mais largas?
+229. Há necessidade de elevador?
+230. Há outras necessidades de acessibilidade?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: COMERCIAL
+TIPOLOGIA: LOJA/VAREJO
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da empresa/estabelecimento?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o ramo de atividade específico?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão no local?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E IMÓVEL
+11. Qual é o endereço do imóvel comercial?
+12. Qual é a área total disponível (m²)?
+13. O imóvel é próprio, alugado ou será adquirido?
+14. Qual é o tipo de imóvel (térreo, sobreloja, shopping)?
+15. Há estacionamento disponível?
+16. Qual é a localização em relação à rua principal?
+17. Há vitrine para a rua?
+18. Qual é o fluxo de pedestres na região?
+19. Há concorrentes próximos?
+20. Qual é a infraestrutura disponível (água, luz, esgoto)?
+21. Há restrições do condomínio ou shopping?
+22. Qual é o horário de funcionamento permitido?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível para o projeto?
+24. Este orçamento inclui o projeto arquitetônico?
+25. Este orçamento inclui a reforma/construção?
+26. Este orçamento inclui mobiliário e equipamentos?
+27. Este orçamento inclui estoque inicial?
+28. Como será o financiamento da obra?
+29. Há prazo limite para inauguração?
+30. Há recursos para imprevistos?
+31. Qual é o valor do aluguel mensal (se aplicável)?
+32. Qual é o retorno esperado do investimento?
+
+SEÇÃO 4: PROGRAMA COMERCIAL
+33. Qual é o tipo de produtos vendidos?
+34. Qual é o público-alvo principal?
+35. É necessária área de atendimento ao cliente?
+36. É necessário balcão de vendas?
+37. É necessário caixa/checkout?
+38. É necessária área de estoque?
+39. É necessário provador?
+40. É necessária vitrine interna?
+41. É necessário escritório/administração?
+42. É necessária copa/cozinha para funcionários?
+43. É necessário banheiro para clientes?
+44. É necessário banheiro para funcionários?
+45. É necessária área de recebimento de mercadorias?
+46. É necessário depósito?
+47. Há necessidade de refrigeração especial?
+48. É necessária área para demonstração de produtos?
+
+SEÇÃO 5: LAYOUT E CIRCULAÇÃO
+49. Qual é a capacidade máxima de clientes simultâneos?
+50. Como deve ser o fluxo de clientes na loja?
+51. É importante ter entrada e saída separadas?
+52. Como deve ser organizada a exposição dos produtos?
+53. É necessário espaço para carrinho de compras?
+54. É importante ter área de espera?
+55. Como deve ser a circulação dos funcionários?
+56. É necessário acesso independente para fornecedores?
+57. Há produtos que precisam de área específica?
+58. É importante ter flexibilidade no layout?
+
+SEÇÃO 6: IDENTIDADE VISUAL E MARKETING
+59. A empresa já possui identidade visual definida?
+60. Há cores específicas da marca?
+61. Há logotipo que deve ser aplicado?
+62. Qual é o conceito/estilo desejado para a loja?
+63. É importante que a loja seja instagramável?
+64. Há referências visuais de outras lojas?
+65. É necessária comunicação visual específica?
+66. É importante ter área para fotos/selfies?
+67. Há materiais de marketing que devem ser expostos?
+68. É necessário espaço para eventos/lançamentos?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+69. É necessário sistema de ar condicionado?
+70. É necessário sistema de som ambiente?
+71. É necessário sistema de segurança/câmeras?
+72. É necessário sistema de alarme?
+73. É necessária instalação de internet/Wi-Fi?
+74. É necessário sistema de iluminação especial?
+75. É necessária instalação elétrica reforçada?
+76. É necessário sistema de telefonia?
+77. É necessária instalação de gás?
+78. É necessário sistema de exaustão?
+
+SEÇÃO 8: EQUIPAMENTOS E MOBILIÁRIO
+79. Quais equipamentos serão necessários?
+80. É necessário balcão refrigerado?
+81. É necessário freezer/geladeira?
+82. É necessárias prateleiras específicas?
+83. É necessário caixa registradora/PDV?
+84. É necessário computador/sistema?
+85. É necessária máquina de cartão?
+86. É necessário cofre?
+87. Há equipamentos pesados que precisam de base especial?
+88. É necessário mobiliário sob medida?
+
+SEÇÃO 9: NORMAS E APROVAÇÕES
+89. É necessário alvará de funcionamento?
+90. É necessária aprovação no corpo de bombeiros?
+91. Há normas específicas do ramo de atividade?
+92. É necessária licença sanitária?
+93. É necessário projeto de prevenção contra incêndio?
+94. Há normas de acessibilidade a cumprir?
+95. É necessária aprovação na prefeitura?
+96. Há outras licenças específicas necessárias?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+97. Qual é o prazo desejado para inauguração?
+98. Há sazonalidade que deve ser considerada?
+99. É importante inaugurar em data específica?
+100. Há fornecedores que dependem do cronograma?
+101. É necessário treinamento da equipe no novo espaço?
+102. Há mudança de endereço de loja existente?
+103. É necessário comunicar clientes sobre a mudança?
+104. Há contratos que dependem da inauguração?
+
+SEÇÃO 11: SUSTENTABILIDADE E EFICIÊNCIA
+105. Há interesse em soluções sustentáveis?
+106. É importante ter eficiência energética?
+107. É importante usar materiais ecológicos?
+108. Há interesse em certificação ambiental?
+109. É importante reduzir custos operacionais?
+110. Há interesse em energia solar?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+111. É necessário sistema anti-furto?
+112. É necessário controle de acesso?
+113. É necessário sistema de monitoramento?
+114. Há necessidade de segurança especial para produtos?
+115. É necessário acesso para pessoas com deficiência?
+116. É necessário banheiro acessível?
+117. Há necessidade de sinalização especial?
+118. É necessário sistema de emergência?
+
+SEÇÃO 13: LOGÍSTICA E OPERAÇÃO COMERCIAL
+119. Qual é o volume médio de mercadorias recebidas por semana?
+120. Qual é o horário preferencial para recebimento de mercadorias?
+121. Qual é o tipo de veículo usado para entrega (moto, van, caminhão)?
+122. É necessário espaço para conferência de mercadorias?
+123. Como é feito o controle de estoque (manual, sistema)?
+124. É necessário código de barras/etiquetagem?
+125. Há produtos que precisam de armazenamento especial (temperatura, umidade)?
+126. É necessário espaço para embalagem de produtos?
+127. É feita entrega para clientes? Precisa de área específica?
+128. É necessário espaço para devolução/troca de produtos?
+129. Há necessidade de área para produtos em promoção?
+130. É necessário espaço para produtos sazonais?
+131. Como é feita a reposição de produtos nas prateleiras?
+132. É necessário carrinho/equipamento para movimentação interna?
+133. Há produtos frágeis que precisam de cuidado especial?
+134. É necessário controle de validade de produtos?
+135. Há necessidade de área para produtos danificados?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: COMERCIAL
+TIPOLOGIA: ESCRITÓRIO
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da empresa?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço atual da empresa?
+7. Qual é o ramo de atividade da empresa?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão no escritório?
+10. Qual é o horário de funcionamento?
+
+SEÇÃO 2: LOCALIZAÇÃO E IMÓVEL
+11. Qual é o endereço do imóvel?
+12. Qual é a área total disponível (m²)?
+13. O imóvel é próprio, alugado ou será adquirido?
+14. Em que andar está localizado?
+15. Há elevador no prédio?
+16. Há estacionamento disponível?
+17. Qual é a infraestrutura disponível?
+18. Há restrições do condomínio?
+19. Qual é o horário de funcionamento permitido?
+20. Há segurança no prédio?
+21. Qual é a qualidade da internet/telefonia na região?
+22. Há transporte público próximo?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a reforma?
+26. Este orçamento inclui mobiliário?
+27. Este orçamento inclui equipamentos?
+28. Como será o financiamento?
+29. Há prazo limite para mudança?
+30. Há recursos para imprevistos?
+31. Qual é o valor do aluguel mensal?
+32. É importante controlar custos operacionais?
+
+SEÇÃO 4: PROGRAMA ARQUITETÔNICO
+33. Quantas estações de trabalho são necessárias?
+34. É necessária recepção?
+35. É necessária sala de reuniões?
+36. É necessária sala da diretoria?
+37. É necessário arquivo/depósito?
+38. É necessária copa/cozinha?
+39. É necessário banheiro?
+40. É necessária sala de espera?
+41. É necessário almoxarifado?
+42. É necessária sala de servidor/TI?
+43. É necessário espaço para impressoras?
+44. É necessária área de descanso?
+45. É necessário vestiário?
+46. Há necessidade de salas específicas?
+
+SEÇÃO 5: ORGANIZAÇÃO DO TRABALHO
+47. Qual é o tipo de trabalho realizado?
+48. É necessário concentração/silêncio?
+49. Há trabalho em equipe frequente?
+50. É necessário atendimento ao público?
+51. Há reuniões frequentes?
+52. É necessário espaço para apresentações?
+53. Há necessidade de privacidade?
+54. É importante flexibilidade no layout?
+55. Há trabalho com documentos confidenciais?
+56. É necessário espaço para arquivo físico?
+
+SEÇÃO 6: TECNOLOGIA E EQUIPAMENTOS
+57. Quantos computadores serão utilizados?
+58. É necessário servidor local?
+59. É necessária rede estruturada?
+60. É necessário sistema telefônico?
+61. É necessário sistema de videoconferência?
+62. É necessária internet de alta velocidade?
+63. É necessário Wi-Fi em todo o escritório?
+64. Quantas impressoras serão necessárias?
+65. É necessário scanner/copiadora?
+66. Há equipamentos especiais necessários?
+
+SEÇÃO 7: CONFORTO E AMBIENTE
+67. É necessário ar condicionado?
+68. É importante ventilação natural?
+69. É importante iluminação natural?
+70. É necessário controle de ruído?
+71. É importante ter vista externa?
+72. É necessário sistema de som?
+73. É importante ter plantas/decoração?
+74. É necessário espaço para relaxamento?
+75. É importante ter cores específicas?
+76. É necessário isolamento acústico?
+
+SEÇÃO 8: SEGURANÇA E CONTROLE
+77. É necessário controle de acesso?
+78. É necessário sistema de segurança?
+79. É necessário cofre?
+80. É necessário sistema de backup?
+81. É necessário controle de visitantes?
+82. É necessário câmeras de segurança?
+83. É necessário alarme?
+84. É necessário sistema contra incêndio?
+85. É necessário saída de emergência?
+86. Há documentos que precisam de segurança especial?
+
+SEÇÃO 9: NORMAS E APROVAÇÕES
+87. É necessário alvará de funcionamento?
+88. É necessária aprovação no corpo de bombeiros?
+89. Há normas específicas da atividade?
+90. É necessário projeto de prevenção contra incêndio?
+91. Há normas de acessibilidade a cumprir?
+92. É necessária licença sanitária?
+93. Há outras aprovações necessárias?
+94. É necessário laudo elétrico?
+
+SEÇÃO 10: CRONOGRAMA E MUDANÇA
+95. Qual é o prazo para mudança?
+96. Há contratos que dependem da mudança?
+97. É necessário comunicar clientes?
+98. Há sazonalidade a considerar?
+99. É necessário treinamento da equipe?
+100. Há fornecedores que dependem do cronograma?
+101. É necessário testar sistemas antes da mudança?
+102. Há backup do escritório atual durante a transição?
+
+SEÇÃO 11: SUSTENTABILIDADE
+103. Há interesse em soluções sustentáveis?
+104. É importante eficiência energética?
+105. É importante usar materiais ecológicos?
+106. Há interesse em certificação ambiental?
+107. É importante reduzir custos operacionais?
+108. Há interesse em energia solar?
+
+SEÇÃO 12: ERGONOMIA E BEM-ESTAR
+109. É importante ter móveis ergonômicos?
+110. É necessário ajuste de altura das mesas?
+111. É importante ter cadeiras de qualidade?
+112. É necessário apoio para pés/punhos?
+113. É importante controlar reflexos na tela?
+114. É necessário iluminação adequada para leitura?
+115. É importante ter pausas visuais (plantas, arte)?
+116. É necessário espaço para alongamento?
+117. É importante ter temperatura controlada individualmente?
+118. É necessário controle de umidade do ar?
+119. É importante ter água filtrada disponível?
+120. É necessário espaço para lanche/café?
+121. É importante ter área para descompressão?
+122. É necessário controle de poluição sonora?
+123. É importante ter boa qualidade do ar?
+124. É necessário espaço para guardar pertences pessoais?
+125. É importante ter privacidade visual?
+126. É necessário espaço para reuniões informais?
+127. É importante ter flexibilidade para mudanças de layout?
+128. É necessário considerar diferentes tipos físicos de usuários?
+
+SEÇÃO 13: TECNOLOGIA CORPORATIVA E SUSTENTABILIDADE
+129. É necessário sistema de automação predial?
+130. É importante ter controle inteligente de iluminação?
+131. É necessário sistema de monitoramento de energia?
+132. É importante ter sensores de presença?
+133. É necessário sistema de controle de temperatura por zona?
+134. É importante ter sistema de purificação do ar?
+135. É necessário carregadores para dispositivos móveis?
+136. É importante ter projetores/telas para apresentação?
+137. É necessário sistema de áudio para reuniões?
+138. É importante ter quadros interativos?
+139. É necessário sistema de videoconferência avançado?
+140. É importante ter rede 5G/Wi-Fi 6?
+141. É necessário sistema de backup de energia?
+142. É importante ter materiais com baixa emissão de VOC?
+143. É necessário sistema de coleta seletiva?
+144. É importante ter certificação LEED ou similar?
+145. É necessário monitoramento de qualidade do ar interno?
+146. É importante ter sistema de reuso de água?
+147. É necessário paisagismo interno (biofilia)?
+148. É importante ter iluminação LED com controle de temperatura de cor?
+149. É necessário sistema de sombreamento automatizado?
+150. É importante ter mobiliário feito com materiais sustentáveis?
+
+===============================================================
+
+
+
+DISCIPLINA: ARQUITETURA
+ÁREA: COMERCIAL
+TIPOLOGIA: RESTAURANTE/BAR
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome do estabelecimento?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o tipo de estabelecimento (restaurante, bar, lanchonete, café)?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão no local?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E IMÓVEL
+11. Qual é o endereço do imóvel?
+12. Qual é a área total disponível (m²)?
+13. O imóvel é próprio, alugado ou será adquirido?
+14. Qual é o tipo de imóvel (térreo, sobreloja, shopping)?
+15. Há estacionamento disponível?
+16. Há área externa disponível (calçada, terraço)?
+17. Qual é o fluxo de pedestres na região?
+18. Há concorrentes próximos?
+19. Qual é a infraestrutura disponível?
+20. Há restrições do condomínio ou shopping?
+21. Qual é o horário de funcionamento permitido?
+22. Há limitações de ruído?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a reforma/construção?
+26. Este orçamento inclui equipamentos de cozinha?
+27. Este orçamento inclui mobiliário?
+28. Como será o financiamento?
+29. Há prazo limite para inauguração?
+30. Há recursos para imprevistos?
+31. Qual é o valor do aluguel mensal?
+32. Qual é o retorno esperado do investimento?
+
+SEÇÃO 4: CONCEITO E CARDÁPIO
+33. Qual é o conceito do estabelecimento?
+34. Qual é o público-alvo principal?
+35. Qual é o tipo de cardápio (à la carte, self-service, fast food)?
+36. Qual é a faixa de preço dos pratos?
+37. Há especialidade culinária específica?
+38. É servido café da manhã?
+39. É servido almoço?
+40. É servido jantar?
+41. São servidas bebidas alcoólicas?
+42. Há delivery/take away?
+43. É necessário espaço para eventos?
+44. Qual é a capacidade de atendimento desejada?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+45. Quantos lugares são necessários no salão?
+46. É necessário bar/balcão?
+47. É necessária cozinha completa?
+48. É necessária copa/apoio?
+49. É necessário depósito/estoque?
+50. É necessário escritório/administração?
+51. É necessário vestiário para funcionários?
+52. É necessário banheiro para clientes?
+53. É necessário banheiro para funcionários?
+54. É necessária área de recebimento de mercadorias?
+55. É necessária área externa/terraço?
+56. É necessário espaço para música ao vivo?
+57. É necessária área para fumantes?
+58. É necessário espaço kids?
+
+SEÇÃO 6: COZINHA E OPERAÇÃO
+59. Qual é o tipo de cozinha necessária (completa, básica, industrial)?
+60. É necessário forno industrial?
+61. É necessário fogão industrial?
+62. É necessária fritadeira?
+63. É necessária chapa/grill?
+64. É necessário forno de pizza?
+65. É necessária coifa/exaustão?
+66. É necessária câmara fria?
+67. É necessário freezer?
+68. É necessária geladeira industrial?
+69. É necessária pia industrial?
+70. É necessário espaço para preparo?
+71. É necessário espaço para higienização?
+72. É necessária área suja/limpa separada?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+73. É necessário sistema de exaustão?
+74. É necessário sistema de ar condicionado?
+75. É necessário sistema de som?
+76. É necessário sistema de iluminação especial?
+77. É necessária instalação de gás?
+78. É necessário sistema de segurança?
+79. É necessária instalação elétrica reforçada?
+80. É necessário sistema de telefonia/internet?
+81. É necessário sistema de TV?
+82. É necessário sistema de alarme?
+
+SEÇÃO 8: AMBIENTAÇÃO E DECORAÇÃO
+83. Qual é o estilo/tema desejado?
+84. Há cores específicas da marca?
+85. É importante que seja instagramável?
+86. Há referências visuais?
+87. É necessária música ambiente?
+88. É importante ter iluminação romântica/aconchegante?
+89. É necessário espaço para exposição de produtos?
+90. É importante ter plantas/decoração natural?
+91. É necessária comunicação visual específica?
+92. É importante ter área para fotos?
+
+SEÇÃO 9: NORMAS E LICENÇAS
+93. É necessário alvará de funcionamento?
+94. É necessária licença sanitária?
+95. É necessária aprovação no corpo de bombeiros?
+96. É necessário projeto de prevenção contra incêndio?
+97. Há normas específicas da vigilância sanitária?
+98. É necessária licença para música ao vivo?
+99. É necessária licença para bebidas alcoólicas?
+100. Há outras licenças específicas?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+101. Qual é o prazo desejado para inauguração?
+102. Há sazonalidade que deve ser considerada?
+103. É importante inaugurar em data específica?
+104. Há fornecedores que dependem do cronograma?
+105. É necessário treinamento da equipe?
+106. Há mudança de endereço de estabelecimento existente?
+107. É necessário comunicar clientes sobre mudança?
+108. Há contratos que dependem da inauguração?
+
+SEÇÃO 11: SUSTENTABILIDADE
+109. Há interesse em soluções sustentáveis?
+110. É importante ter eficiência energética?
+111. É importante usar materiais ecológicos?
+112. Há interesse em reduzir desperdício?
+113. É importante ter gestão de resíduos?
+114. Há interesse em fornecedores locais?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+115. É necessário sistema anti-furto?
+116. É necessário controle de acesso?
+117. É necessário cofre?
+118. É necessário acesso para pessoas com deficiência?
+119. É necessário banheiro acessível?
+120. Há necessidade de sinalização especial?
+
+SEÇÃO 13: OPERAÇÃO GASTRONÔMICA
+121. Qual é o volume de refeições servidas por dia?
+122. Qual é o horário de pico de movimento?
+123. É necessário cardápio digital/QR Code?
+124. É feito controle de temperatura dos alimentos?
+125. É necessário sistema de pedidos online?
+126. Há necessidade de área para entregadores?
+127. É necessário espaço para higienização de mãos dos clientes?
+128. É feito controle de validade dos ingredientes?
+129. É necessário sistema de ventilação na área de refeições?
+130. Há necessidade de área para preparo de bebidas especiais?
+131. É necessário espaço para armazenamento de bebidas?
+132. É feito controle de pragas? Precisa de área específica?
+133. É necessário sistema de água filtrada?
+134. Há necessidade de área para limpeza de equipamentos?
+135. É necessário espaço para uniformes/EPIs?
+136. É feito controle de resíduos orgânicos?
+137. É necessário sistema de monitoramento de temperatura?
+138. Há necessidade de área para recebimento de gás?
+139. É necessário sistema de detecção de vazamento de gás?
+140. É feito controle de qualidade da água?
+141. É necessário espaço para produtos de limpeza?
+142. Há necessidade de área para manutenção de equipamentos?
+143. É necessário sistema de backup de energia para refrigeração?
+144. É feito controle de umidade nos estoques?
+145. É necessário espaço para degustação/teste de pratos?
+146. Há necessidade de área para preparo de sobremesas?
+147. É necessário sistema de som na cozinha?
+148. É feito controle de acesso à cozinha?
+149. É necessário sistema de comunicação cozinha-salão?
+150. Há necessidade de área para embalagens de delivery?
+151. É necessário espaço para cardápios físicos?
+152. É feito controle de entrada/saída de mercadorias?
+153. É necessário sistema de rastreabilidade de ingredientes?
+154. Há necessidade de área para produtos diet/veganos?
+155. É necessário espaço para preparo de bebidas quentes?
+156. É feito controle de rotatividade de estoque?
+157. É necessário sistema de ventilação no depósito?
+158. Há necessidade de área para produtos de primeira necessidade?
+159. É necessário espaço para material de limpeza específico da cozinha?
+160. É feito controle de temperatura ambiente no salão?
+161. É necessário sistema de música ambiente diferenciada por área?
+162. Há necessidade de área para eventos especiais/degustações?
+163. É necessário espaço para exposição de vinhos/bebidas especiais?
+164. É feito controle de iluminação por horário/ambiente?
+165. É necessário sistema de reservas/controle de mesas?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: COMERCIAL
+TIPOLOGIA: HOTEL/POUSADA
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome do empreendimento?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o tipo de empreendimento (hotel, pousada, hostel)?
+8. Há experiência anterior no ramo hoteleiro?
+9. Quantos funcionários trabalharão no local?
+10. Qual é o horário de funcionamento da recepção?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno/imóvel?
+12. Qual é a área total disponível (m²)?
+13. O terreno é próprio, alugado ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Há vista privilegiada (mar, montanha, cidade)?
+17. Qual é a distância de pontos turísticos?
+18. Há transporte público próximo?
+19. Qual é a infraestrutura disponível?
+20. Há restrições legais ou ambientais?
+21. Qual é o gabarito máximo permitido?
+22. Há estacionamento necessário?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui mobiliário?
+27. Este orçamento inclui equipamentos?
+28. Como será o financiamento?
+29. Há prazo limite para inauguração?
+30. Há recursos para imprevistos?
+31. Qual é o retorno esperado do investimento?
+32. Qual é a taxa de ocupação esperada?
+
+SEÇÃO 4: CONCEITO E PÚBLICO-ALVO
+33. Qual é o conceito do hotel/pousada?
+34. Qual é o público-alvo principal?
+35. Qual é a categoria desejada (econômico, médio, luxo)?
+36. É voltado para turismo de negócios ou lazer?
+37. Qual é a faixa etária do público?
+38. É nacional ou internacional?
+39. Qual é a sazonalidade esperada?
+40. Há eventos específicos na região?
+41. É pet friendly?
+42. É family friendly?
+
+SEÇÃO 5: PROGRAMA HOTELEIRO
+43. Quantos quartos são necessários?
+44. Qual é o tipo de quartos (solteiro, casal, suíte)?
+45. É necessária recepção/lobby?
+46. É necessário restaurante?
+47. É necessário bar?
+48. É necessária sala de café da manhã?
+49. É necessária cozinha?
+50. É necessário depósito?
+51. É necessária lavanderia?
+52. É necessário escritório/administração?
+53. É necessária sala de reuniões?
+54. É necessário espaço de lazer?
+55. É necessária piscina?
+56. É necessária academia?
+57. É necessário spa/sauna?
+58. É necessário estacionamento?
+
+SEÇÃO 6: QUARTOS E ACOMODAÇÕES
+59. Qual é a metragem média dos quartos?
+60. É necessário banheiro privativo em todos os quartos?
+61. É necessário ar condicionado nos quartos?
+62. É necessária TV nos quartos?
+63. É necessário frigobar nos quartos?
+64. É necessário cofre nos quartos?
+65. É necessária varanda nos quartos?
+66. É necessário closet nos quartos?
+67. É necessária mesa de trabalho nos quartos?
+68. É necessário Wi-Fi nos quartos?
+69. É necessário telefone nos quartos?
+70. Qual é o padrão de acabamento dos quartos?
+
+SEÇÃO 7: ÁREAS COMUNS
+71. Qual é o conceito do lobby/recepção?
+72. É necessária área de espera no lobby?
+73. É necessário concierge?
+74. É necessária loja de conveniência?
+75. É necessário business center?
+76. É necessária sala de jogos?
+77. É necessária biblioteca?
+78. É necessário espaço kids?
+79. É necessário salão de eventos?
+80. É necessário terraço/área externa?
+81. É necessário jardim?
+82. É necessário espaço para fumantes?
+
+SEÇÃO 8: SISTEMAS E INSTALAÇÕES
+83. É necessário sistema de ar condicionado central?
+84. É necessário sistema de som ambiente?
+85. É necessário sistema de segurança/câmeras?
+86. É necessário sistema de controle de acesso?
+87. É necessária central telefônica?
+88. É necessário sistema de TV a cabo?
+89. É necessário sistema de internet/Wi-Fi?
+90. É necessário sistema de energia solar?
+91. É necessário gerador de energia?
+92. É necessário sistema de incêndio?
+
+SEÇÃO 9: SERVIÇOS HOTELEIROS
+93. É oferecido café da manhã?
+94. É oferecido room service?
+95. É oferecido serviço de lavanderia?
+96. É oferecido transfer/transporte?
+97. É oferecido aluguel de carros?
+98. É oferecido passeios/turismo?
+99. É oferecido serviço de babá?
+100. É oferecido serviço médico?
+101. É oferecido serviço de massagem?
+102. É oferecido catering para eventos?
+
+SEÇÃO 10: NORMAS E LICENÇAS
+103. É necessário alvará de funcionamento?
+104. É necessária licença da EMBRATUR?
+105. É necessária aprovação no corpo de bombeiros?
+106. É necessário projeto de prevenção contra incêndio?
+107. Há normas específicas da vigilância sanitária?
+108. É necessária licença ambiental?
+109. É necessário estudo de impacto de vizinhança?
+110. Há outras licenças específicas?
+
+SEÇÃO 11: CRONOGRAMA E OPERAÇÃO
+111. Qual é o prazo desejado para inauguração?
+112. Há sazonalidade que deve ser considerada?
+113. É importante inaugurar em data específica?
+114. Há fornecedores que dependem do cronograma?
+115. É necessário treinamento da equipe?
+116. É necessário período de testes antes da inauguração?
+117. É necessário marketing de lançamento?
+118. Há contratos que dependem da inauguração?
+
+SEÇÃO 12: SUSTENTABILIDADE
+119. Há interesse em soluções sustentáveis?
+120. É importante ter eficiência energética?
+121. É importante usar materiais ecológicos?
+122. Há interesse em certificação ambiental?
+123. É importante ter gestão de resíduos?
+124. Há interesse em energia renovável?
+
+SEÇÃO 13: CUSTOMER EXPERIENCE
+125. É importante ter check-in/check-out automatizado?
+126. É necessário sistema de chaves eletrônicas?
+127. É importante ter aplicativo próprio para hóspedes?
+128. É necessário sistema de feedback dos hóspedes?
+129. É importante ter programa de fidelidade?
+130. É necessário sistema de reservas online?
+131. É importante ter redes sociais ativas?
+132. É necessário sistema de avaliação de qualidade?
+133. É importante ter parcerias com plataformas de reserva?
+134. É necessário sistema de gestão hoteleira (PMS)?
+135. É importante ter central de atendimento 24h?
+136. É necessário sistema de controle de temperatura dos quartos?
+137. É importante ter amenities personalizados?
+138. É necessário sistema de limpeza com horário flexível?
+139. É importante ter cardápio de travesseiros?
+140. É necessário serviço de despertar personalizado?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: COMERCIAL
+TIPOLOGIA: SHOPPING/MALL
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome do empreendimento?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o tipo de shopping (regional, de vizinhança, outlet)?
+8. Há experiência anterior no ramo?
+9. Qual é a equipe de gestão prevista?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno?
+12. Qual é a área total do terreno (m²)?
+13. O terreno é próprio ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Qual é o acesso viário principal?
+17. Há transporte público próximo?
+18. Qual é a população da região de influência?
+19. Qual é a renda média da população?
+20. Há concorrentes próximos?
+21. Qual é a infraestrutura disponível?
+22. Há restrições legais ou ambientais?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui equipamentos?
+27. Como será o financiamento?
+28. Há prazo limite para inauguração?
+29. Há recursos para imprevistos?
+30. Qual é o retorno esperado do investimento?
+31. Qual é a receita esperada com aluguéis?
+32. Qual é o custo operacional estimado?
+
+SEÇÃO 4: CONCEITO E POSICIONAMENTO
+33. Qual é o conceito do shopping?
+34. Qual é o público-alvo principal?
+35. Qual é a categoria (popular, médio, premium)?
+36. Qual é a área de influência (bairro, cidade, região)?
+37. Qual é o diferencial competitivo?
+38. É temático ou tradicional?
+39. É aberto ou fechado?
+40. Há sazonalidade específica?
+41. É voltado para famílias?
+42. Há foco em algum segmento específico?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+43. Qual é a área bruta locável (ABL) desejada?
+44. Quantas lojas são previstas?
+45. É necessária praça de alimentação?
+46. É necessário supermercado âncora?
+47. É necessário cinema?
+48. É necessárias lojas âncoras?
+49. É necessário estacionamento?
+50. É necessária área de lazer?
+51. É necessário playground?
+52. É necessária academia?
+53. É necessário centro médico?
+54. É necessário banco/lotérica?
+55. É necessária área de eventos?
+56. É necessário auditório?
+57. É necessária área administrativa?
+58. É necessário depósito geral?
+
+SEÇÃO 6: LAYOUT E CIRCULAÇÃO
+59. Qual é o número de pavimentos previsto?
+60. Como deve ser a circulação principal?
+61. É necessário mall central?
+62. É necessária praça central?
+63. Como deve ser a distribuição das lojas?
+64. É necessário acesso independente para âncoras?
+65. Como deve ser o acesso de mercadorias?
+66. É necessário elevador?
+67. É necessária escada rolante?
+68. Como deve ser a sinalização?
+69. É necessário acesso para pessoas com deficiência?
+70. Como deve ser a iluminação natural?
+
+SEÇÃO 7: ESTACIONAMENTO
+71. Quantas vagas são necessárias?
+72. É coberto ou descoberto?
+73. É necessário estacionamento VIP?
+74. É necessário valet?
+75. É necessário controle de acesso?
+76. É necessário cobrança de estacionamento?
+77. É necessário área para ônibus?
+78. É necessário área para táxi/Uber?
+79. É necessário área para motos?
+80. É necessário área para bicicletas?
+
+SEÇÃO 8: SISTEMAS E INSTALAÇÕES
+81. É necessário sistema de ar condicionado central?
+82. É necessário sistema de som ambiente?
+83. É necessário sistema de segurança/câmeras?
+84. É necessário sistema de controle de acesso?
+85. É necessária central telefônica?
+86. É necessário sistema de internet/Wi-Fi?
+87. É necessário sistema de energia solar?
+88. É necessário gerador de energia?
+89. É necessário sistema de incêndio?
+90. É necessário sistema de exaustão?
+
+SEÇÃO 9: SERVIÇOS E FACILIDADES
+91. É necessário fraldário?
+92. É necessário posto médico?
+93. É necessário achados e perdidos?
+94. É necessário guarda-volumes?
+95. É necessário carrinhos de compra?
+96. É necessário carrinhos para crianças?
+97. É necessário cadeiras de rodas?
+98. É necessário área de descanso?
+99. É necessário área para idosos?
+100. É necessário área para amamentação?
+
+SEÇÃO 10: NORMAS E LICENÇAS
+101. É necessário alvará de funcionamento?
+102. É necessária aprovação no corpo de bombeiros?
+103. É necessário projeto de prevenção contra incêndio?
+104. Há normas específicas da vigilância sanitária?
+105. É necessária licença ambiental?
+106. É necessário estudo de impacto de vizinhança?
+107. É necessário estudo de tráfego?
+108. Há outras licenças específicas?
+
+SEÇÃO 11: CRONOGRAMA E OPERAÇÃO
+109. Qual é o prazo desejado para inauguração?
+110. Há sazonalidade que deve ser considerada?
+111. É importante inaugurar em data específica?
+112. Há fornecedores que dependem do cronograma?
+113. É necessário pré-lançamento?
+114. É necessário período de testes?
+115. É necessário marketing de lançamento?
+116. Há contratos que dependem da inauguração?
+
+SEÇÃO 12: SUSTENTABILIDADE
+117. Há interesse em soluções sustentáveis?
+118. É importante ter eficiência energética?
+119. É importante usar materiais ecológicos?
+120. Há interesse em certificação ambiental?
+121. É importante ter gestão de resíduos?
+122. Há interesse em energia renovável?
+
+SEÇÃO 13: GESTÃO DE FLUXO E OPERAÇÃO
+123. Qual é a capacidade máxima de pessoas simultâneas?
+124. Qual é o fluxo esperado nos finais de semana?
+125. Qual é o fluxo esperado nos dias úteis?
+126. É necessário controle de acesso por horário?
+127. É necessário sistema de contagem de pessoas?
+128. Como será feita a segurança patrimonial?
+129. É necessário sistema de monitoramento de filas?
+130. Como será feita a limpeza das áreas comuns?
+131. É necessário sistema de coleta seletiva?
+132. Como será feita a manutenção preventiva?
+133. É necessário sistema de comunicação interna?
+134. Como será feito o controle de temperatura?
+135. É necessário sistema de ventilação forçada?
+136. Como será feita a iluminação de emergência?
+137. É necessário sistema de música ambiente por zonas?
+138. Como será feito o controle de pragas?
+139. É necessário sistema de backup de energia?
+140. Como será feita a gestão de resíduos?
+141. É necessário sistema de água de reuso?
+142. Como será feito o controle de umidade?
+143. É necessário sistema de detecção de incêndio?
+144. Como será feita a sinalização de emergência?
+145. É necessário sistema de comunicação com bombeiros?
+146. Como será feito o controle de acesso de fornecedores?
+147. É necessário sistema de rastreamento de mercadorias?
+148. Como será feita a gestão de eventos?
+149. É necessário sistema de reserva de espaços?
+150. Como será feito o atendimento ao cliente?
+151. É necessário sistema de reclamações?
+152. Como será feita a gestão de contratos de locação?
+153. É necessário sistema de cobrança de aluguéis?
+154. Como será feito o marketing do empreendimento?
+155. É necessário sistema de fidelização de clientes?
+156. Como será feita a gestão de redes sociais?
+157. É necessário sistema de pesquisa de satisfação?
+158. Como será feita a análise de performance das lojas?
+159. É necessário sistema de relatórios gerenciais?
+160. Como será feita a gestão de expansão?
+161. É necessário sistema de controle de inadimplência?
+162. Como será feita a renovação de contratos?
+163. É necessário sistema de análise de mercado?
+164. Como será feita a captação de novos lojistas?
+165. É necessário sistema de aprovação de projetos de lojas?
+166. Como será feito o controle de obras internas?
+167. É necessário sistema de gestão de facilities?
+168. Como será feita a gestão de seguros?
+169. É necessário sistema de controle de custos operacionais?
+170. Como será feita a gestão de fornecedores?
+171. É necessário sistema de compras centralizadas?
+172. Como será feita a gestão de estoque de materiais?
+173. É necessário sistema de manutenção preditiva?
+174. Como será feita a gestão de energia?
+175. É necessário sistema de monitoramento ambiental?
+176. Como será feita a gestão de água?
+177. É necessário sistema de tratamento de efluentes?
+178. Como será feita a gestão de resíduos perigosos?
+179. É necessário sistema de certificação ambiental?
+180. Como será feita a comunicação com a comunidade?
+181. É necessário sistema de responsabilidade social?
+182. Como será feita a gestão de crises?
+183. É necessário sistema de contingência?
+184. Como será feita a gestão de mudanças?
+185. É necessário sistema de inovação?
+186. Como será feita a gestão do conhecimento?
+187. É necessário sistema de treinamento?
+188. Como será feita a gestão de pessoas?
+189. É necessário sistema de avaliação de desempenho?
+190. Como será feita a sucessão de cargos-chave?
+191. É necessário sistema de remuneração variável?
+192. Como será feita a gestão de benefícios?
+193. É necessário sistema de comunicação interna?
+194. Como será feita a gestão de conflitos?
+195. É necessário sistema de ouvidoria?
+196. Como será feita a gestão de ética?
+197. É necessário sistema de compliance?
+198. Como será feita a gestão de riscos?
+199. É necessário sistema de auditoria interna?
+200. Como será feita a gestão estratégica?
+201. É necessário sistema de planejamento?
+202. Como será feito o controle orçamentário?
+203. É necessário sistema de indicadores de performance?
+204. Como será feita a gestão de projetos?
+205. É necessário sistema de gestão da qualidade?
+206. Como será feita a melhoria contínua?
+207. É necessário sistema de benchmarking?
+208. Como será feita a gestão da inovação?
+209. É necessário sistema de pesquisa e desenvolvimento?
+210. Como será feita a gestão do futuro?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: INDUSTRIAL
+TIPOLOGIA: GALPÃO INDUSTRIAL
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da empresa?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o ramo de atividade industrial?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão no galpão?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno?
+12. Qual é a área total do terreno (m²)?
+13. O terreno é próprio, alugado ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Qual é o acesso viário (rodovia, estrada)?
+17. Há acesso para caminhões?
+18. Qual é a infraestrutura disponível?
+19. Há restrições legais ou ambientais?
+20. Qual é o zoneamento da região?
+21. Há vizinhos industriais?
+22. Qual é a distância do centro urbano?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui equipamentos?
+27. Como será o financiamento?
+28. Há prazo limite para início da operação?
+29. Há recursos para imprevistos?
+30. Qual é o retorno esperado do investimento?
+31. Há incentivos fiscais disponíveis?
+32. Qual é o custo operacional estimado?
+
+SEÇÃO 4: PROCESSO PRODUTIVO
+33. Qual é o tipo de produção (manufatura, montagem, armazenagem)?
+34. Qual é o produto principal fabricado/armazenado?
+35. Qual é a capacidade produtiva desejada?
+36. Há necessidade de linha de produção?
+37. Há equipamentos pesados?
+38. É necessário ponte rolante?
+39. Há necessidade de piso industrial especial?
+40. É necessário controle de temperatura?
+41. É necessário controle de umidade?
+42. Há produtos perigosos/inflamáveis?
+43. É necessário isolamento acústico?
+44. Há vibração de equipamentos?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+45. Qual é a área necessária para produção (m²)?
+46. É necessário escritório administrativo?
+47. É necessária recepção/portaria?
+48. É necessário refeitório?
+49. É necessário vestiário?
+50. É necessário almoxarifado?
+51. É necessário depósito de matéria-prima?
+52. É necessário depósito de produto acabado?
+53. É necessária oficina de manutenção?
+54. É necessário laboratório de controle de qualidade?
+55. É necessária área de expedição?
+56. É necessária área de recebimento?
+57. É necessário estacionamento?
+58. É necessária guarita/segurança?
+
+SEÇÃO 6: ESTRUTURA E CONSTRUÇÃO
+59. Qual é o pé-direito necessário?
+60. Qual é a carga necessária no piso (kg/m²)?
+61. É necessário mezanino?
+62. Qual é o tipo de cobertura preferido?
+63. É necessário shed para iluminação natural?
+64. É necessário isolamento térmico?
+65. Qual é o tipo de fechamento lateral?
+66. É necessário dock para caminhões?
+67. Quantos portões são necessários?
+68. Qual é o tamanho dos portões?
+69. É necessário portão basculante ou de correr?
+70. É necessária rampa de acesso?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+71. É necessário sistema elétrico industrial?
+72. Qual é a potência elétrica necessária?
+73. É necessário transformador próprio?
+74. É necessário sistema de iluminação industrial?
+75. É necessário sistema de ventilação?
+76. É necessário sistema de exaustão?
+77. É necessário ar comprimido?
+78. É necessário sistema de incêndio?
+79. É necessário sistema de segurança?
+80. É necessário sistema de comunicação?
+
+SEÇÃO 8: LOGÍSTICA E MOVIMENTAÇÃO
+81. Qual é o tipo de veículo para recebimento?
+82. Qual é o tipo de veículo para expedição?
+83. É necessário equipamento de movimentação (empilhadeira)?
+84. É necessário sistema de estocagem vertical?
+85. Como é feito o controle de estoque?
+86. É necessário sistema de código de barras?
+87. É necessária balança para pesagem?
+88. É necessário sistema de rastreamento?
+89. Como é feito o controle de qualidade?
+90. É necessária área de quarentena?
+
+SEÇÃO 9: NORMAS E LICENÇAS
+91. É necessário alvará de funcionamento?
+92. É necessária licença ambiental?
+93. É necessária aprovação no corpo de bombeiros?
+94. É necessário projeto de prevenção contra incêndio?
+95. Há normas específicas da atividade?
+96. É necessária licença da vigilância sanitária?
+97. É necessário estudo de impacto ambiental?
+98. Há outras licenças específicas?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+99. Qual é o prazo desejado para início da operação?
+100. Há sazonalidade na produção?
+101. É importante iniciar em data específica?
+102. Há fornecedores que dependem do cronograma?
+103. É necessário treinamento da equipe?
+104. Há mudança de local de produção existente?
+105. É necessário período de testes?
+106. Há contratos que dependem do início da operação?
+
+SEÇÃO 11: SUSTENTABILIDADE
+107. Há interesse em soluções sustentáveis?
+108. É importante ter eficiência energética?
+109. É importante usar materiais ecológicos?
+110. Há interesse em certificação ambiental?
+111. É importante ter gestão de resíduos?
+112. Há interesse em energia renovável?
+
+SEÇÃO 12: SEGURANÇA E SAÚDE
+113. É necessário sistema de segurança do trabalho?
+114. É necessário controle de acesso?
+115. É necessário EPI específico?
+116. É necessário chuveiro de emergência?
+117. É necessário lava-olhos?
+118. É necessário sistema de detecção de gases?
+119. É necessário sistema de ventilação forçada?
+120. Há riscos específicos da atividade?
+
+SEÇÃO 13: LOGÍSTICA E SEGURANÇA INDUSTRIAL
+121. Qual é o volume de matéria-prima recebida por mês?
+122. Qual é o volume de produto acabado expedido por mês?
+123. É necessário controle de temperatura para armazenagem?
+124. É necessário sistema de ventilação no estoque?
+125. É feito controle de pragas no armazenamento?
+126. É necessário sistema de detecção de incêndio específico?
+127. É necessário sistema de sprinklers?
+128. É necessário sistema de detecção de fumaça?
+129. É necessário sistema de alarme sonoro?
+130. É necessário sistema de iluminação de emergência?
+131. É necessário sistema de saída de emergência?
+132. É necessário sistema de comunicação de emergência?
+133. É necessário sistema de backup de energia?
+134. É necessário sistema de tratamento de efluentes?
+135. É necessário sistema de captação de água da chuva?
+136. É necessário sistema de reuso de água?
+137. É necessário sistema de monitoramento ambiental?
+138. É necessário controle de emissões atmosféricas?
+139. É necessário sistema de contenção de vazamentos?
+140. É necessário área para resíduos perigosos?
+141. É necessário sistema de coleta seletiva?
+142. É necessário área para compostagem?
+143. É necessário sistema de reciclagem?
+144. É necessário controle de ruído?
+145. É necessário sistema de isolamento acústico?
+146. É necessário monitoramento de vibração?
+147. É necessário sistema de proteção contra raios?
+148. É necessário sistema de aterramento?
+149. É necessário sistema de proteção elétrica?
+150. É necessário sistema de monitoramento elétrico?
+151. É necessário sistema de manutenção preventiva?
+152. É necessário sistema de gestão de ativos?
+153. É necessário sistema de controle de qualidade?
+154. É necessário laboratório interno?
+155. É necessário sistema de rastreabilidade?
+156. É necessário sistema de gestão da produção?
+157. É necessário sistema de planejamento da produção?
+158. É necessário sistema de controle de custos?
+159. É necessário sistema de gestão de estoque?
+160. É necessário sistema de compras?
+161. É necessário sistema de gestão de fornecedores?
+162. É necessário sistema de logística reversa?
+163. É necessário sistema de gestão de transporte?
+164. É necessário sistema de agendamento de entregas?
+165. É necessário sistema de controle de acesso de veículos?
+166. É necessário sistema de pesagem de veículos?
+167. É necessário sistema de lavagem de veículos?
+168. É necessário sistema de abastecimento de veículos?
+169. É necessário sistema de manutenção de veículos?
+170. É necessário sistema de rastreamento de veículos?
+
+===============================================================
+
+
+DISCIPLINA: ARQUITETURA
+ÁREA: INDUSTRIAL
+TIPOLOGIA: FÁBRICA
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da empresa?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o ramo de atividade industrial?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão na fábrica?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno?
+12. Qual é a área total do terreno (m²)?
+13. O terreno é próprio, alugado ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Qual é o acesso viário (rodovia, estrada)?
+17. Há acesso para caminhões?
+18. Qual é a infraestrutura disponível?
+19. Há restrições legais ou ambientais?
+20. Qual é o zoneamento da região?
+21. Há vizinhos industriais?
+22. Qual é a distância do centro urbano?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui equipamentos?
+27. Como será o financiamento?
+28. Há prazo limite para início da operação?
+29. Há recursos para imprevistos?
+30. Qual é o retorno esperado do investimento?
+31. Há incentivos fiscais disponíveis?
+32. Qual é o custo operacional estimado?
+
+SEÇÃO 4: PROCESSO PRODUTIVO
+33. Qual é o produto principal fabricado?
+34. Qual é a capacidade produtiva desejada?
+35. Qual é o processo de fabricação?
+36. Há necessidade de linha de montagem?
+37. Há equipamentos pesados?
+38. É necessário ponte rolante?
+39. Há necessidade de piso industrial especial?
+40. É necessário controle de temperatura?
+41. É necessário controle de umidade?
+42. Há produtos químicos/perigosos?
+43. É necessário isolamento acústico?
+44. Há vibração de equipamentos?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+45. Qual é a área necessária para produção (m²)?
+46. É necessário escritório administrativo?
+47. É necessária recepção/portaria?
+48. É necessário refeitório?
+49. É necessário vestiário?
+50. É necessário almoxarifado?
+51. É necessário depósito de matéria-prima?
+52. É necessário depósito de produto acabado?
+53. É necessária oficina de manutenção?
+54. É necessário laboratório de controle de qualidade?
+55. É necessária área de expedição?
+56. É necessária área de recebimento?
+57. É necessário estacionamento?
+58. É necessária guarita/segurança?
+
+SEÇÃO 6: ESTRUTURA E CONSTRUÇÃO
+59. Qual é o pé-direito necessário?
+60. Qual é a carga necessária no piso (kg/m²)?
+61. É necessário mezanino?
+62. Qual é o tipo de cobertura preferido?
+63. É necessário shed para iluminação natural?
+64. É necessário isolamento térmico?
+65. Qual é o tipo de fechamento lateral?
+66. É necessário dock para caminhões?
+67. Quantos portões são necessários?
+68. Qual é o tamanho dos portões?
+69. É necessário portão basculante ou de correr?
+70. É necessária rampa de acesso?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+71. É necessário sistema elétrico industrial?
+72. Qual é a potência elétrica necessária?
+73. É necessário transformador próprio?
+74. É necessário sistema de iluminação industrial?
+75. É necessário sistema de ventilação?
+76. É necessário sistema de exaustão?
+77. É necessário ar comprimido?
+78. É necessário sistema de incêndio?
+79. É necessário sistema de segurança?
+80. É necessário sistema de comunicação?
+
+SEÇÃO 8: CONTROLE DE QUALIDADE
+81. É necessário laboratório de análises?
+82. É necessário controle de matéria-prima?
+83. É necessário controle de processo?
+84. É necessário controle de produto final?
+85. É necessário certificação de qualidade?
+86. É necessário rastreabilidade?
+87. É necessário sistema de medição?
+88. É necessário calibração de equipamentos?
+89. É necessário área de quarentena?
+90. É necessário descarte de produtos não conformes?
+
+SEÇÃO 9: NORMAS E LICENÇAS
+91. É necessário alvará de funcionamento?
+92. É necessária licença ambiental?
+93. É necessária aprovação no corpo de bombeiros?
+94. É necessário projeto de prevenção contra incêndio?
+95. Há normas específicas da atividade?
+96. É necessária licença da vigilância sanitária?
+97. É necessário estudo de impacto ambiental?
+98. Há outras licenças específicas?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+99. Qual é o prazo desejado para início da operação?
+100. Há sazonalidade na produção?
+101. É importante iniciar em data específica?
+102. Há fornecedores que dependem do cronograma?
+103. É necessário treinamento da equipe?
+104. Há mudança de local de produção existente?
+105. É necessário período de testes?
+106. Há contratos que dependem do início da operação?
+
+SEÇÃO 11: SUSTENTABILIDADE
+107. Há interesse em soluções sustentáveis?
+108. É importante ter eficiência energética?
+109. É importante usar materiais ecológicos?
+110. Há interesse em certificação ambiental?
+111. É importante ter gestão de resíduos?
+112. Há interesse em energia renovável?
+
+SEÇÃO 12: SEGURANÇA E SAÚDE
+113. É necessário sistema de segurança do trabalho?
+114. É necessário controle de acesso?
+115. É necessário EPI específico?
+116. É necessário chuveiro de emergência?
+117. É necessário lava-olhos?
+118. É necessário sistema de detecção de gases?
+119. É necessário sistema de ventilação forçada?
+120. Há riscos específicos da atividade?
+
+SEÇÃO 13: PROCESSO PRODUTIVO COMPLETO
+121. Qual é o fluxo de produção desde a matéria-prima até o produto final?
+122. Quantas etapas tem o processo produtivo?
+123. É necessário controle de temperatura em cada etapa?
+124. É necessário controle de umidade em cada etapa?
+125. É necessário controle de tempo em cada etapa?
+126. É necessário controle de pressão em alguma etapa?
+127. É necessário sistema de mistura/homogeneização?
+128. É necessário sistema de aquecimento/resfriamento?
+129. É necessário sistema de secagem?
+130. É necessário sistema de filtração/separação?
+131. É necessário sistema de moagem/trituração?
+132. É necessário sistema de prensagem/compactação?
+133. É necessário sistema de corte/usinagem?
+134. É necessário sistema de soldagem/união?
+135. É necessário sistema de pintura/acabamento?
+136. É necessário sistema de embalagem?
+137. É necessário sistema de rotulagem?
+138. É necessário sistema de paletização?
+139. É necessário sistema de transporte interno?
+140. É necessário sistema de elevação/içamento?
+141. É necessário sistema de pesagem?
+142. É necessário sistema de medição dimensional?
+143. É necessário sistema de teste de resistência?
+144. É necessário sistema de teste de funcionamento?
+145. É necessário sistema de inspeção visual?
+146. É necessário sistema de controle estatístico?
+147. É necessário sistema de amostragem?
+148. É necessário sistema de certificação?
+149. É necessário sistema de rastreabilidade por lote?
+150. É necessário sistema de recall de produtos?
+151. É necessário sistema de gestão de não conformidades?
+152. É necessário sistema de ações corretivas?
+153. É necessário sistema de ações preventivas?
+154. É necessário sistema de melhoria contínua?
+155. É necessário sistema de auditoria interna?
+156. É necessário sistema de auditoria externa?
+157. É necessário sistema de certificação ISO?
+158. É necessário sistema de gestão ambiental?
+159. É necessário sistema de gestão de segurança?
+160. É necessário sistema de gestão de saúde ocupacional?
+161. É necessário sistema de gestão de energia?
+162. É necessário sistema de gestão de resíduos?
+163. É necessário sistema de gestão de água?
+164. É necessário sistema de gestão de emissões?
+165. É necessário sistema de gestão de ruído?
+166. É necessário sistema de gestão de vibração?
+167. É necessário sistema de gestão de iluminação?
+168. É necessário sistema de gestão de ventilação?
+169. É necessário sistema de gestão de temperatura?
+170. É necessário sistema de gestão de umidade?
+171. É necessário sistema de gestão de pressão?
+172. É necessário sistema de gestão de vácuo?
+173. É necessário sistema de gestão de gases?
+174. É necessário sistema de gestão de vapores?
+175. É necessário sistema de gestão de poeiras?
+176. É necessário sistema de gestão de fumos?
+177. É necessário sistema de gestão de odores?
+178. É necessário sistema de gestão de radiação?
+179. É necessário sistema de gestão de campos magnéticos?
+180. É necessário sistema de gestão de eletricidade estática?
+181. É necessário sistema de gestão de corrosão?
+182. É necessário sistema de gestão de erosão?
+183. É necessário sistema de gestão de desgaste?
+184. É necessário sistema de gestão de fadiga?
+185. É necessário sistema de gestão de envelhecimento?
+186. É necessário sistema de gestão de obsolescência?
+187. É necessário sistema de gestão de vida útil?
+188. É necessário sistema de gestão de manutenção?
+189. É necessário sistema de gestão de sobressalentes?
+190. É necessário sistema de gestão de ferramentas?
+191. É necessário sistema de gestão de instrumentos?
+192. É necessário sistema de gestão de calibração?
+193. É necessário sistema de gestão de metrologia?
+194. É necessário sistema de gestão de padrões?
+195. É necessário sistema de gestão de referências?
+196. É necessário sistema de gestão de documentação?
+197. É necessário sistema de gestão de registros?
+198. É necessário sistema de gestão de arquivos?
+199. É necessário sistema de gestão de backup?
+200. É necessário sistema de gestão de segurança da informação?
+201. É necessário sistema de gestão de propriedade intelectual?
+202. É necessário sistema de gestão de contratos?
+203. É necessário sistema de gestão de fornecedores?
+204. É necessário sistema de gestão de clientes?
+205. É necessário sistema de gestão de vendas?
+206. É necessário sistema de gestão de marketing?
+207. É necessário sistema de gestão de pesquisa e desenvolvimento?
+208. É necessário sistema de gestão de inovação?
+209. É necessário sistema de gestão de projetos?
+210. É necessário sistema de gestão estratégica?
+211. É necessário sistema de gestão de riscos?
+212. É necessário sistema de gestão de oportunidades?
+213. É necessário sistema de gestão de competências?
+214. É necessário sistema de gestão de conhecimento?
+215. É necessário sistema de gestão de aprendizagem?
+216. É necessário sistema de gestão de mudanças?
+217. É necessário sistema de gestão de crises?
+218. É necessário sistema de gestão de contingências?
+219. É necessário sistema de gestão de continuidade?
+220. É necessário sistema de gestão de recuperação?
+221. É necessário sistema de gestão de expansão?
+222. É necessário sistema de gestão de diversificação?
+223. É necessário sistema de gestão de integração?
+224. É necessário sistema de gestão de parcerias?
+225. É necessário sistema de gestão de alianças?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: INDUSTRIAL
+TIPOLOGIA: CENTRO LOGÍSTICO
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da empresa?
+2. Qual é o CNPJ da empresa?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da empresa?
+7. Qual é o tipo de operação logística?
+8. Há quantos anos a empresa está no mercado?
+9. Quantos funcionários trabalharão no centro?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno?
+12. Qual é a área total do terreno (m²)?
+13. O terreno é próprio, alugado ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Qual é o acesso viário (rodovia, estrada)?
+17. Há acesso para carretas/bitrens?
+18. Qual é a infraestrutura disponível?
+19. Há restrições legais ou ambientais?
+20. Qual é o zoneamento da região?
+21. Há outros centros logísticos próximos?
+22. Qual é a distância de portos/aeroportos?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui equipamentos?
+27. Como será o financiamento?
+28. Há prazo limite para início da operação?
+29. Há recursos para imprevistos?
+30. Qual é o retorno esperado do investimento?
+31. Há incentivos fiscais disponíveis?
+32. Qual é o custo operacional estimado?
+
+SEÇÃO 4: OPERAÇÃO LOGÍSTICA
+33. Qual é o tipo de carga movimentada?
+34. Qual é o volume de movimentação diária?
+35. É necessário armazenagem refrigerada?
+36. É necessário armazenagem de produtos perigosos?
+37. É necessário cross-docking?
+38. É necessário picking/separação?
+39. É necessário embalagem/reembalagem?
+40. É necessário etiquetagem/rotulagem?
+41. É necessário controle de estoque?
+42. É necessário sistema WMS?
+43. É necessário rastreabilidade?
+44. É necessário controle de temperatura?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+45. Qual é a área necessária para armazenagem (m²)?
+46. É necessário escritório administrativo?
+47. É necessária recepção/portaria?
+48. É necessário refeitório?
+49. É necessário vestiário?
+50. É necessária área de manutenção?
+51. É necessária área de carga/descarga?
+52. É necessária área de triagem?
+53. É necessária área de conferência?
+54. É necessária área de expedição?
+55. É necessário estacionamento para funcionários?
+56. É necessário estacionamento para visitantes?
+57. É necessária área para caminhões?
+58. É necessária guarita/segurança?
+
+SEÇÃO 6: ESTRUTURA E CONSTRUÇÃO
+59. Qual é o pé-direito necessário?
+60. Qual é a carga necessária no piso (kg/m²)?
+61. É necessário mezanino?
+62. Qual é o tipo de cobertura preferido?
+63. É necessário shed para iluminação natural?
+64. É necessário isolamento térmico?
+65. Qual é o tipo de fechamento lateral?
+66. É necessário dock nivelador?
+67. Quantas docas são necessárias?
+68. É necessário abrigo para docas?
+69. É necessária rampa de acesso?
+70. É necessário piso industrial especial?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+71. É necessário sistema elétrico industrial?
+72. Qual é a potência elétrica necessária?
+73. É necessário transformador próprio?
+74. É necessário sistema de iluminação industrial?
+75. É necessário sistema de ventilação?
+76. É necessário sistema de climatização?
+77. É necessário sistema de refrigeração?
+78. É necessário sistema de incêndio?
+79. É necessário sistema de segurança?
+80. É necessário sistema de comunicação?
+
+SEÇÃO 8: EQUIPAMENTOS DE MOVIMENTAÇÃO
+81. É necessário empilhadeira?
+82. É necessário paleteira?
+83. É necessário ponte rolante?
+84. É necessário esteira transportadora?
+85. É necessário elevador de carga?
+86. É necessário sistema automatizado?
+87. É necessário AGV (veículo guiado automaticamente)?
+88. É necessário sistema de classificação automática?
+89. É necessário sistema de picking automático?
+90. É necessário robôs de armazenagem?
+
+SEÇÃO 9: NORMAS E LICENÇAS
+91. É necessário alvará de funcionamento?
+92. É necessária licença ambiental?
+93. É necessária aprovação no corpo de bombeiros?
+94. É necessário projeto de prevenção contra incêndio?
+95. Há normas específicas da atividade?
+96. É necessária licença da vigilância sanitária?
+97. É necessário registro na ANTT?
+98. Há outras licenças específicas?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+99. Qual é o prazo desejado para início da operação?
+100. Há sazonalidade na operação?
+101. É importante iniciar em data específica?
+102. Há clientes que dependem do cronograma?
+103. É necessário treinamento da equipe?
+104. Há mudança de local de operação existente?
+105. É necessário período de testes?
+106. Há contratos que dependem do início da operação?
+
+SEÇÃO 11: SUSTENTABILIDADE
+107. Há interesse em soluções sustentáveis?
+108. É importante ter eficiência energética?
+109. É importante usar materiais ecológicos?
+110. Há interesse em certificação ambiental?
+111. É importante ter gestão de resíduos?
+112. Há interesse em energia renovável?
+
+SEÇÃO 12: SEGURANÇA E CONTROLE
+113. É necessário sistema de segurança patrimonial?
+114. É necessário controle de acesso?
+115. É necessário sistema de monitoramento?
+116. É necessário sistema de rastreamento de cargas?
+117. É necessário sistema de pesagem?
+118. É necessário sistema de identificação de veículos?
+119. É necessário sistema de agendamento?
+120. É necessário sistema de controle de temperatura?
+
+SEÇÃO 13: TECNOLOGIA LOGÍSTICA
+121. É necessário sistema de gestão de armazém (WMS)?
+122. É necessário sistema de gestão de transporte (TMS)?
+123. É necessário sistema de rastreamento em tempo real?
+124. É necessário sistema de código de barras?
+125. É necessário sistema RFID?
+126. É necessário sistema de EDI (intercâmbio eletrônico de dados)?
+127. É necessário sistema de otimização de rotas?
+128. É necessário sistema de agendamento de entregas?
+129. É necessário sistema de controle de frota?
+130. É necessário sistema de monitoramento de veículos?
+131. É necessário sistema de gestão de combustível?
+132. É necessário sistema de manutenção de frota?
+133. É necessário sistema de gestão de pneus?
+134. É necessário sistema de telemetria?
+135. É necessário sistema de videomonitoramento?
+
+===============================================================
+
+DISCIPLINA: ARQUITETURA
+ÁREA: INSTITUCIONAL
+TIPOLOGIA: ESCOLA/UNIVERSIDADE
+PADRÃO: SIMPLES
+
+SEÇÃO 1: DADOS BÁSICOS DO PROJETO
+1. Qual é o nome da instituição?
+2. Qual é o CNPJ da instituição?
+3. Qual é o nome do responsável pelo projeto?
+4. Qual é o telefone principal?
+5. Qual é o e-mail de contato?
+6. Qual é o endereço da instituição?
+7. Qual é o tipo de ensino (infantil, fundamental, médio, superior)?
+8. Há quantos anos a instituição está no mercado?
+9. Quantos alunos serão atendidos?
+10. Qual é o horário de funcionamento previsto?
+
+SEÇÃO 2: LOCALIZAÇÃO E TERRENO
+11. Qual é o endereço do terreno?
+12. Qual é a área total do terreno (m²)?
+13. O terreno é próprio, alugado ou será adquirido?
+14. Qual é a topografia do terreno?
+15. Qual é a orientação solar?
+16. Qual é o acesso viário?
+17. Há transporte público próximo?
+18. Qual é a infraestrutura disponível?
+19. Há restrições legais ou ambientais?
+20. Qual é o zoneamento da região?
+21. Há outras escolas próximas?
+22. Qual é a segurança da região?
+
+SEÇÃO 3: VIABILIDADE FINANCEIRA
+23. Qual é o orçamento total disponível?
+24. Este orçamento inclui o projeto?
+25. Este orçamento inclui a construção?
+26. Este orçamento inclui mobiliário?
+27. Este orçamento inclui equipamentos?
+28. Como será o financiamento?
+29. Há prazo limite para inauguração?
+30. Há recursos para imprevistos?
+31. Qual é o retorno esperado do investimento?
+32. Há recursos públicos disponíveis?
+
+SEÇÃO 4: PROJETO PEDAGÓGICO
+33. Qual é a metodologia de ensino?
+34. Qual é a filosofia educacional?
+35. É ensino tradicional ou alternativo?
+36. Há atividades extracurriculares?
+37. É necessário laboratório de ciências?
+38. É necessário laboratório de informática?
+39. É necessária biblioteca?
+40. É necessário auditório?
+41. É necessária quadra esportiva?
+42. É necessário refeitório?
+43. É necessária cozinha?
+44. É necessário pátio coberto?
+45. É necessário playground?
+46. É necessária área verde?
+
+SEÇÃO 5: PROGRAMA ARQUITETÔNICO
+47. Quantas salas de aula são necessárias?
+48. Qual é a capacidade de cada sala?
+49. É necessária sala de professores?
+50. É necessária coordenação/direção?
+51. É necessária secretaria?
+52. É necessário almoxarifado?
+53. É necessário depósito?
+54. É necessária enfermaria?
+55. É necessário banheiro para alunos?
+56. É necessário banheiro para professores?
+57. É necessário banheiro para funcionários?
+58. É necessário estacionamento?
+59. É necessária portaria/recepção?
+60. É necessária sala de reuniões?
+
+SEÇÃO 6: SALAS ESPECIAIS
+61. É necessária sala de artes?
+62. É necessária sala de música?
+63. É necessária sala de dança?
+64. É necessária sala de teatro?
+65. É necessário ateliê?
+66. É necessária sala de educação física?
+67. É necessária sala de recursos?
+68. É necessária sala de reforço?
+69. É necessária sala multimídia?
+70. É necessária sala de vídeo?
+
+SEÇÃO 7: SISTEMAS E INSTALAÇÕES
+71. É necessário sistema de som?
+72. É necessário sistema de vídeo?
+73. É necessário sistema de segurança?
+74. É necessário sistema de monitoramento?
+75. É necessário sistema de alarme?
+76. É necessário sistema de incêndio?
+77. É necessário ar condicionado?
+78. É necessário sistema de ventilação?
+79. É necessária instalação de internet?
+80. É necessário sistema telefônico?
+
+SEÇÃO 8: MOBILIÁRIO E EQUIPAMENTOS
+81. É necessário mobiliário escolar específico?
+82. É necessário quadro interativo?
+83. É necessário projetor?
+84. É necessário computadores?
+85. É necessário tablets?
+86. É necessário equipamento de laboratório?
+87. É necessário equipamento esportivo?
+88. É necessário equipamento de cozinha?
+89. É necessário equipamento de limpeza?
+90. É necessário equipamento de segurança?
+
+SEÇÃO 9: NORMAS E APROVAÇÕES
+91. É necessário alvará de funcionamento?
+92. É necessária aprovação no corpo de bombeiros?
+93. É necessário projeto de prevenção contra incêndio?
+94. Há normas específicas do MEC?
+95. É necessária licença sanitária?
+96. É necessário projeto de acessibilidade?
+97. Há normas municipais específicas?
+98. É necessário estudo de impacto de vizinhança?
+
+SEÇÃO 10: CRONOGRAMA E OPERAÇÃO
+99. Qual é o prazo desejado para inauguração?
+100. É importante inaugurar no início do ano letivo?
+101. Há fornecedores que dependem do cronograma?
+102. É necessário treinamento da equipe?
+103. É necessário período de adaptação?
+104. Há mudança de local de funcionamento?
+105. É necessário comunicar pais/alunos?
+106. Há contratos que dependem da inauguração?
+
+SEÇÃO 11: SUSTENTABILIDADE
+107. Há interesse em soluções sustentáveis?
+108. É importante ter eficiência energética?
+109. É importante usar materiais ecológicos?
+110. Há interesse em certificação ambiental?
+111. É importante ter educação ambiental?
+112. Há interesse em energia renovável?
+
+SEÇÃO 12: SEGURANÇA E ACESSIBILIDADE
+113. É necessário controle de acesso?
+114. É necessário sistema de identificação?
+115. É necessário circuito fechado de TV?
+116. É necessário acesso para pessoas com deficiência?
+117. É necessário elevador?
+118. É necessário rampas de acesso?
+119. É necessário banheiro acessível?
+120. É necessária sinalização especial?
+
+SEÇÃO 13: AMBIENTE EDUCACIONAL E SEGURANÇA ESCOLAR
+121. É necessário controle de ruído entre salas de aula?
+122. É importante ter iluminação natural adequada em todas as salas?
+123. É necessário sistema de ventilação cruzada?
+124. É importante ter cores adequadas para o ambiente educacional?
+125. É necessário mobiliário ergonômico para diferentes idades?
+126. É importante ter espaços de convivência para alunos?
+127. É necessário espaço para exposição de trabalhos dos alunos?
+128. É importante ter jardins/áreas verdes para atividades pedagógicas?
+129. É necessário sistema de comunicação interna (interfone)?
+130. É importante ter salas com flexibilidade de layout?
+131. É necessário depósito para material didático em cada sala?
+132. É importante ter bebedouros em locais estratégicos?
+133. É necessário sistema de proteção solar nas janelas?
+134. É importante ter piso antiderrapante em áreas molhadas?
+135. É necessário sistema de drenagem adequado no pátio?
+136. É importante ter cobertura para proteção da chuva?
+137. É necessário sistema de iluminação de emergência?
+138. É importante ter saídas de emergência sinalizadas?
+139. É necessário sistema de detecção de fumaça?
+140. É importante ter extintores de incêndio em locais adequados?
+141. É necessário sistema de alarme de emergência?
+142. É importante ter kit de primeiros socorros?
+143. É necessário protocolo de segurança contra intrusos?
+144. É importante ter câmeras nos acessos principais?
+145. É necessário sistema de identificação de visitantes?
+146. É importante ter controle de entrada e saída de alunos?
+147. É necessário sistema de comunicação com pais/responsáveis?
+148. É importante ter área de espera para pais?
+149. É necessário estacionamento exclusivo para funcionários?
+150. É importante ter área de embarque/desembarque segura?
+151. É necessário sistema de monitoramento do transporte escolar?
+152. É importante ter protocolo para situações de emergência médica?
+153. É necessário espaço isolado para alunos com sintomas de doença?
+154. É importante ter sistema de purificação do ar?
+155. É necessário protocolo de limpeza e desinfecção?
+156. É importante ter espaços ao ar livre para atividades?
+157. É necessário sistema de captação de água da chuva para educação ambiental?
+158. É importante ter horta escolar?
+159. É necessário composteira para educação ambiental?
+160. É importante ter sistema de energia solar para educação sustentável?
+161. É necessário laboratório de ciências com segurança adequada?
+162. É importante ter sistema de exaustão no laboratório?
+163. É necessário chuveiro de emergência no laboratório?
+164. É importante ter lava-olhos no laboratório?
+165. É necessário armário para produtos químicos?
+166. É importante ter sistema de ventilação na cozinha?
+167. É necessário sistema de exaustão na cozinha?
+168. É importante ter área de higienização na cozinha?
+169. É necessário controle de temperatura na cozinha?
+170. É importante ter área de estoque refrigerado?
+171. É necessário sistema de tratamento de resíduos da cozinha?
+172. É importante ter área de lavagem de utensílios?
+173. É necessário sistema de água filtrada?
+174. É importante ter cardápio balanceado e saudável?
+175. É necessário espaço para refeições de funcionários?
+176. É importante ter área de recreação coberta?
+177. É necessário equipamento de som para atividades externas?
+178. É importante ter palco para apresentações?
+179. É necessário sistema de iluminação para eventos noturnos?
+180. É importante ter área para feira de ciências?
+181. É necessário espaço para reuniões de pais?
+182. É importante ter sala para atendimento psicopedagógico?
+183. É necessário espaço para atividades de inclusão?
+184. É importante ter sala de recursos multifuncionais?
+185. É necessário espaço para terapias (fonoaudiologia, psicologia)?
+186. É importante ter brinquedoteca?
+187. É necessário espaço para atividades de educação física adaptada?
+188. É importante ter vestiário para educação física?
+189. É necessário depósito para material esportivo?
+190. É importante ter arquibancada na quadra?
+191. É necessário sistema de iluminação adequada na quadra?
+192. É importante ter marcação oficial da quadra?
+193. É necessário sistema de drenagem na quadra externa?
+194. É importante ter cobertura na quadra?
+195. É necessário espaço para educação no trânsito?
+196. É importante ter mini cidade para educação infantil?
+197. É necessário espaço para atividades de robótica?
+198. É importante ter sala maker/laboratório de criação?
+199. É necessário espaço para atividades de empreendedorismo?
+200. É importante ter incubadora de projetos estudantis?
+
+===============================================================
+
