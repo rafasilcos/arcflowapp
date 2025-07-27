@@ -1,0 +1,135 @@
+'use client'
+
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { useQuery } from '@tanstack/react-query'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { ArrowLeft, Home } from 'lucide-react'
+import Link from 'next/link'
+import { ConfiguracaoInicial } from '@/components/briefing/ConfiguracaoInicial'
+import SeletorDisciplinasHierarquico from '@/components/briefing/SeletorDisciplinasHierarquico'
+import { toast } from 'sonner'
+import type { SelecaoComposta } from '@/types/disciplinas'
+
+interface ConfiguracaoInicial {
+  nomeProjeto: string
+  descricao: string
+  objetivos: string
+  prazo: string
+  orcamento: string
+  clienteId: string
+  responsavelId: string
+}
+
+export default function NovoBriefing() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  
+  // Estados
+  const [etapa, setEtapa] = useState<'configuracao' | 'selecao'>('configuracao')
+  const [configuracao, setConfiguracao] = useState<ConfiguracaoInicial>({
+    nomeProjeto: '',
+    descricao: '',
+    objetivos: '',
+    prazo: '',
+    orcamento: '',
+    clienteId: searchParams.get('clienteId') || '',
+    responsavelId: ''
+  })
+
+  // Funções auxiliares
+  const validarConfiguracao = () => {
+    if (!configuracao.nomeProjeto || !configuracao.clienteId || !configuracao.responsavelId) {
+      toast.error('Preencha todos os campos obrigatórios')
+      return false
+    }
+    return true
+  }
+
+  const handleSelecaoCompleta = (selecao: SelecaoComposta) => {
+    // Navegar para a página de preenchimento com os IDs selecionados
+    router.push(`/briefing/preencher?ids=${encodeURIComponent(JSON.stringify(selecao.briefingIds))}&config=${encodeURIComponent(JSON.stringify(configuracao))}`)
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="px-6 py-8 mb-8 bg-white border-b border-gray-200"
+      >
+        <div className="flex items-center justify-between max-w-5xl mx-auto">
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="/briefing"
+              className="p-3 rounded-xl transition-all text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </Link>
+            <div className="space-y-1">
+              <h1 className="text-2xl font-bold text-gray-900">
+                Novo Briefing
+              </h1>
+              <div className="flex items-center space-x-2 text-sm text-gray-500">
+                <span>Etapa {etapa === 'configuracao' ? '1' : '2'} de 2</span>
+                <span>•</span>
+                <span>{etapa === 'configuracao' ? 'Configuração Inicial' : 'Seleção de Disciplinas'}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="/dashboard"
+              className="p-3 rounded-xl transition-all text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+            >
+              <Home className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Conteúdo Principal */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="max-w-7xl mx-auto px-6 pb-20"
+      >
+        {etapa === 'configuracao' ? (
+          <>
+            <ConfiguracaoInicial
+              configuracao={configuracao}
+              onConfiguracao={setConfiguracao}
+            />
+            
+            {/* Botões de Navegação */}
+            <div className="flex justify-between mt-8">
+              <Link href="/briefing">
+                <button className="px-6 py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50">
+                  Cancelar
+                </button>
+              </Link>
+
+              <button
+                onClick={() => {
+                  if (validarConfiguracao()) {
+                    setEtapa('selecao')
+                  }
+                }}
+                className="px-6 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700"
+              >
+                Próxima Etapa
+              </button>
+            </div>
+          </>
+        ) : (
+          <SeletorDisciplinasHierarquico
+            onSelecaoCompleta={handleSelecaoCompleta}
+          />
+        )}
+      </motion.div>
+    </div>
+  )
+} 

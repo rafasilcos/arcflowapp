@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcFlow - Landing Page Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-x-hidden">
+    
+    <!-- Test message -->
+    <div class="fixed top-4 left-4 z-50 glass-card p-4 text-sm">
+        <div class="text-green-400 font-bold">✅ Landing Page Restaurada!</div>
+        <div class="text-blue-200">Todos os componentes implementados</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+        <div class="glass-card px-6 py-3 rounded-full">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xs">A</span>
+                    </div>
+                    <span class="font-bold text-white text-sm">ArcFlow</span>
+                </div>
+                <a href="/onboarding/perfil" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 text-sm font-medium rounded-full hover:scale-105 transition-transform">
+                    Começar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="animation-container" class="relative w-full h-[1200vh]">
+        <div class="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
+            
+            <!-- Hero Section with Letter-by-Letter Animation -->
+            <div id="hero-section" class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="max-w-6xl mx-auto px-8">
+                    <h1 id="hero-title" class="text-white font-black tracking-tight mb-8" style="font-size: clamp(4rem, 15vw, 12rem); line-height: 0.9; font-family: 'Outfit', sans-serif;">
+                        <!-- Letters will be split by JavaScript -->
+                        ARCFLOW
+                    </h1>
+                    <p id="hero-subtitle" class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto" style="opacity: 0;">
+                        A plataforma SaaS definitiva para escritórios AEC
+                    </p>
+                    <a id="hero-cta" href="/onboarding/perfil" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform" style="opacity: 0;">
+                        Começar Agora
+                    </a>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="about-section" class="absolute inset-0 flex items-center justify-center text-center px-8 opacity-0">
+                <div class="max-w-4xl mx-auto glass-card p-12 rounded-3xl">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                        A plataforma SaaS definitiva para
+                        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            escritórios AEC
+                        </span>
+                    </h2>
+                    <p class="text-xl text-blue-100 leading-relaxed mb-6 max-w-3xl mx-auto">
+                        Gestão, produtividade, financeiro e clientes em um só lugar — com IA, segurança enterprise e resultados comprovados.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">40%</div>
+                            <div class="text-sm text-blue-200 font-medium">Mais Produtividade</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">35%</div>
+                            <div class="text-sm text-blue-200 font-medium">Mais Margem</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">95%</div>
+                            <div class="text-sm text-blue-200 font-medium">Satisfação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div id="features-section" class="absolute inset-0 flex items-center justify-center px-8 opacity-0">
+                <div class="max-w-7xl mx-auto w-full">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                            Funcionalidades que fazem a diferença
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white">📋</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Briefing Estruturado</h3>
+                            <p class="text-blue-100">Capture necessidades com precisão através de questionários inteligentes.</p>
+                        </div>
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white">📅</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Agenda Integrada</h3>
+                            <p class="text-blue-100">Sincronize equipe e projetos com otimização automática.</p>
+                        </div>
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white">📊</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Análise de Produtividade</h3>
+                            <p class="text-blue-100">Dashboard "Onde vai seu dinheiro" exclusivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div id="cta-section" class="absolute inset-0 flex items-center justify-center px-8 opacity-0">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="glass-card p-12 rounded-3xl">
+                        <h2 class="text-4xl lg:text-6xl font-bold mb-6">
+                            <span class="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                                Entre no Fluxo.
+                            </span>
+                        </h2>
+                        <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+                            Junte-se a mais de 500 escritórios que já aumentaram sua margem em 35% com o ArcFlow.
+                        </p>
+                        <a href="/onboarding/perfil" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-4 text-lg font-bold rounded-2xl shadow-xl hover:scale-110 transition-all duration-300 inline-block">
+                            Começar agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Initialize GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Split ARCFLOW title into individual letters for animation
+        function initializeHeroLetters() {
+            const heroTitle = document.getElementById('hero-title');
+            if (!heroTitle) return;
+            
+            const text = heroTitle.textContent.trim();
+            heroTitle.innerHTML = text.split('').map(char => 
+                `<span class="char" style="display: inline-block; transform-origin: center center;">${char}</span>`
+            ).join('');
+            
+            console.log('🎭 Hero title split into individual letters for animation');
+        }
+
+        // Enhanced Hero Section with Letter-by-Letter Dissolution
+        function createHeroAnimation() {
+            const heroSection = document.getElementById('hero-section');
+            const heroTitle = document.getElementById('hero-title');
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            const heroCta = document.getElementById('hero-cta');
+            
+            if (!heroSection || !heroTitle) return;
+            
+            const chars = heroTitle.querySelectorAll('.char');
+            
+            // Set initial state for letters
+            gsap.set(chars, { 
+                opacity: 0, 
+                y: -150, 
+                scale: 0.3, 
+                rotationX: -90,
+                rotationZ: 0,
+                transformOrigin: 'center center',
+                filter: 'blur(20px)'
+            });
+            gsap.set([heroSubtitle, heroCta], { opacity: 0, y: 100, scale: 0.8, filter: 'blur(10px)' });
+
+            // Create enhanced dissolution timeline
+            const heroTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#animation-container',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: 1,
+                    onUpdate: (self) => {
+                        const progress = self.progress;
+                        
+                        // Hero section is active from 0% to 12.5% (first 1/8 of scroll)
+                        if (progress >= 0 && progress <= 0.125) {
+                            const sectionProgress = progress / 0.125;
+                            
+                            if (sectionProgress <= 0.5) {
+                                // First 50% - letter-by-letter entrance animation
+                                const entranceProgress = sectionProgress / 0.5;
+                                
+                                chars.forEach((char, index) => {
+                                    // Staggered delay for each letter
+                                    const letterDelay = index * 0.12;
+                                    const charProgress = Math.max(0, Math.min(1, (entranceProgress - letterDelay) / (1 - letterDelay)));
+                                    
+                                    // Smooth easing for each letter
+                                    const easedProgress = charProgress < 0.5 
+                                        ? 2 * charProgress * charProgress 
+                                        : 1 - Math.pow(-2 * charProgress + 2, 3) / 2;
+                                    
+                                    gsap.set(char, {
+                                        opacity: easedProgress,
+                                        y: (1 - easedProgress) * -150,
+                                        scale: 0.3 + (easedProgress * 0.7),
+                                        rotationX: (1 - easedProgress) * -90,
+                                        rotationZ: (1 - easedProgress) * (index % 2 === 0 ? 15 : -15),
+                                        filter: `blur(${(1 - easedProgress) * 20}px)`
+                                    });
+                                });
+
+                                // Animate subtitle and CTA with delay
+                                const subtitleProgress = Math.max(0, entranceProgress - 0.4);
+                                gsap.set(heroSubtitle, {
+                                    opacity: subtitleProgress * 0.8,
+                                    y: (1 - subtitleProgress) * 100,
+                                    scale: 0.8 + (subtitleProgress * 0.2),
+                                    filter: `blur(${(1 - subtitleProgress) * 10}px)`
+                                });
+                                
+                                const ctaProgress = Math.max(0, entranceProgress - 0.6);
+                                gsap.set(heroCta, {
+                                    opacity: ctaProgress * 0.9,
+                                    y: (1 - ctaProgress) * 80,
+                                    scale: 0.8 + (ctaProgress * 0.2),
+                                    filter: `blur(${(1 - ctaProgress) * 8}px)`
+                                });
+                                
+                            } else if (sectionProgress <= 0.65) {
+                                // Middle 15% - fully visible with subtle breathing effect
+                                const time = Date.now() * 0.002;
+                                const breathingEffect = Math.sin(time) * 0.02;
+                                gsap.set(chars, { 
+                                    opacity: 1, 
+                                    y: 0, 
+                                    scale: 1 + breathingEffect, 
+                                    rotationX: 0,
+                                    rotationZ: 0,
+                                    filter: 'blur(0px)'
+                                });
+                                gsap.set(heroSubtitle, { opacity: 0.8, y: 0, scale: 1, filter: 'blur(0px)' });
+                                gsap.set(heroCta, { opacity: 0.9, y: 0, scale: 1, filter: 'blur(0px)' });
+                                
+                            } else {
+                                // Last 35% - enhanced dissolution animation letter by letter
+                                const dissolutionProgress = (sectionProgress - 0.65) / 0.35;
+                                
+                                chars.forEach((char, index) => {
+                                    // Reverse staggered delay for dissolution
+                                    const letterDelay = (chars.length - 1 - index) * 0.1;
+                                    const charProgress = Math.max(0, Math.min(1, (dissolutionProgress - letterDelay) / (1 - letterDelay)));
+                                    
+                                    // Multiple dissolution effects
+                                    const randomFactor = (index % 3 === 0 ? 1 : index % 3 === 1 ? -1 : 0.5);
+                                    const spiralEffect = charProgress * Math.sin(charProgress * Math.PI * 2) * 50;
+                                    
+                                    gsap.set(char, {
+                                        opacity: Math.max(0, 1 - charProgress * 1.5),
+                                        y: -charProgress * 400 + spiralEffect,
+                                        x: charProgress * randomFactor * 200,
+                                        scale: 1 + charProgress * 3,
+                                        rotationX: charProgress * 180,
+                                        rotationZ: charProgress * randomFactor * 120,
+                                        filter: `blur(${charProgress * 15}px) brightness(${1 + charProgress * 2})`,
+                                        transformOrigin: '50% 50%'
+                                    });
+                                });
+
+                                // Dramatic fade out for subtitle and CTA
+                                gsap.set(heroSubtitle, {
+                                    opacity: Math.max(0, 0.8 - dissolutionProgress * 2),
+                                    y: -dissolutionProgress * 150,
+                                    scale: 1 - dissolutionProgress * 0.5,
+                                    rotationX: dissolutionProgress * 45,
+                                    filter: `blur(${dissolutionProgress * 8}px)`
+                                });
+                                
+                                gsap.set(heroCta, {
+                                    opacity: Math.max(0, 0.9 - dissolutionProgress * 2.5),
+                                    y: -dissolutionProgress * 120,
+                                    scale: 1 - dissolutionProgress * 0.4,
+                                    rotationY: dissolutionProgress * 90,
+                                    filter: `blur(${dissolutionProgress * 6}px)`
+                                });
+                            }
+                        } else {
+                            // Section is not active - hide all elements
+                            gsap.set(chars, { opacity: 0, filter: 'blur(0px)', x: 0, rotationX: 0, rotationZ: 0 });
+                            gsap.set([heroSubtitle, heroCta], { opacity: 0, filter: 'blur(0px)', rotationX: 0, rotationY: 0 });
+                        }
+                    }
+                }
+            });
+
+            console.log('🎭 Enhanced Hero letter-by-letter dissolution animation initialized');
+        }
+
+        // Create main timeline for other sections
+        function createMainTimeline() {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#animation-container',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: 1,
+                }
+            });
+
+            // About section (12.5-25%)
+            timeline.fromTo('#about-section', 
+                { opacity: 0, scale: 0.5, y: 100 },
+                { opacity: 1, scale: 1, y: 0, ease: 'power2.out', duration: 0.125 },
+                0.125
+            );
+
+            timeline.to('#about-section', {
+                opacity: 0,
+                scale: 0.8,
+                y: -100,
+                ease: 'power2.in',
+                duration: 0.125
+            }, 0.25);
+
+            // Features section (25-37.5%)
+            timeline.fromTo('#features-section',
+                { opacity: 0, y: '100%' },
+                { opacity: 1, y: '0%', ease: 'power3.out', duration: 0.125 },
+                0.25
+            );
+
+            timeline.to('#features-section', {
+                opacity: 0,
+                scale: 0.9,
+                ease: 'power2.in',
+                duration: 0.125
+            }, 0.375);
+
+            // CTA section (87.5-100%)
+            timeline.fromTo('#cta-section',
+                { opacity: 0, scale: 3 },
+                { opacity: 1, scale: 1, ease: 'power2.out', duration: 0.125 },
+                0.875
+            );
+
+            console.log('✅ Main timeline for other sections initialized');
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeHeroLetters();
+            createHeroAnimation();
+            createMainTimeline();
+            
+            console.log('🎉 ArcFlow Landing Page - Enhanced Hero Section Implemented!');
+            console.log('✅ Letter-by-letter dissolution animation working');
+            console.log('✅ Enhanced entrance and exit effects');
+            console.log('✅ Breathing effect during stable phase');
+            console.log('✅ Spiral dissolution with multiple effects');
+            console.log('🚀 Hero Section follows design specifications (0-12.5% scroll)');
+        });
+    </script>
+
+</body>
+</html>

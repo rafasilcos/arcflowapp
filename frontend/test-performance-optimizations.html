@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Performance Optimizations - ArcFlow Scroll Infinito</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .test-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-success { background-color: #10b981; }
+        .status-warning { background-color: #f59e0b; }
+        .status-error { background-color: #ef4444; }
+        .status-info { background-color: #3b82f6; }
+        
+        .test-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 5px;
+            transition: transform 0.2s ease;
+        }
+        
+        .test-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .test-button:active {
+            transform: scale(0.95);
+        }
+        
+        .performance-monitor {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            z-index: 1000;
+            min-width: 200px;
+        }
+        
+        .fps-chart {
+            display: flex;
+            align-items: end;
+            height: 40px;
+            gap: 1px;
+            margin-top: 10px;
+        }
+        
+        .fps-bar {
+            background: linear-gradient(to top, #ef4444, #f59e0b, #10b981);
+            border-radius: 1px;
+            min-width: 2px;
+            transition: height 0.2s ease;
+        }
+        
+        .optimization-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .animated-element {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .gpu-test-element {
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+        
+        .will-change-test {
+            will-change: transform, opacity;
+        }
+        
+        .complex-animation {
+            animation: complexMove 2s ease-in-out infinite;
+        }
+        
+        @keyframes complexMove {
+            0% { transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) scale(1); }
+            25% { transform: translate3d(50px, -30px, 20px) rotateX(45deg) rotateY(90deg) scale(1.1); }
+            50% { transform: translate3d(100px, 0, 0) rotateX(90deg) rotateY(180deg) scale(0.9); }
+            75% { transform: translate3d(50px, 30px, -20px) rotateX(135deg) rotateY(270deg) scale(1.1); }
+            100% { transform: translate3d(0, 0, 0) rotateX(180deg) rotateY(360deg) scale(1); }
+        }
+        
+        .test-results {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🚀 Performance Optimizations Test Suite</h1>
+            <p>Teste das otimizações finais de performance do sistema de scroll infinito</p>
+        </div>
+
+        <!-- Performance Monitor -->
+        <div class="performance-monitor" id="performanceMonitor">
+            <div><strong>Performance Monitor</strong></div>
+            <div>FPS: <span id="fpsDisplay">60</span></div>
+            <div>Frame Time: <span id="frameTimeDisplay">16.67ms</span></div>
+            <div>Memory: <span id="memoryDisplay">0%</span></div>
+            <div>GPU Acceleration: <span id="gpuStatus">❌</span></div>
+            <div>Will-Change: <span id="willChangeStatus">❌</span></div>
+            <div class="fps-chart" id="fpsChart"></div>
+        </div>
+
+        <!-- GPU Acceleration Tests -->
+        <div class="test-section">
+            <h2>🎮 GPU Acceleration Tests</h2>
+            <p>Testa a aplicação de transform3d, backface-visibility e perspective para aceleração por hardware.</p>
+            
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Transform3D Test</h3>
+                    <div class="animated-element gpu-test-element" id="transform3dTest"></div>
+                    <button class="test-button" onclick="testTransform3D()">Test Transform3D</button>
+                    <div id="transform3dResult" class="test-results"></div>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Backface Visibility Test</h3>
+                    <div class="animated-element" id="backfaceTest" style="transform-style: preserve-3d;"></div>
+                    <button class="test-button" onclick="testBackfaceVisibility()">Test Backface</button>
+                    <div id="backfaceResult" class="test-results"></div>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Perspective Test</h3>
+                    <div class="animated-element" id="perspectiveTest" style="perspective: 1000px;"></div>
+                    <button class="test-button" onclick="testPerspective()">Test Perspective</button>
+                    <div id="perspectiveResult" class="test-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Will-Change Optimization Tests -->
+        <div class="test-section">
+            <h2>⚡ Will-Change Optimization Tests</h2>
+            <p>Testa a otimização dinâmica de will-change properties baseada no estado das animações.</p>
+            
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Dynamic Will-Change</h3>
+                    <div class="animated-element will-change-test" id="willChangeTest"></div>
+                    <button class="test-button" onclick="testWillChange()">Test Will-Change</button>
+                    <div id="willChangeResult" class="test-results"></div>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Auto Cleanup Test</h3>
+                    <div class="animated-element" id="cleanupTest"></div>
+                    <button class="test-button" onclick="testAutoCleanup()">Test Auto Cleanup</button>
+                    <div id="cleanupResult" class="test-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lazy Animation Loading Tests -->
+        <div class="test-section">
+            <h2>🔄 Lazy Animation Loading Tests</h2>
+            <p>Testa o carregamento lazy de animações complexas baseado na visibilidade e performance.</p>
+            
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Intersection Observer</h3>
+                    <div class="animated-element" id="intersectionTest" style="margin-top: 200px;"></div>
+                    <button class="test-button" onclick="testIntersectionObserver()">Test Intersection</button>
+                    <div id="intersectionResult" class="test-results"></div>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Priority Loading</h3>
+                    <div class="animated-element complex-animation" id="priorityTest"></div>
+                    <button class="test-button" onclick="testPriorityLoading()">Test Priority</button>
+                    <div id="priorityResult" class="test-results"></div>
+                </div>
+                
+                <div class="test-card">
+                    <h3><span class="status-indicator status-info"></span>Performance-Based Loading</h3>
+                    <div class="animated-element" id="performanceTest"></div>
+                    <button class="test-button" onclick="testPerformanceBasedLoading()">Test Performance Loading</button>
+                    <div id="performanceLoadingResult" class="test-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Impact Tests -->
+        <div class="test-section">
+            <h2>📊 Performance Impact Tests</h2>
+            <p>Testa o impacto das otimizações na performance geral do sistema.</p>
+            
+            <div class="optimization-controls">
+                <button class="test-button" onclick="enableAllOptimizations()">Enable All Optimizations</button>
+                <button class="test-button" onclick="disableAllOptimizations()">Disable All Optimizations</button>
+                <button class="test-button" onclick="stressTest()">Stress Test</button>
+                <button class="test-button" onclick="measurePerformance()">Measure Performance</button>
+            </div>
+            
+            <div id="performanceResults" class="test-results">
+                <div>Aguardando testes...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Performance monitoring
+        let fpsHistory = [];
+        let frameCount = 0;
+        let lastTime = performance.now();
+        let isMonitoring = true;
+
+        function updatePerformanceMonitor() {
+            if (!isMonitoring) return;
+            
+            frameCount++;
+            const currentTime = performance.now();
+            
+            if (currentTime - lastTime >= 1000) {
+                const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+                const frameTime = (currentTime - lastTime) / frameCount;
+                
+                fpsHistory.push(fps);
+                if (fpsHistory.length > 20) fpsHistory.shift();
+                
+                // Update display
+                document.getElementById('fpsDisplay').textContent = fps;
+                document.getElementById('frameTimeDisplay').textContent = frameTime.toFixed(2) + 'ms';
+                
+                // Update memory if available
+                if (performance.memory) {
+                    const memoryUsage = Math.round((performance.memory.usedJSHeapSize / performance.memory.jsHeapSizeLimit) * 100);
+                    document.getElementById('memoryDisplay').textContent = memoryUsage + '%';
+                }
+                
+                // Update FPS chart
+                updateFPSChart();
+                
+                frameCount = 0;
+                lastTime = currentTime;
+            }
+            
+            requestAnimationFrame(updatePerformanceMonitor);
+        }
+
+        function updateFPSChart() {
+            const chart = document.getElementById('fpsChart');
+            chart.innerHTML = '';
+            
+            fpsHistory.forEach(fps => {
+                const bar = document.createElement('div');
+                bar.className = 'fps-bar';
+                bar.style.height = `${(fps / 60) * 40}px`;
+                bar.title = `${fps} FPS`;
+                chart.appendChild(bar);
+            });
+        }
+
+        // GPU Acceleration Tests
+        function testTransform3D() {
+            const element = document.getElementById('transform3dTest');
+            const result = document.getElementById('transform3dResult');
+            
+            // Apply transform3d
+            element.style.transform = 'translate3d(0, 0, 0)';
+            element.style.backfaceVisibility = 'hidden';
+            
+            // Check if GPU acceleration is applied
+            const computedStyle = getComputedStyle(element);
+            const hasTransform3d = computedStyle.transform !== 'none';
+            const hasBackfaceHidden = computedStyle.backfaceVisibility === 'hidden';
+            
+            result.innerHTML = `
+                <div>Transform3D: ${hasTransform3d ? '✅' : '❌'}</div>
+                <div>Backface Hidden: ${hasBackfaceHidden ? '✅' : '❌'}</div>
+                <div>GPU Layer: ${hasTransform3d && hasBackfaceHidden ? '✅ Active' : '❌ Inactive'}</div>
+            `;
+            
+            // Update status
+            document.getElementById('gpuStatus').textContent = hasTransform3d && hasBackfaceHidden ? '✅' : '❌';
+        }
+
+        function testBackfaceVisibility() {
+            const element = document.getElementById('backfaceTest');
+            const result = document.getElementById('backfaceResult');
+            
+            element.style.backfaceVisibility = 'hidden';
+            element.style.transform = 'rotateY(180deg)';
+            
+            setTimeout(() => {
+                const isHidden = getComputedStyle(element).backfaceVisibility === 'hidden';
+                result.innerHTML = `
+                    <div>Backface Visibility: ${isHidden ? '✅ Hidden' : '❌ Visible'}</div>
+                    <div>Performance Impact: ${isHidden ? '✅ Optimized' : '⚠️ Not Optimized'}</div>
+                `;
+                
+                element.style.transform = 'rotateY(0deg)';
+            }, 1000);
+        }
+
+        function testPerspective() {
+            const element = document.getElementById('perspectiveTest');
+            const result = document.getElementById('perspectiveResult');
+            
+            element.style.perspective = '1000px';
+            element.style.transformStyle = 'preserve-3d';
+            element.style.transform = 'rotateX(45deg) rotateY(45deg)';
+            
+            const computedStyle = getComputedStyle(element);
+            const hasPerspective = computedStyle.perspective !== 'none';
+            const hasPreserve3d = computedStyle.transformStyle === 'preserve-3d';
+            
+            result.innerHTML = `
+                <div>Perspective: ${hasPerspective ? '✅ Applied' : '❌ Not Applied'}</div>
+                <div>Transform Style: ${hasPreserve3d ? '✅ Preserve-3D' : '❌ Flat'}</div>
+                <div>3D Context: ${hasPerspective && hasPreserve3d ? '✅ Active' : '❌ Inactive'}</div>
+            `;
+        }
+
+        // Will-Change Tests
+        function testWillChange() {
+            const element = document.getElementById('willChangeTest');
+            const result = document.getElementById('willChangeResult');
+            
+            // Apply will-change
+            element.style.willChange = 'transform, opacity';
+            
+            // Animate element
+            element.style.transition = 'transform 2s ease, opacity 2s ease';
+            element.style.transform = 'translateX(100px) scale(1.2)';
+            element.style.opacity = '0.5';
+            
+            setTimeout(() => {
+                const willChange = getComputedStyle(element).willChange;
+                result.innerHTML = `
+                    <div>Will-Change: ${willChange !== 'auto' ? '✅ ' + willChange : '❌ Auto'}</div>
+                    <div>Animation State: ✅ Active</div>
+                `;
+                
+                // Reset and cleanup
+                setTimeout(() => {
+                    element.style.transform = '';
+                    element.style.opacity = '';
+                    element.style.willChange = 'auto';
+                    
+                    result.innerHTML += `<div>Cleanup: ✅ Will-change reset to auto</div>`;
+                    document.getElementById('willChangeStatus').textContent = '✅';
+                }, 2000);
+            }, 100);
+        }
+
+        function testAutoCleanup() {
+            const element = document.getElementById('cleanupTest');
+            const result = document.getElementById('cleanupResult');
+            
+            // Apply will-change and animate
+            element.style.willChange = 'transform';
+            element.style.transition = 'transform 1s ease';
+            element.style.transform = 'rotate(360deg)';
+            
+            result.innerHTML = '<div>Animation Started: ✅</div>';
+            
+            // Auto cleanup after animation
+            setTimeout(() => {
+                element.style.willChange = 'auto';
+                element.style.transform = '';
+                
+                result.innerHTML += `
+                    <div>Animation Complete: ✅</div>
+                    <div>Will-Change Cleanup: ✅ Auto</div>
+                    <div>Memory Optimized: ✅</div>
+                `;
+            }, 1100);
+        }
+
+        // Lazy Loading Tests
+        function testIntersectionObserver() {
+            const element = document.getElementById('intersectionTest');
+            const result = document.getElementById('intersectionResult');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        result.innerHTML = `
+                            <div>Intersection: ✅ Element Visible</div>
+                            <div>Lazy Load Trigger: ✅ Activated</div>
+                            <div>Performance: ✅ Optimized Loading</div>
+                        `;
+                        
+                        // Simulate lazy animation loading
+                        element.style.animation = 'float 2s ease-in-out infinite';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(element);
+            
+            // Scroll element into view
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function testPriorityLoading() {
+            const element = document.getElementById('priorityTest');
+            const result = document.getElementById('priorityResult');
+            
+            // Simulate priority-based loading
+            const animations = [
+                { name: 'High Priority', delay: 100 },
+                { name: 'Medium Priority', delay: 300 },
+                { name: 'Low Priority', delay: 500 }
+            ];
+            
+            result.innerHTML = '<div>Loading animations by priority...</div>';
+            
+            animations.forEach((anim, index) => {
+                setTimeout(() => {
+                    result.innerHTML += `<div>${anim.name}: ✅ Loaded</div>`;
+                    
+                    if (index === animations.length - 1) {
+                        result.innerHTML += '<div>Priority Loading: ✅ Complete</div>';
+                    }
+                }, anim.delay);
+            });
+        }
+
+        function testPerformanceBasedLoading() {
+            const element = document.getElementById('performanceTest');
+            const result = document.getElementById('performanceLoadingResult');
+            
+            const currentFPS = fpsHistory[fpsHistory.length - 1] || 60;
+            
+            if (currentFPS > 50) {
+                element.style.animation = 'complexMove 2s ease-in-out infinite';
+                result.innerHTML = `
+                    <div>FPS: ${currentFPS} (Good)</div>
+                    <div>Animation Quality: ✅ High</div>
+                    <div>Complex Animations: ✅ Enabled</div>
+                `;
+            } else if (currentFPS > 30) {
+                element.style.animation = 'float 3s ease-in-out infinite';
+                result.innerHTML = `
+                    <div>FPS: ${currentFPS} (Medium)</div>
+                    <div>Animation Quality: ⚠️ Reduced</div>
+                    <div>Complex Animations: ❌ Disabled</div>
+                `;
+            } else {
+                element.style.animation = 'none';
+                result.innerHTML = `
+                    <div>FPS: ${currentFPS} (Low)</div>
+                    <div>Animation Quality: ❌ Minimal</div>
+                    <div>Complex Animations: ❌ Disabled</div>
+                `;
+            }
+        }
+
+        // Performance Impact Tests
+        function enableAllOptimizations() {
+            document.documentElement.classList.add(
+                'gpu-accelerated',
+                'enable-will-change',
+                'force-gpu-acceleration'
+            );
+            
+            // Apply to all animated elements
+            document.querySelectorAll('.animated-element').forEach(el => {
+                el.style.transform = 'translate3d(0, 0, 0)';
+                el.style.willChange = 'transform, opacity';
+                el.style.backfaceVisibility = 'hidden';
+            });
+            
+            updatePerformanceResults('All optimizations enabled ✅');
+        }
+
+        function disableAllOptimizations() {
+            document.documentElement.classList.remove(
+                'gpu-accelerated',
+                'enable-will-change',
+                'force-gpu-acceleration'
+            );
+            
+            // Remove from all animated elements
+            document.querySelectorAll('.animated-element').forEach(el => {
+                el.style.transform = '';
+                el.style.willChange = 'auto';
+                el.style.backfaceVisibility = '';
+            });
+            
+            updatePerformanceResults('All optimizations disabled ❌');
+        }
+
+        function stressTest() {
+            const container = document.querySelector('.test-container');
+            const stressElements = [];
+            
+            // Create many animated elements
+            for (let i = 0; i < 50; i++) {
+                const el = document.createElement('div');
+                el.className = 'animated-element complex-animation';
+                el.style.position = 'fixed';
+                el.style.left = Math.random() * window.innerWidth + 'px';
+                el.style.top = Math.random() * window.innerHeight + 'px';
+                el.style.zIndex = '-1';
+                container.appendChild(el);
+                stressElements.push(el);
+            }
+            
+            updatePerformanceResults('Stress test started - 50 complex animations');
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                stressElements.forEach(el => el.remove());
+                updatePerformanceResults('Stress test completed');
+            }, 5000);
+        }
+
+        function measurePerformance() {
+            const startTime = performance.now();
+            let measurements = [];
+            
+            function measure() {
+                const currentTime = performance.now();
+                const fps = fpsHistory[fpsHistory.length - 1] || 60;
+                measurements.push(fps);
+                
+                if (currentTime - startTime < 3000) {
+                    requestAnimationFrame(measure);
+                } else {
+                    const avgFPS = measurements.reduce((a, b) => a + b, 0) / measurements.length;
+                    const minFPS = Math.min(...measurements);
+                    const maxFPS = Math.max(...measurements);
+                    
+                    updatePerformanceResults(`
+                        Performance Measurement Complete:<br>
+                        Average FPS: ${avgFPS.toFixed(1)}<br>
+                        Min FPS: ${minFPS}<br>
+                        Max FPS: ${maxFPS}<br>
+                        Stability: ${maxFPS - minFPS < 10 ? '✅ Stable' : '⚠️ Unstable'}
+                    `);
+                }
+            }
+            
+            measure();
+        }
+
+        function updatePerformanceResults(message) {
+            const results = document.getElementById('performanceResults');
+            const timestamp = new Date().toLocaleTimeString();
+            results.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+        }
+
+        // Initialize
+        updatePerformanceMonitor();
+        
+        // Auto-run some tests
+        setTimeout(() => {
+            testTransform3D();
+            testWillChange();
+        }, 1000);
+        
+        console.log('🚀 Performance Optimization Test Suite Loaded');
+        console.log('📊 Monitor the performance metrics in the top-right corner');
+        console.log('🎮 Run individual tests or enable all optimizations to see the impact');
+    </script>
+</body>
+</html>

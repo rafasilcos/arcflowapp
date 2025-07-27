@@ -1,0 +1,290 @@
+/* Mobile Optimizations CSS */
+
+/* Base mobile optimizations */
+.mobile-optimized {
+  /* Reduce motion for better performance */
+  --animation-duration: 0.3s;
+  --stagger-delay: 0.05s;
+  --transition-timing: ease-out;
+}
+
+.mobile-optimized * {
+  /* Force GPU acceleration on mobile */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Low-end device optimizations */
+.low-end-device {
+  /* Disable expensive effects */
+  --blur-amount: 0px;
+  --shadow-opacity: 0.1;
+  --gradient-steps: 2;
+}
+
+.low-end-device .glass-card {
+  /* Simplify glass effect */
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.low-end-device .floating-particle:nth-child(even) {
+  /* Hide every other particle */
+  display: none !important;
+}
+
+.low-end-device .background-gradient {
+  /* Simplify background gradients */
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
+  filter: none !important;
+}
+
+/* Low performance mode */
+.low-performance {
+  /* Disable all non-essential animations */
+  --animation-duration: 0.1s;
+  --stagger-delay: 0s;
+}
+
+.low-performance * {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
+}
+
+.low-performance .animate-element {
+  /* Disable complex animations */
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.low-performance .floating-particle {
+  /* Disable floating particles */
+  display: none !important;
+}
+
+/* Mobile device specific */
+.mobile-device {
+  /* Optimize touch interactions */
+  touch-action: pan-y;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.mobile-device .section {
+  /* Optimize section rendering */
+  contain: layout style paint;
+  will-change: transform, opacity;
+}
+
+.mobile-device .glass-card {
+  /* Optimize glass cards for mobile */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Touch optimization */
+.mobile-device button,
+.mobile-device a,
+.mobile-device [role="button"] {
+  /* Larger touch targets */
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .mobile-optimized * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .floating-particle {
+    display: none !important;
+  }
+  
+  .background-gradient {
+    background: #1e293b !important;
+  }
+}
+
+/* Small screen optimizations */
+@media (max-width: 640px) {
+  .mobile-optimized {
+    /* Reduce spacing on small screens */
+    --section-padding: 2rem;
+    --card-padding: 1rem;
+    --text-scale: 0.9;
+  }
+  
+  .mobile-optimized .hero-title {
+    /* Optimize hero title for small screens */
+    font-size: clamp(2.5rem, 12vw, 6rem) !important;
+    line-height: 1.1;
+  }
+  
+  .mobile-optimized .glass-card {
+    /* Simplify cards on small screens */
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+  }
+  
+  .mobile-optimized .grid {
+    /* Simplify grids */
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+}
+
+/* Portrait orientation optimizations */
+@media (orientation: portrait) {
+  .mobile-optimized .section {
+    /* Optimize sections for portrait */
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .mobile-optimized .hero-title {
+    /* Adjust hero for portrait */
+    margin-bottom: 2rem;
+  }
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .mobile-optimized .glass-card {
+    /* Optimize for retina displays */
+    border-width: 0.5px;
+  }
+  
+  .mobile-optimized .floating-particle {
+    /* Reduce particles on high DPI */
+    opacity: 0.3;
+  }
+}
+
+/* Battery saving mode */
+.force-optimized {
+  /* Ultra-conservative mode */
+  --animation-duration: 0s;
+  --stagger-delay: 0s;
+  --transition-timing: linear;
+}
+
+.force-optimized * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.force-optimized .floating-particle,
+.force-optimized .background-gradient {
+  display: none !important;
+}
+
+.force-optimized .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: none !important;
+}
+
+/* Performance monitoring indicators */
+.performance-indicator {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.performance-indicator.good {
+  border-left: 3px solid #10b981;
+}
+
+.performance-indicator.medium {
+  border-left: 3px solid #f59e0b;
+}
+
+.performance-indicator.poor {
+  border-left: 3px solid #ef4444;
+}
+
+/* Accessibility improvements for mobile */
+.mobile-device [role="button"]:focus,
+.mobile-device button:focus,
+.mobile-device a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* iOS specific optimizations */
+@supports (-webkit-touch-callout: none) {
+  .mobile-device {
+    /* iOS Safari optimizations */
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  
+  .mobile-device .section {
+    /* Fix iOS viewport issues */
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Android specific optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .mobile-device {
+    /* Android Chrome optimizations */
+    transform: translateZ(0);
+  }
+}
+
+/* Utility classes for manual optimization */
+.disable-animations {
+  animation: none !important;
+  transition: none !important;
+}
+
+.enable-gpu-acceleration {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.reduce-blur {
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+}
+
+.hide-on-mobile {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block !important;
+  }
+}
+
+.show-on-mobile {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .show-on-mobile {
+    display: none !important;
+  }
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Pricing Section Animações</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #581c87 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        #scroll-infinite-container {
+            height: 800vh;
+            position: relative;
+        }
+        
+        .pricing-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .pricing-header h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-header p {
+            font-size: 1.25rem;
+            color: #bfdbfe;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid;
+        }
+        
+        .badge-green {
+            background: rgba(34, 197, 94, 0.2);
+            color: #86efac;
+            border-color: rgba(74, 222, 128, 0.3);
+        }
+        
+        .badge-blue {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+        
+        .badge-yellow {
+            background: rgba(234, 179, 8, 0.2);
+            color: #fde047;
+            border-color: rgba(250, 204, 21, 0.3);
+        }
+        
+        .badge-purple {
+            background: rgba(147, 51, 234, 0.2);
+            color: #c4b5fd;
+            border-color: rgba(168, 85, 247, 0.3);
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.professional {
+            border: 2px solid rgba(59, 130, 246, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.2);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .plan-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .plan-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-description {
+            color: #bfdbfe;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .period {
+            color: #bfdbfe;
+            margin-left: 0.25rem;
+        }
+        
+        .cta-button {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            color: white;
+        }
+        
+        .cta-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .features {
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #4ade80;
+            margin-right: 0.75rem;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-text {
+            color: #bfdbfe;
+            font-size: 0.875rem;
+        }
+        
+        .pricing-bottom-cta {
+            text-align: center;
+            margin-top: 5rem;
+        }
+        
+        .pricing-bottom-cta p {
+            color: #bfdbfe;
+            margin-bottom: 1.5rem;
+        }
+        
+        .bottom-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .bottom-links {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .bottom-link {
+            color: #93c5fd;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .bottom-link:hover {
+            color: white;
+        }
+        
+        .separator {
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll-infinite-container">
+        <div class="pricing-section" id="pricing-section">
+            <div style="max-width: 1400px; width: 100%;">
+                <div class="pricing-header">
+                    <h2>Escolha seu plano</h2>
+                    <p>Preços transparentes e sem surpresas. Cancele quando quiser.</p>
+                    <div class="badges">
+                        <span class="badge badge-green">Sem surpresas</span>
+                        <span class="badge badge-blue">LGPD</span>
+                        <span class="badge badge-yellow">PCI DSS</span>
+                        <span class="badge badge-purple">SLA garantido</span>
+                    </div>
+                </div>
+
+                <div class="pricing-cards">
+                    <!-- Starter Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <p class="plan-description">Ideal para escritórios iniciantes</p>
+                            <div class="price-container">
+                                <span class="price">R$ 97</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <button class="cta-button cta-secondary">Começar agora</button>
+                        </div>
+                        <div class="features">
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Até 3 usuários</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Briefing estruturado</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Agenda básica</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">5 projetos simultâneos</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Suporte por email</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Relatórios básicos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Plan -->
+                    <div class="pricing-card professional">
+                        <div class="popular-badge">Mais popular</div>
+                        <div class="plan-header">
+                            <h3 class="plan-name">Professional</h3>
+                            <p class="plan-description">Para escritórios em crescimento</p>
+                            <div class="price-container">
+                                <span class="price">R$ 197</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <button class="cta-button cta-primary">Começar agora</button>
+                        </div>
+                        <div class="features">
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Usuários ilimitados</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Todos os módulos</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Análise de produtividade</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Projetos ilimitados</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Portal do cliente</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Suporte prioritário</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Integrações avançadas</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Relatórios personalizados</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Enterprise</h3>
+                            <p class="plan-description">Para grandes escritórios</p>
+                            <div class="price-container">
+                                <span class="price">R$ 397</span>
+                                <span class="period">/mês</span>
+                            </div>
+                            <button class="cta-button cta-secondary">Começar agora</button>
+                        </div>
+                        <div class="features">
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Tudo do Professional</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">API personalizada</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Consultoria especializada</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Treinamento dedicado</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">SLA garantido</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Suporte 24/7</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Customizações exclusivas</span>
+                            </div>
+                            <div class="feature">
+                                <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="feature-text">Gerente de sucesso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-bottom-cta">
+                    <p>Não tem certeza? Teste grátis por 14 dias, sem cartão de crédito.</p>
+                    <div class="bottom-links">
+                        <button class="bottom-link">Ver demonstração</button>
+                        <span class="separator">•</span>
+                        <button class="bottom-link">Falar com especialista</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Simular as animações da Pricing Section
+        function testPricingAnimations() {
+            const element = document.getElementById('pricing-section');
+            const timeline = gsap.timeline();
+
+            // Configuração da animação
+            const config = {
+                duration: 1.1,
+                ease: 'back.out(1.7)',
+                stagger: 0.1
+            };
+
+            // Pricing: Enhanced flip in effect with card-specific animations
+            const pricingHeader = element.querySelector('.pricing-header');
+            const pricingCards = element.querySelectorAll('.pricing-card');
+            const professionalCard = element.querySelector('.pricing-card.professional');
+            const bottomCta = element.querySelector('.pricing-bottom-cta');
+            
+            // Header slides in from top
+            if (pricingHeader) {
+                timeline.fromTo(pricingHeader,
+                    { opacity: 0, y: -60, scale: 0.9 },
+                    { opacity: 1, y: 0, scale: 1, duration: config.duration * 0.7, ease: config.ease }
+                );
+            }
+            
+            // Cards flip in with enhanced stagger
+            if (pricingCards.length > 0) {
+                timeline.fromTo(pricingCards,
+                    { 
+                        opacity: 0, 
+                        rotationY: 90, 
+                        scale: 0.8,
+                        z: -100,
+                        transformOrigin: "center center"
+                    },
+                    { 
+                        opacity: 1, 
+                        rotationY: 0, 
+                        scale: 1,
+                        z: 0,
+                        duration: config.duration,
+                        stagger: {
+                            amount: config.stagger * 2,
+                            from: "center",
+                            ease: "back.out(1.7)"
+                        },
+                        ease: config.ease 
+                    }, '-=0.3'
+                );
+                
+                // Special highlight animation for Professional plan
+                if (professionalCard) {
+                    timeline.to(professionalCard, {
+                        scale: 1.05,
+                        y: -10,
+                        boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.4)",
+                        duration: 0.6,
+                        ease: "back.out(1.7)",
+                        repeat: 1,
+                        yoyo: true
+                    }, '-=0.2');
+                }
+            }
+            
+            // Bottom CTA fades in
+            if (bottomCta) {
+                timeline.fromTo(bottomCta,
+                    { opacity: 0, y: 40 },
+                    { opacity: 1, y: 0, duration: config.duration * 0.6, ease: config.ease },
+                    '-=0.4'
+                );
+            }
+
+            return timeline;
+        }
+
+        // Mostrar a seção inicialmente
+        gsap.set('#pricing-section', { opacity: 1 });
+
+        // Executar animação de entrada após um pequeno delay
+        setTimeout(() => {
+            testPricingAnimations();
+        }, 500);
+
+        // Botão para testar animação de saída
+        document.addEventListener('keydown', (e) => {
+            if (e.key === ' ') { // Espaço para testar saída
+                e.preventDefault();
+                const element = document.getElementById('pricing-section');
+                const pricingCardsExit = element.querySelectorAll('.pricing-card');
+                const pricingHeaderExit = element.querySelector('.pricing-header');
+                const bottomCtaExit = element.querySelector('.pricing-bottom-cta');
+                
+                // Scale down uniform na saída
+                gsap.to([pricingHeaderExit, pricingCardsExit, bottomCtaExit], {
+                    opacity: 0,
+                    scale: 0.85,
+                    y: 30,
+                    duration: 1.1 * 0.8,
+                    stagger: {
+                        amount: 0.1,
+                        from: "start"
+                    },
+                    ease: 'back.out(1.7)'
+                });
+            }
+            
+            if (e.key === 'r') { // R para resetar
+                e.preventDefault();
+                location.reload();
+            }
+        });
+
+        console.log('🎬 Teste da Pricing Section carregado!');
+        console.log('💡 Pressione ESPAÇO para testar animação de saída');
+        console.log('💡 Pressione R para resetar');
+    </script>
+</body>
+</html>

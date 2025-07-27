@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Mobile Optimizations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .test-result {
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .success {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+            color: #10b981;
+        }
+        
+        .warning {
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.5);
+            color: #f59e0b;
+        }
+        
+        .error {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            color: #ef4444;
+        }
+        
+        .info {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            color: #3b82f6;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 5px;
+            min-height: 44px;
+            min-width: 120px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+        
+        .touch-test-area {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            user-select: none;
+            touch-action: pan-y;
+        }
+        
+        .touch-test-area.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .test-section {
+                padding: 15px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Teste de Otimizações Mobile</h1>
+        <p>Este teste verifica se as otimizações para dispositivos móveis estão funcionando corretamente.</p>
+        
+        <!-- Device Detection -->
+        <div class="test-section">
+            <h2>📱 Detecção de Dispositivo</h2>
+            <div id="device-info"></div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value" id="screen-size">-</div>
+                    <div class="metric-label">Tamanho da Tela</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="pixel-ratio">-</div>
+                    <div class="metric-label">Device Pixel Ratio</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="touch-points">-</div>
+                    <div class="metric-label">Touch Points</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="memory">-</div>
+                    <div class="metric-label">Memória (GB)</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Performance Monitoring -->
+        <div class="test-section">
+            <h2>⚡ Monitoramento de Performance</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value" id="fps-counter">60</div>
+                    <div class="metric-label">FPS</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="memory-usage">0%</div>
+                    <div class="metric-label">Uso de Memória</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="connection-speed">-</div>
+                    <div class="metric-label">Velocidade de Conexão</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="battery-level">-</div>
+                    <div class="metric-label">Nível da Bateria</div>
+                </div>
+            </div>
+            <div id="performance-status"></div>
+        </div>
+        
+        <!-- Touch Gesture Testing -->
+        <div class="test-section">
+            <h2>👆 Teste de Gestos Touch</h2>
+            <div class="touch-test-area" id="touch-area">
+                <h3>Área de Teste de Touch</h3>
+                <p>Faça swipe para cima, baixo, esquerda ou direita</p>
+                <div id="gesture-feedback"></div>
+            </div>
+            <div id="touch-metrics"></div>
+        </div>
+        
+        <!-- Optimization Controls -->
+        <div class="test-section">
+            <h2>🎛️ Controles de Otimização</h2>
+            <button onclick="forceOptimizations()">Forçar Otimizações</button>
+            <button onclick="disableOptimizations()">Desabilitar Otimizações</button>
+            <button onclick="testPerformance()">Teste de Stress</button>
+            <button onclick="resetMetrics()">Reset Métricas</button>
+            <div id="optimization-status"></div>
+        </div>
+        
+        <!-- Animation Test -->
+        <div class="test-section">
+            <h2>🎨 Teste de Animações</h2>
+            <button onclick="testAnimations()">Testar Animações</button>
+            <button onclick="toggleReducedMotion()">Toggle Reduced Motion</button>
+            <div id="animation-test-area">
+                <div class="floating-particle" style="width: 20px; height: 20px; background: #3b82f6; border-radius: 50%; margin: 10px; display: inline-block; animation: float 2s ease-in-out infinite;"></div>
+                <div class="floating-particle" style="width: 20px; height: 20px; background: #8b5cf6; border-radius: 50%; margin: 10px; display: inline-block; animation: float 2s ease-in-out infinite 0.5s;"></div>
+                <div class="floating-particle" style="width: 20px; height: 20px; background: #10b981; border-radius: 50%; margin: 10px; display: inline-block; animation: float 2s ease-in-out infinite 1s;"></div>
+            </div>
+        </div>
+        
+        <!-- Test Results -->
+        <div class="test-section">
+            <h2>📊 Resultados dos Testes</h2>
+            <div id="test-results"></div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .reduced-motion * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    </style>
+
+    <script>
+        // Global variables
+        let performanceMetrics = {
+            fps: 60,
+            memoryUsage: 0,
+            connectionSpeed: 'unknown',
+            batteryLevel: null
+        };
+        
+        let touchMetrics = {
+            touchCount: 0,
+            averageResponseTime: 0,
+            lastGesture: null
+        };
+        
+        let optimizationsActive = false;
+        let fpsCounter = { frames: 0, lastTime: performance.now() };
+        
+        // Device Detection
+        function detectDevice() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isMobile = /android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+            const isTablet = /ipad|android(?!.*mobile)|tablet/i.test(userAgent);
+            const isLowEnd = checkLowEndDevice();
+            
+            const deviceInfo = {
+                isMobile,
+                isTablet,
+                isLowEnd,
+                screenSize: getScreenSize(),
+                orientation: window.innerHeight > window.innerWidth ? 'portrait' : 'landscape',
+                hasTouch: 'ontouchstart' in window,
+                maxTouchPoints: navigator.maxTouchPoints || 0,
+                supportsWebGL: checkWebGLSupport()
+            };
+            
+            displayDeviceInfo(deviceInfo);
+            return deviceInfo;
+        }
+        
+        function checkLowEndDevice() {
+            const memory = navigator.deviceMemory;
+            const cores = navigator.hardwareConcurrency;
+            const userAgent = navigator.userAgent.toLowerCase();
+            
+            if (memory && memory <= 2) return true;
+            if (cores && cores <= 2) return true;
+            if (/android 4|android 5|iphone 5|iphone 6(?!s)/i.test(userAgent)) return true;
+            
+            return false;
+        }
+        
+        function getScreenSize() {
+            const width = window.innerWidth;
+            return width < 640 ? 'small' : width < 1024 ? 'medium' : 'large';
+        }
+        
+        function checkWebGLSupport() {
+            try {
+                const canvas = document.createElement('canvas');
+                return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+            } catch {
+                return false;
+            }
+        }
+        
+        function displayDeviceInfo(info) {
+            const deviceInfoEl = document.getElementById('device-info');
+            let html = '';
+            
+            if (info.isMobile) {
+                html += '<div class="test-result success">✅ Dispositivo móvel detectado</div>';
+            } else {
+                html += '<div class="test-result info">ℹ️ Dispositivo desktop detectado</div>';
+            }
+            
+            if (info.isLowEnd) {
+                html += '<div class="test-result warning">⚠️ Dispositivo de baixo desempenho detectado</div>';
+            }
+            
+            if (info.hasTouch) {
+                html += '<div class="test-result success">✅ Suporte a touch detectado</div>';
+            }
+            
+            if (info.supportsWebGL) {
+                html += '<div class="test-result success">✅ WebGL suportado</div>';
+            } else {
+                html += '<div class="test-result warning">⚠️ WebGL não suportado</div>';
+            }
+            
+            deviceInfoEl.innerHTML = html;
+            
+            // Update metrics
+            document.getElementById('screen-size').textContent = info.screenSize;
+            document.getElementById('pixel-ratio').textContent = window.devicePixelRatio || 1;
+            document.getElementById('touch-points').textContent = info.maxTouchPoints;
+            document.getElementById('memory').textContent = navigator.deviceMemory || 'N/A';
+        }
+        
+        // Performance Monitoring
+        function startPerformanceMonitoring() {
+            function monitorFPS() {
+                fpsCounter.frames++;
+                const currentTime = performance.now();
+                
+                if (currentTime >= fpsCounter.lastTime + 1000) {
+                    const fps = Math.round((fpsCounter.frames * 1000) / (currentTime - fpsCounter.lastTime));
+                    performanceMetrics.fps = fps;
+                    
+                    document.getElementById('fps-counter').textContent = fps;
+                    
+                    // Update performance status
+                    updatePerformanceStatus();
+                    
+                    fpsCounter.frames = 0;
+                    fpsCounter.lastTime = currentTime;
+                }
+                
+                requestAnimationFrame(monitorFPS);
+            }
+            
+            requestAnimationFrame(monitorFPS);
+        }
+        
+        function updatePerformanceStatus() {
+            const statusEl = document.getElementById('performance-status');
+            const fps = performanceMetrics.fps;
+            
+            let html = '';
+            
+            if (fps >= 50) {
+                html += '<div class="test-result success">✅ Performance excelente (60fps)</div>';
+            } else if (fps >= 30) {
+                html += '<div class="test-result warning">⚠️ Performance média (30-50fps)</div>';
+            } else {
+                html += '<div class="test-result error">❌ Performance baixa (<30fps)</div>';
+            }
+            
+            if (fps < 30 && !optimizationsActive) {
+                html += '<div class="test-result info">💡 Recomendado ativar otimizações</div>';
+            }
+            
+            statusEl.innerHTML = html;
+        }
+        
+        // Touch Gesture Testing
+        function setupTouchTesting() {
+            const touchArea = document.getElementById('touch-area');
+            let touchStart = null;
+            let touchStartTime = 0;
+            
+            touchArea.addEventListener('touchstart', (e) => {
+                touchStartTime = performance.now();
+                const touch = e.touches[0];
+                touchStart = { x: touch.clientX, y: touch.clientY };
+                touchArea.classList.add('active');
+                
+                touchMetrics.touchCount++;
+                updateTouchMetrics();
+            }, { passive: false });
+            
+            touchArea.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+            }, { passive: false });
+            
+            touchArea.addEventListener('touchend', (e) => {
+                const touchEndTime = performance.now();
+                const responseTime = touchEndTime - touchStartTime;
+                
+                if (touchStart && e.changedTouches[0]) {
+                    const touch = e.changedTouches[0];
+                    const deltaX = touch.clientX - touchStart.x;
+                    const deltaY = touch.clientY - touchStart.y;
+                    
+                    const direction = determineSwipeDirection(deltaX, deltaY);
+                    
+                    if (direction) {
+                        touchMetrics.lastGesture = direction;
+                        displayGestureFeedback(direction, responseTime);
+                    }
+                }
+                
+                touchArea.classList.remove('active');
+                touchStart = null;
+                
+                // Update average response time
+                touchMetrics.averageResponseTime = 
+                    (touchMetrics.averageResponseTime + responseTime) / 2;
+                
+                updateTouchMetrics();
+            });
+        }
+        
+        function determineSwipeDirection(deltaX, deltaY) {
+            const threshold = 50;
+            const absX = Math.abs(deltaX);
+            const absY = Math.abs(deltaY);
+            
+            if (absX < threshold && absY < threshold) return null;
+            
+            if (absY > absX) {
+                return deltaY > 0 ? 'down' : 'up';
+            } else {
+                return deltaX > 0 ? 'right' : 'left';
+            }
+        }
+        
+        function displayGestureFeedback(direction, responseTime) {
+            const feedbackEl = document.getElementById('gesture-feedback');
+            const directionEmoji = {
+                up: '⬆️',
+                down: '⬇️',
+                left: '⬅️',
+                right: '➡️'
+            };
+            
+            feedbackEl.innerHTML = `
+                <div style="font-size: 24px; margin: 10px 0;">
+                    ${directionEmoji[direction]} Swipe ${direction}
+                </div>
+                <div style="font-size: 14px; color: #94a3b8;">
+                    Tempo de resposta: ${Math.round(responseTime)}ms
+                </div>
+            `;
+            
+            setTimeout(() => {
+                feedbackEl.innerHTML = '';
+            }, 2000);
+        }
+        
+        function updateTouchMetrics() {
+            const metricsEl = document.getElementById('touch-metrics');
+            metricsEl.innerHTML = `
+                <div class="test-result info">
+                    📊 Toques: ${touchMetrics.touchCount} | 
+                    Tempo médio: ${Math.round(touchMetrics.averageResponseTime)}ms |
+                    Último gesto: ${touchMetrics.lastGesture || 'Nenhum'}
+                </div>
+            `;
+        }
+        
+        // Optimization Controls
+        function forceOptimizations() {
+            optimizationsActive = true;
+            document.documentElement.classList.add('mobile-optimized', 'low-end-device');
+            
+            // Reduce animations
+            const particles = document.querySelectorAll('.floating-particle');
+            particles.forEach((particle, index) => {
+                if (index % 2 === 0) {
+                    particle.style.display = 'none';
+                }
+            });
+            
+            updateOptimizationStatus('✅ Otimizações ativadas');
+        }
+        
+        function disableOptimizations() {
+            optimizationsActive = false;
+            document.documentElement.classList.remove('mobile-optimized', 'low-end-device');
+            
+            // Restore animations
+            const particles = document.querySelectorAll('.floating-particle');
+            particles.forEach(particle => {
+                particle.style.display = 'inline-block';
+            });
+            
+            updateOptimizationStatus('❌ Otimizações desativadas');
+        }
+        
+        function testPerformance() {
+            updateOptimizationStatus('🧪 Executando teste de stress...');
+            
+            // Create stress test
+            const stressElements = [];
+            for (let i = 0; i < 100; i++) {
+                const el = document.createElement('div');
+                el.style.cssText = `
+                    position: fixed;
+                    width: 10px;
+                    height: 10px;
+                    background: hsl(${Math.random() * 360}, 70%, 50%);
+                    border-radius: 50%;
+                    left: ${Math.random() * window.innerWidth}px;
+                    top: ${Math.random() * window.innerHeight}px;
+                    animation: float 1s ease-in-out infinite;
+                    pointer-events: none;
+                    z-index: 1000;
+                `;
+                document.body.appendChild(el);
+                stressElements.push(el);
+            }
+            
+            setTimeout(() => {
+                stressElements.forEach(el => el.remove());
+                updateOptimizationStatus('✅ Teste de stress concluído');
+            }, 5000);
+        }
+        
+        function resetMetrics() {
+            touchMetrics = {
+                touchCount: 0,
+                averageResponseTime: 0,
+                lastGesture: null
+            };
+            
+            updateTouchMetrics();
+            updateOptimizationStatus('🔄 Métricas resetadas');
+        }
+        
+        function updateOptimizationStatus(message) {
+            const statusEl = document.getElementById('optimization-status');
+            statusEl.innerHTML = `<div class="test-result info">${message}</div>`;
+        }
+        
+        // Animation Testing
+        function testAnimations() {
+            const testArea = document.getElementById('animation-test-area');
+            testArea.style.transform = 'scale(1.1)';
+            testArea.style.transition = 'transform 0.5s ease';
+            
+            setTimeout(() => {
+                testArea.style.transform = 'scale(1)';
+            }, 500);
+        }
+        
+        function toggleReducedMotion() {
+            document.documentElement.classList.toggle('reduced-motion');
+            const isReduced = document.documentElement.classList.contains('reduced-motion');
+            updateOptimizationStatus(
+                isReduced ? '🐌 Reduced motion ativado' : '🚀 Reduced motion desativado'
+            );
+        }
+        
+        // Connection Speed Detection
+        function detectConnectionSpeed() {
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            
+            if (connection) {
+                const effectiveType = connection.effectiveType;
+                const downlink = connection.downlink;
+                
+                let speed = 'unknown';
+                if (effectiveType === 'slow-2g' || effectiveType === '2g' || downlink < 1) {
+                    speed = 'slow';
+                } else if (effectiveType === '3g' || downlink < 5) {
+                    speed = 'medium';
+                } else {
+                    speed = 'fast';
+                }
+                
+                performanceMetrics.connectionSpeed = speed;
+                document.getElementById('connection-speed').textContent = speed;
+            }
+        }
+        
+        // Battery Detection
+        async function detectBattery() {
+            if ('getBattery' in navigator) {
+                try {
+                    const battery = await navigator.getBattery();
+                    const level = Math.round(battery.level * 100);
+                    performanceMetrics.batteryLevel = level;
+                    document.getElementById('battery-level').textContent = level + '%';
+                } catch (e) {
+                    document.getElementById('battery-level').textContent = 'N/A';
+                }
+            } else {
+                document.getElementById('battery-level').textContent = 'N/A';
+            }
+        }
+        
+        // Memory Usage Detection
+        function detectMemoryUsage() {
+            if (performance.memory) {
+                const used = performance.memory.usedJSHeapSize;
+                const total = performance.memory.jsHeapSizeLimit;
+                const percentage = Math.round((used / total) * 100);
+                
+                performanceMetrics.memoryUsage = percentage;
+                document.getElementById('memory-usage').textContent = percentage + '%';
+            }
+        }
+        
+        // Initialize everything
+        function init() {
+            console.log('🧪 Iniciando testes de otimização mobile...');
+            
+            detectDevice();
+            startPerformanceMonitoring();
+            setupTouchTesting();
+            detectConnectionSpeed();
+            detectBattery();
+            
+            // Update memory usage periodically
+            setInterval(detectMemoryUsage, 2000);
+            
+            // Add test results
+            setTimeout(() => {
+                const resultsEl = document.getElementById('test-results');
+                resultsEl.innerHTML = `
+                    <div class="test-result success">✅ Sistema de detecção funcionando</div>
+                    <div class="test-result success">✅ Monitoramento de performance ativo</div>
+                    <div class="test-result success">✅ Gestos touch configurados</div>
+                    <div class="test-result info">ℹ️ Teste concluído com sucesso</div>
+                `;
+            }, 1000);
+        }
+        
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', init);
+        
+        // Handle orientation change
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                detectDevice();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

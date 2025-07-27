@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Sistema de Performance Monitoring</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .test-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .performance-card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .metric-label {
+            font-size: 12px;
+            opacity: 0.7;
+            text-transform: uppercase;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .status-good { background: #10b981; }
+        .status-warning { background: #f59e0b; }
+        .status-critical { background: #ef4444; }
+        
+        .test-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .test-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+        }
+        
+        .test-button:hover {
+            background: #2563eb;
+        }
+        
+        .test-button.danger {
+            background: #ef4444;
+        }
+        
+        .test-button.danger:hover {
+            background: #dc2626;
+        }
+        
+        .test-button.success {
+            background: #10b981;
+        }
+        
+        .test-button.success:hover {
+            background: #059669;
+        }
+        
+        .fps-chart {
+            display: flex;
+            align-items: end;
+            height: 60px;
+            gap: 2px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        
+        .fps-bar {
+            background: linear-gradient(to top, #ef4444, #f59e0b, #10b981);
+            border-radius: 1px;
+            min-width: 3px;
+            transition: height 0.3s ease;
+        }
+        
+        .log-container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 6px;
+            padding: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        
+        .log-entry {
+            margin-bottom: 5px;
+            padding: 2px 0;
+        }
+        
+        .log-error { color: #ef4444; }
+        .log-warning { color: #f59e0b; }
+        .log-info { color: #3b82f6; }
+        .log-success { color: #10b981; }
+        
+        .optimization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .optimization-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .optimization-active {
+            background: rgba(251, 191, 36, 0.2);
+            border: 1px solid #f59e0b;
+        }
+        
+        .stress-test-area {
+            position: relative;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .stress-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .heavy-animation {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🔍 Sistema de Performance Monitoring</h1>
+            <p>Teste completo do sistema de monitoramento de performance em tempo real</p>
+        </div>
+
+        <!-- Métricas Principais -->
+        <div class="test-section">
+            <h2>📊 Métricas de Performance</h2>
+            <div class="test-grid">
+                <div class="performance-card">
+                    <div class="metric-label">FPS Atual</div>
+                    <div class="metric-value" id="current-fps">
+                        <span class="status-indicator status-good"></span>60
+                    </div>
+                </div>
+                
+                <div class="performance-card">
+                    <div class="metric-label">FPS Médio</div>
+                    <div class="metric-value" id="average-fps">60</div>
+                </div>
+                
+                <div class="performance-card">
+                    <div class="metric-label">Uso de Memória</div>
+                    <div class="metric-value" id="memory-usage">0%</div>
+                </div>
+                
+                <div class="performance-card">
+                    <div class="metric-label">CPU Estimado</div>
+                    <div class="metric-value" id="cpu-usage">0%</div>
+                </div>
+                
+                <div class="performance-card">
+                    <div class="metric-label">Frame Time</div>
+                    <div class="metric-value" id="frame-time">16.7ms</div>
+                </div>
+                
+                <div class="performance-card">
+                    <div class="metric-label">Qualidade</div>
+                    <div class="metric-value" id="animation-quality">HIGH</div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de FPS -->
+            <div>
+                <div class="metric-label">Histórico de FPS (últimos 30 frames)</div>
+                <div class="fps-chart" id="fps-chart"></div>
+            </div>
+        </div>
+
+        <!-- Controles de Teste -->
+        <div class="test-section">
+            <h2>🎮 Controles de Teste</h2>
+            <div class="test-controls">
+                <button class="test-button" onclick="startMonitoring()">▶️ Iniciar Monitoramento</button>
+                <button class="test-button" onclick="stopMonitoring()">⏸️ Parar Monitoramento</button>
+                <button class="test-button danger" onclick="stressTest()">🔥 Teste de Stress</button>
+                <button class="test-button" onclick="normalLoad()">🔄 Carga Normal</button>
+                <button class="test-button success" onclick="optimizePerformance()">⚡ Otimizar</button>
+                <button class="test-button" onclick="clearLogs()">🗑️ Limpar Logs</button>
+            </div>
+        </div>
+
+        <!-- Otimizações Ativas -->
+        <div class="test-section">
+            <h2>⚡ Otimizações Ativas</h2>
+            <div class="optimization-grid">
+                <div class="optimization-item" id="opt-particles">
+                    <div>Reduzir Partículas</div>
+                    <div id="particles-status">❌ Inativo</div>
+                </div>
+                <div class="optimization-item" id="opt-animations">
+                    <div>Simplificar Animações</div>
+                    <div id="animations-status">❌ Inativo</div>
+                </div>
+                <div class="optimization-item" id="opt-blur">
+                    <div>Desabilitar Blur</div>
+                    <div id="blur-status">❌ Inativo</div>
+                </div>
+                <div class="optimization-item" id="opt-stagger">
+                    <div>Reduzir Stagger</div>
+                    <div id="stagger-status">❌ Inativo</div>
+                </div>
+                <div class="optimization-item" id="opt-willchange">
+                    <div>Will-Change</div>
+                    <div id="willchange-status">❌ Inativo</div>
+                </div>
+                <div class="optimization-item" id="opt-throttle">
+                    <div>Throttle Scroll</div>
+                    <div id="throttle-status">❌ Inativo</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de Teste de Stress -->
+        <div class="test-section">
+            <h2>🔥 Área de Teste de Stress</h2>
+            <div class="stress-test-area" id="stress-area">
+                <!-- Partículas serão adicionadas dinamicamente -->
+            </div>
+            <div class="test-controls">
+                <button class="test-button" onclick="addParticles(10)">+10 Partículas</button>
+                <button class="test-button" onclick="addParticles(50)">+50 Partículas</button>
+                <button class="test-button" onclick="addParticles(100)">+100 Partículas</button>
+                <button class="test-button danger" onclick="clearParticles()">Limpar Partículas</button>
+            </div>
+            <div>Partículas ativas: <span id="particle-count">0</span></div>
+        </div>
+
+        <!-- Logs de Performance -->
+        <div class="test-section">
+            <h2>📝 Logs de Performance</h2>
+            <div class="log-container" id="performance-logs">
+                <div class="log-entry log-info">[INFO] Sistema de monitoramento inicializado</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sistema de Performance Monitoring Simulado
+        class PerformanceMonitorTest {
+            constructor() {
+                this.isMonitoring = false
+                this.frameCount = 0
+                this.lastTime = performance.now()
+                this.fpsHistory = []
+                this.currentFPS = 60
+                this.memoryUsage = 0
+                this.optimizations = {
+                    particles: false,
+                    animations: false,
+                    blur: false,
+                    stagger: false,
+                    willchange: false,
+                    throttle: false
+                }
+                this.particleCount = 0
+                this.stressLevel = 0
+                
+                this.init()
+            }
+            
+            init() {
+                this.log('Sistema de monitoramento inicializado', 'info')
+                this.startMonitoring()
+            }
+            
+            startMonitoring() {
+                if (this.isMonitoring) return
+                
+                this.isMonitoring = true
+                this.lastTime = performance.now()
+                this.frameCount = 0
+                this.measureFPS()
+                this.log('Monitoramento iniciado', 'success')
+            }
+            
+            stopMonitoring() {
+                this.isMonitoring = false
+                this.log('Monitoramento pausado', 'warning')
+            }
+            
+            measureFPS() {
+                if (!this.isMonitoring) return
+                
+                const now = performance.now()
+                this.frameCount++
+                
+                if (now - this.lastTime >= 1000) {
+                    this.currentFPS = Math.round((this.frameCount * 1000) / (now - this.lastTime))
+                    
+                    // Simular impacto do stress test
+                    if (this.stressLevel > 0) {
+                        this.currentFPS = Math.max(10, this.currentFPS - this.stressLevel)
+                    }
+                    
+                    this.fpsHistory.push(this.currentFPS)
+                    if (this.fpsHistory.length > 30) {
+                        this.fpsHistory.shift()
+                    }
+                    
+                    // Simular uso de memória
+                    this.memoryUsage = Math.min(90, (this.particleCount / 10) + Math.random() * 20)
+                    
+                    this.updateUI()
+                    this.checkPerformance()
+                    
+                    this.frameCount = 0
+                    this.lastTime = now
+                }
+                
+                requestAnimationFrame(() => this.measureFPS())
+            }
+            
+            updateUI() {
+                // Atualizar métricas
+                const fpsElement = document.getElementById('current-fps')
+                const indicator = fpsElement.querySelector('.status-indicator')
+                
+                fpsElement.innerHTML = `<span class="status-indicator ${this.getPerformanceClass()}"></span>${this.currentFPS}`
+                
+                document.getElementById('average-fps').textContent = 
+                    Math.round(this.fpsHistory.reduce((a, b) => a + b, 0) / this.fpsHistory.length) || 60
+                
+                document.getElementById('memory-usage').textContent = `${Math.round(this.memoryUsage)}%`
+                document.getElementById('cpu-usage').textContent = `${Math.max(0, 100 - (this.currentFPS / 60) * 100).toFixed(0)}%`
+                document.getElementById('frame-time').textContent = `${(1000 / this.currentFPS).toFixed(1)}ms`
+                
+                // Atualizar qualidade
+                let quality = 'HIGH'
+                if (this.currentFPS < 20) quality = 'LOW'
+                else if (this.currentFPS < 30) quality = 'MEDIUM'
+                document.getElementById('animation-quality').textContent = quality
+                
+                // Atualizar gráfico
+                this.updateFPSChart()
+                
+                // Atualizar otimizações
+                this.updateOptimizationStatus()
+            }
+            
+            getPerformanceClass() {
+                if (this.currentFPS >= 50) return 'status-good'
+                if (this.currentFPS >= 30) return 'status-warning'
+                return 'status-critical'
+            }
+            
+            updateFPSChart() {
+                const chart = document.getElementById('fps-chart')
+                chart.innerHTML = ''
+                
+                const maxFPS = Math.max(...this.fpsHistory, 60)
+                
+                this.fpsHistory.forEach(fps => {
+                    const bar = document.createElement('div')
+                    bar.className = 'fps-bar'
+                    bar.style.height = `${(fps / maxFPS) * 50}px`
+                    bar.title = `${fps} FPS`
+                    chart.appendChild(bar)
+                })
+            }
+            
+            checkPerformance() {
+                // Auto-otimização
+                if (this.currentFPS < 20 && !this.optimizations.particles) {
+                    this.enableOptimization('particles')
+                    this.log('Performance crítica - Otimizações automáticas ativadas', 'warning')
+                }
+                
+                if (this.currentFPS < 15) {
+                    this.enableOptimization('animations')
+                    this.enableOptimization('blur')
+                }
+                
+                if (this.memoryUsage > 80) {
+                    this.enableOptimization('willchange')
+                    this.log(`Uso de memória alto: ${this.memoryUsage.toFixed(1)}%`, 'warning')
+                }
+                
+                // Remover otimizações se performance melhorar
+                if (this.currentFPS > 50 && this.optimizations.particles) {
+                    this.disableOptimization('particles')
+                    this.disableOptimization('animations')
+                    this.log('Performance restaurada - Otimizações removidas', 'success')
+                }
+            }
+            
+            enableOptimization(type) {
+                this.optimizations[type] = true
+                this.log(`Otimização ativada: ${type}`, 'info')
+            }
+            
+            disableOptimization(type) {
+                this.optimizations[type] = false
+                this.log(`Otimização desativada: ${type}`, 'info')
+            }
+            
+            updateOptimizationStatus() {
+                Object.keys(this.optimizations).forEach(opt => {
+                    const element = document.getElementById(`opt-${opt}`)
+                    const status = document.getElementById(`${opt}-status`)
+                    
+                    if (this.optimizations[opt]) {
+                        element.classList.add('optimization-active')
+                        status.textContent = '✅ Ativo'
+                    } else {
+                        element.classList.remove('optimization-active')
+                        status.textContent = '❌ Inativo'
+                    }
+                })
+            }
+            
+            stressTest() {
+                this.stressLevel = 30
+                this.addParticles(100)
+                this.log('Teste de stress iniciado - Adicionando carga pesada', 'warning')
+                
+                // Adicionar animações pesadas
+                for (let i = 0; i < 20; i++) {
+                    setTimeout(() => {
+                        const div = document.createElement('div')
+                        div.className = 'heavy-animation'
+                        div.style.cssText = `
+                            position: fixed;
+                            top: ${Math.random() * 100}%;
+                            left: ${Math.random() * 100}%;
+                            width: 50px;
+                            height: 50px;
+                            background: linear-gradient(45deg, #ff0000, #00ff00);
+                            z-index: 1000;
+                        `
+                        document.body.appendChild(div)
+                        
+                        setTimeout(() => div.remove(), 5000)
+                    }, i * 100)
+                }
+            }
+            
+            normalLoad() {
+                this.stressLevel = 0
+                this.clearParticles()
+                this.log('Carga normalizada', 'success')
+            }
+            
+            addParticles(count) {
+                const area = document.getElementById('stress-area')
+                
+                for (let i = 0; i < count; i++) {
+                    const particle = document.createElement('div')
+                    particle.className = 'stress-particle'
+                    particle.style.left = Math.random() * 100 + '%'
+                    particle.style.top = Math.random() * 100 + '%'
+                    particle.style.animationDelay = Math.random() * 3 + 's'
+                    area.appendChild(particle)
+                    this.particleCount++
+                }
+                
+                document.getElementById('particle-count').textContent = this.particleCount
+                this.log(`Adicionadas ${count} partículas (total: ${this.particleCount})`, 'info')
+            }
+            
+            clearParticles() {
+                document.getElementById('stress-area').innerHTML = ''
+                this.particleCount = 0
+                document.getElementById('particle-count').textContent = '0'
+                this.log('Partículas removidas', 'info')
+            }
+            
+            optimizePerformance() {
+                Object.keys(this.optimizations).forEach(opt => {
+                    this.enableOptimization(opt)
+                })
+                this.log('Todas as otimizações foram ativadas manualmente', 'success')
+            }
+            
+            log(message, type = 'info') {
+                const logs = document.getElementById('performance-logs')
+                const entry = document.createElement('div')
+                entry.className = `log-entry log-${type}`
+                entry.textContent = `[${new Date().toLocaleTimeString()}] [${type.toUpperCase()}] ${message}`
+                logs.appendChild(entry)
+                logs.scrollTop = logs.scrollHeight
+                
+                // Manter apenas últimas 50 entradas
+                while (logs.children.length > 50) {
+                    logs.removeChild(logs.firstChild)
+                }
+            }
+        }
+        
+        // Funções globais para os botões
+        let monitor
+        
+        function startMonitoring() {
+            if (!monitor) {
+                monitor = new PerformanceMonitorTest()
+            } else {
+                monitor.startMonitoring()
+            }
+        }
+        
+        function stopMonitoring() {
+            if (monitor) monitor.stopMonitoring()
+        }
+        
+        function stressTest() {
+            if (monitor) monitor.stressTest()
+        }
+        
+        function normalLoad() {
+            if (monitor) monitor.normalLoad()
+        }
+        
+        function optimizePerformance() {
+            if (monitor) monitor.optimizePerformance()
+        }
+        
+        function addParticles(count) {
+            if (monitor) monitor.addParticles(count)
+        }
+        
+        function clearParticles() {
+            if (monitor) monitor.clearParticles()
+        }
+        
+        function clearLogs() {
+            document.getElementById('performance-logs').innerHTML = ''
+        }
+        
+        // Inicializar automaticamente
+        window.addEventListener('load', () => {
+            setTimeout(startMonitoring, 1000)
+        })
+    </script>
+</body>
+</html>

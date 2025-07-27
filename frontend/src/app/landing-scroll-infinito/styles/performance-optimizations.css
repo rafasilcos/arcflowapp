@@ -1,0 +1,415 @@
+/* Performance Optimization Styles */
+
+/* Base performance classes */
+.reduce-particles {
+  --particle-count: 0.3;
+  --particle-opacity: 0.5;
+}
+
+.simplify-animations {
+  --animation-complexity: 0.5;
+  --animation-duration-multiplier: 0.7;
+  --stagger-delay: 0.05s;
+}
+
+.disable-blur {
+  --blur-amount: 0px;
+}
+
+.reduce-stagger {
+  --stagger-delay: 0.02s;
+  --stagger-count: 0.5;
+}
+
+.enable-will-change {
+  --enable-will-change: auto;
+}
+
+.throttle-scroll {
+  --scroll-throttle: 32ms;
+}
+
+.pause-non-critical {
+  --non-critical-animations: paused;
+}
+
+/* Particle optimizations */
+.reduce-particles .floating-particles {
+  opacity: var(--particle-opacity, 0.5);
+}
+
+.reduce-particles .floating-particles::before {
+  transform: scale(var(--particle-count, 0.3));
+}
+
+.reduce-particles .background-gradient {
+  background-size: 200% 200%;
+  animation-duration: calc(var(--animation-duration-multiplier, 0.7) * 20s);
+}
+
+/* Animation simplifications */
+.simplify-animations * {
+  animation-duration: calc(var(--animation-duration-multiplier, 0.7) * var(--original-duration, 1s)) !important;
+  transition-duration: calc(var(--animation-duration-multiplier, 0.7) * var(--original-transition, 0.3s)) !important;
+}
+
+.simplify-animations .stagger-animation {
+  animation-delay: calc(var(--stagger-index, 0) * var(--stagger-delay, 0.05s)) !important;
+}
+
+.simplify-animations .complex-animation {
+  animation: simple-fade var(--animation-duration-multiplier, 0.7s) ease-out !important;
+}
+
+/* Blur optimizations */
+.disable-blur * {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+.disable-blur .backdrop-blur-sm,
+.disable-blur .backdrop-blur-md,
+.disable-blur .backdrop-blur-lg {
+  backdrop-filter: none !important;
+}
+
+.disable-blur .blur-sm,
+.disable-blur .blur-md,
+.disable-blur .blur-lg {
+  filter: none !important;
+}
+
+/* Will-change optimizations */
+.enable-will-change .scroll-section {
+  will-change: transform, opacity;
+}
+
+.enable-will-change .animated-element {
+  will-change: var(--enable-will-change, auto);
+}
+
+.enable-will-change .gsap-element {
+  will-change: transform;
+}
+
+/* Remove will-change after animations */
+.enable-will-change .animation-complete {
+  will-change: auto;
+}
+
+/* Advanced will-change optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-scroll {
+  will-change: scroll-position;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Dynamic will-change based on animation state */
+.animating {
+  will-change: transform, opacity, scale;
+}
+
+.animating.complex-animation {
+  will-change: transform, opacity, scale, rotate, skew;
+}
+
+.animation-idle {
+  will-change: auto;
+}
+
+/* Lazy loading states */
+.lazy-animation-loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.lazy-animation-loaded {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-animation-error {
+  opacity: 0.8;
+  filter: grayscale(0.5);
+}
+
+/* Preloading indicators */
+.preloading-animation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll throttling */
+.throttle-scroll {
+  scroll-behavior: auto;
+}
+
+.throttle-scroll .smooth-scroll {
+  scroll-behavior: auto;
+}
+
+/* Pause non-critical animations */
+.pause-non-critical .non-critical {
+  animation-play-state: var(--non-critical-animations, paused) !important;
+}
+
+.pause-non-critical .decorative-animation {
+  animation-play-state: paused !important;
+}
+
+.pause-non-critical .background-animation {
+  animation-play-state: paused !important;
+}
+
+/* Performance-based responsive animations */
+@media (prefers-reduced-motion: reduce) {
+  .simplify-animations * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Low-end device optimizations */
+@media (max-width: 768px) and (max-height: 1024px) {
+  .reduce-particles {
+    --particle-count: 0.2;
+    --particle-opacity: 0.3;
+  }
+  
+  .simplify-animations {
+    --animation-complexity: 0.3;
+    --animation-duration-multiplier: 0.5;
+  }
+}
+
+/* Very low-end device optimizations */
+@media (max-width: 480px) and (max-height: 800px) {
+  .reduce-particles {
+    --particle-count: 0.1;
+    --particle-opacity: 0.2;
+  }
+  
+  .simplify-animations {
+    --animation-complexity: 0.2;
+    --animation-duration-multiplier: 0.3;
+  }
+  
+  .disable-blur * {
+    backdrop-filter: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* GPU acceleration helpers */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.gpu-accelerated * {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Enhanced GPU acceleration for scroll elements */
+.gpu-accelerated .scroll-section {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.gpu-accelerated .animate-element {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.gpu-accelerated .glass-card {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Force hardware acceleration for specific elements */
+.force-gpu-acceleration {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimized transforms for animations */
+.optimized-transform {
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Memory optimization */
+.memory-optimized .large-background {
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.memory-optimized .complex-gradient {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Simplified animations for low performance */
+@keyframes simple-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes simple-slide {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes simple-scale {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Performance monitoring styles */
+.performance-monitor {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.performance-critical {
+  animation: performance-alert 1s ease-in-out infinite alternate;
+}
+
+@keyframes performance-alert {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}
+
+/* FPS Chart styles */
+.fps-chart {
+  display: flex;
+  align-items: end;
+  height: 40px;
+  gap: 1px;
+}
+
+.fps-bar {
+  background: linear-gradient(to top, #ef4444, #f59e0b, #10b981);
+  border-radius: 1px;
+  min-width: 2px;
+  transition: height 0.2s ease;
+}
+
+/* Debug mode styles */
+.debug-mode .performance-overlay {
+  display: block !important;
+}
+
+.debug-mode .performance-metrics {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 12px;
+  z-index: 9999;
+}
+
+/* Optimization indicators */
+.optimization-indicator {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: monospace;
+  z-index: 1000;
+}
+
+.optimization-indicator.active {
+  background: rgba(255, 193, 7, 0.9);
+  color: black;
+}
+
+.optimization-indicator.critical {
+  background: rgba(220, 53, 69, 0.9);
+  animation: pulse 1s infinite;
+}
+
+/* Responsive performance adjustments */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch devices - reduce hover effects */
+  .simplify-animations .hover-effect {
+    transition: none !important;
+  }
+  
+  .reduce-particles .hover-particles {
+    display: none !important;
+  }
+}
+
+/* High DPI optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .reduce-particles {
+    --particle-count: 0.4;
+  }
+}
+
+/* Battery optimization */
+@media (prefers-color-scheme: dark) {
+  .battery-optimized {
+    filter: brightness(0.8);
+  }
+}
+
+/* Connection-based optimizations */
+@media (prefers-reduced-data: reduce) {
+  .reduce-particles {
+    --particle-count: 0.1;
+  }
+  
+  .simplify-animations {
+    --animation-complexity: 0.2;
+  }
+  
+  .disable-blur * {
+    backdrop-filter: none !important;
+  }
+}

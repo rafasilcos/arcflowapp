@@ -1,0 +1,648 @@
+'use client';
+
+// ===== DASHBOARD ARCFLOW REDESIGN - FASE 1 IMPLEMENTAÇÃO =====
+// Progressive Disclosure + Smart Loading + Design System
+// CORREÇÃO: Duplicações removidas + UX otimizada para 10k usuários
+
+import React, { useState, use, useMemo, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Building, Play, Pause, Square, CheckCircle2, AlertTriangle, Clock,
+  Users, MessageSquare, Bell, Settings, Eye, EyeOff, Plus, Edit3,
+  List, Calendar, Columns, Upload, Send, Trash2, GripVertical,
+  MoreHorizontal, User, ChevronDown, ChevronRight, Focus, FileText,
+  Paperclip, Target, Search, Filter, Home, ArrowRight, Timer,
+  Zap, TrendingUp, Activity, Save, ChevronUp, PanelRightClose,
+  PanelRightOpen, Workflow, BarChart3, X, Download, ArrowLeft,
+  DollarSign, TrendingDown, AlertCircle, Info, LayoutGrid,
+  Maximize2, Minimize2
+} from 'lucide-react';
+
+// ===== IMPORTS DOS NOVOS HOOKS E COMPONENTES =====
+import { useProgressiveDisclosure } from '@/hooks/useProgressiveDisclosure';
+import { useSmartLoading } from '@/hooks/useSmartLoading';
+import { LoadingIndicator } from '@/design-system/molecules/LoadingIndicator';
+import { designTokens } from '@/design-system/tokens';
+
+// ===== TIPOS =====
+interface DashboardProps {
+  params: Promise<{ id: string }>;
+}
+
+// ===== DADOS TEMPORÁRIOS =====
+const dadosProjetoTemp = {
+  id: "proj_001",
+  nome: "Residência Unifamiliar - João Silva",
+  cliente: "João Silva",
+  gerente: "Arq. Maria Santos", 
+  data_inicio: "2024-01-15",
+  prazo_final: "2024-06-15",
+  status: "em_progresso",
+  progresso_geral: 45,
+  tempo_total_estimado: 720000, // 200 horas
+  tempo_total_trabalhado: 324000, // 90 horas
+  equipe: [
+    { id: "user_001", nome: "Arq. Maria Santos", cargo: "Gerente de Projeto", avatar: "👩‍💼", status: "online" },
+    { id: "user_002", nome: "Eng. Carlos Lima", cargo: "Engenheiro Civil", avatar: "👨‍💻", status: "ocupado" },
+    { id: "user_003", nome: "Eng. Roberto Silva", cargo: "Engenheiro Estrutural", avatar: "👨‍🔧", status: "online" },
+    { id: "user_004", nome: "Eng. Paulo Elétrica", cargo: "Engenheiro Elétrico", avatar: "⚡", status: "offline" }
+  ],
+  etapas: [
+    {
+      id: "etapa_001",
+      numero: 1,
+      nome: "Projeto Arquitetônico",
+      progresso: 80,
+      status: "em_progresso",
+      tarefas: [
+        {
+          id: "tarefa_001",
+          nome: "Análise do Terreno e Levantamento Topográfico",
+          status: "concluida",
+          responsavel: "Eng. Carlos Lima",
+          tempo_estimado: 28800,
+          tempo_total: 32400,
+          data_entrega: "2024-01-20",
+          prioridade: "alta"
+        },
+        {
+          id: "tarefa_002", 
+          nome: "Estudo de Viabilidade e Programa de Necessidades",
+          status: "em_progresso",
+          responsavel: "Arq. Maria Santos",
+          tempo_estimado: 36000,
+          tempo_total: 25200,
+          data_entrega: "2024-01-25",
+          prioridade: "alta"
+        }
+      ]
+    }
+  ]
+};
+
+// ===== COMPONENTE PRINCIPAL =====
+export default function DashboardRedesign({ params }: DashboardProps) {
+  const { id: projetoId } = use(params);
+  
+  // ===== HOOKS DO REDESIGN =====
+  const disclosure = useProgressiveDisclosure('focus');
+  const { withLoading, loadingStates } = useSmartLoading();
+  
+  // ===== ESTADOS =====
+  const [projeto] = useState(dadosProjetoTemp);
+  const [modoFocoAtivo, setModoFocoAtivo] = useState(false);
+
+  // ===== CALCULATED VALUES =====
+  const progressoGeral = useMemo(() => {
+    if (!projeto.etapas || projeto.etapas.length === 0) return 0;
+    const progressoTotal = projeto.etapas.reduce((acc, etapa) => acc + etapa.progresso, 0);
+    return Math.round(progressoTotal / projeto.etapas.length);
+  }, [projeto.etapas]);
+
+  const calcularDiasRestantes = () => {
+    const hoje = new Date();
+    const prazoFinal = new Date(projeto.prazo_final);
+    const diferenca = Math.ceil((prazoFinal.getTime() - hoje.getTime()) / (1000 * 60 * 60 * 24));
+    return Math.max(0, diferenca);
+  };
+
+  const formatarTempo = (segundos: number) => {
+    const horas = Math.floor(segundos / 3600);
+    return `${horas}h`;
+  };
+
+  const estatisticas = useMemo(() => {
+    const todasTarefas = projeto.etapas.flatMap(etapa => etapa.tarefas);
+    
+    return {
+      tarefasPorStatus: {
+        nao_iniciada: todasTarefas.filter(t => t.status === 'nao_iniciada').length,
+        em_progresso: todasTarefas.filter(t => t.status === 'em_progresso').length,
+        em_revisao: todasTarefas.filter(t => t.status === 'em_revisao').length,
+        concluida: todasTarefas.filter(t => t.status === 'concluida').length
+      },
+      tempoTotalEstimado: todasTarefas.reduce((acc, tarefa) => acc + tarefa.tempo_estimado, 0),
+      tempoTotalTrabalhado: todasTarefas.reduce((acc, tarefa) => acc + tarefa.tempo_total, 0),
+      proximasTarefas: todasTarefas.filter(t => t.status !== 'concluida').slice(0, 3)
+    };
+  }, [projeto.etapas]);
+
+  // ===== HANDLERS COM LOADING =====
+  const handleIniciarTarefa = useCallback(async (tarefaId: string) => {
+    await withLoading('start-task', async () => {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('Tarefa iniciada:', tarefaId);
+    }, {
+      message: 'Iniciando cronômetro...',
+      successMessage: 'Tarefa iniciada com sucesso!',
+      estimatedDuration: 1000
+    });
+  }, [withLoading]);
+
+  // ===== COMPONENTE: SELETOR DE NIVEL =====
+  const LevelSelector = () => (
+    <div className="flex items-center space-x-1 bg-white rounded-lg border p-1 shadow-sm">
+      <Button
+        variant={disclosure.isGlance ? 'default' : 'ghost'}
+        size="sm"
+        onClick={disclosure.goToGlance}
+        className="h-8 px-3 text-xs font-medium"
+      >
+        <Eye className="h-3 w-3 mr-1" />
+        Glance
+      </Button>
+      <Button
+        variant={disclosure.isFocus ? 'default' : 'ghost'}
+        size="sm"
+        onClick={disclosure.goToFocus}
+        className="h-8 px-3 text-xs font-medium"
+      >
+        <Target className="h-3 w-3 mr-1" />
+        Focus
+      </Button>
+      <Button
+        variant={disclosure.isDetail ? 'default' : 'ghost'}
+        size="sm"
+        onClick={disclosure.goToDetail}
+        className="h-8 px-3 text-xs font-medium"
+      >
+        <BarChart3 className="h-3 w-3 mr-1" />
+        Detail
+      </Button>
+    </div>
+  );
+
+  // ===== COMPONENTE: PROJECT HEALTH CARD =====
+  const ProjectHealthCard = () => (
+    <Card className="overflow-hidden border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <CardHeader className="border-b bg-white/50 pb-4">
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center space-x-2 text-blue-900">
+            <Building className="h-5 w-5" />
+            <span className="text-lg font-bold">Project Health</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-green-700">87% Health</span>
+          </div>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="p-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="text-center">
+            <p className="text-2xl font-bold text-blue-900">{progressoGeral}%</p>
+            <p className="text-xs text-blue-600">Progresso</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-green-900">{calcularDiasRestantes()}</p>
+            <p className="text-xs text-green-600">Dias restantes</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-purple-900">{projeto.equipe.length}</p>
+            <p className="text-xs text-purple-600">Membros</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-orange-900">{estatisticas.tarefasPorStatus.em_progresso}</p>
+            <p className="text-xs text-orange-600">Ativas</p>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  // ===== COMPONENTE: CRITICAL ALERTS =====
+  const CriticalAlertsCard = () => (
+    <Card className="border-amber-200 bg-gradient-to-r from-amber-50 to-yellow-50">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center space-x-2 text-amber-800">
+          <AlertTriangle className="h-5 w-5" />
+          <span>Alertas Críticos</span>
+          <Badge variant="destructive" className="ml-2">2</Badge>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="p-4 pt-0">
+        <div className="space-y-3">
+          <div className="flex items-center space-x-3 p-3 bg-white/60 rounded-lg border border-amber-200">
+            <AlertTriangle className="h-4 w-4 text-red-600" />
+            <div className="flex-1">
+              <p className="text-sm font-medium text-gray-900">Revisão arquitetônica atrasada</p>
+              <p className="text-xs text-gray-600">2 dias de atraso</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-3 p-3 bg-white/60 rounded-lg border border-amber-200">
+            <Clock className="h-4 w-4 text-orange-600" />
+            <div className="flex-1">
+              <p className="text-sm font-medium text-gray-900">Conflito de recursos</p>
+              <p className="text-xs text-gray-600">Maria sobregregada (130%)</p>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  // ===== COMPONENTE: QUICK ACTIONS =====
+  const QuickActionsCard = () => (
+    <Card className="border-green-200 bg-gradient-to-r from-green-50 to-emerald-50">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center space-x-2 text-green-800">
+          <Zap className="h-5 w-5" />
+          <span>Ações Rápidas</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="p-4 pt-0">
+        <div className="grid grid-cols-2 gap-3">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="h-12 flex flex-col items-center justify-center space-y-1 bg-white/60 border-green-300 hover:bg-green-50"
+            onClick={() => setModoFocoAtivo(true)}
+          >
+            <Focus className="h-4 w-4" />
+            <span className="text-xs">Modo Foco</span>
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="h-12 flex flex-col items-center justify-center space-y-1 bg-white/60 border-green-300 hover:bg-green-50"
+          >
+            <BarChart3 className="h-4 w-4" />
+            <span className="text-xs">Relatórios</span>
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="h-12 flex flex-col items-center justify-center space-y-1 bg-white/60 border-green-300 hover:bg-green-50"
+          >
+            <MessageSquare className="h-4 w-4" />
+            <span className="text-xs">Chat Equipe</span>
+          </Button>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="h-12 flex flex-col items-center justify-center space-y-1 bg-white/60 border-green-300 hover:bg-green-50"
+          >
+            <Plus className="h-4 w-4" />
+            <span className="text-xs">Nova Tarefa</span>
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  // ===== COMPONENTE: TAREFAS ATIVAS =====
+  const ActiveTasksCard = () => (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Activity className="h-5 w-5 text-blue-600" />
+            <span>Tarefas Ativas</span>
+          </div>
+          <Badge variant="outline">{estatisticas.proximasTarefas.length} ativas</Badge>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-3">
+          {estatisticas.proximasTarefas.map((tarefa) => (
+            <motion.div 
+              key={tarefa.id}
+              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border hover:shadow-sm transition-all"
+              whileHover={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <div className="flex items-center space-x-3">
+                <div className={`w-3 h-3 rounded-full ${
+                  tarefa.status === 'em_progresso' ? 'bg-blue-500 animate-pulse' : 'bg-gray-300'
+                }`}></div>
+                <div>
+                  <h4 className="font-medium text-gray-900 text-sm">{tarefa.nome}</h4>
+                  <div className="flex items-center space-x-3 text-xs text-gray-600">
+                    <span>👤 {tarefa.responsavel}</span>
+                    <span>⏱️ {formatarTempo(tarefa.tempo_estimado)}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                {loadingStates['start-task']?.loading ? (
+                  <LoadingIndicator 
+                    state={loadingStates['start-task']} 
+                    variant="inline" 
+                    size="sm" 
+                    showMessage={false}
+                  />
+                ) : (
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="h-8 px-3 text-xs"
+                    onClick={() => handleIniciarTarefa(tarefa.id)}
+                  >
+                    <Play className="h-3 w-3 mr-1" />
+                    {tarefa.status === 'em_progresso' ? 'Continuar' : 'Iniciar'}
+                  </Button>
+                )}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  // ===== COMPONENTE: MÉTRICAS AVANÇADAS =====
+  const AdvancedMetricsGrid = () => (
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+        <CardContent className="p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-blue-700">Tempo Trabalhado</p>
+              <p className="text-2xl font-bold text-blue-900">
+                {formatarTempo(estatisticas.tempoTotalTrabalhado)}
+              </p>
+              <p className="text-xs text-blue-600">
+                de {formatarTempo(estatisticas.tempoTotalEstimado)} estimado
+              </p>
+            </div>
+            <Clock className="h-8 w-8 text-blue-600" />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+        <CardContent className="p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-green-700">Eficiência</p>
+              <p className="text-2xl font-bold text-green-900">94.2%</p>
+              <p className="text-xs text-green-600">Dentro do estimado</p>
+            </div>
+            <TrendingUp className="h-8 w-8 text-green-600" />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
+        <CardContent className="p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-purple-700">Etapas</p>
+              <p className="text-2xl font-bold text-purple-900">{projeto.etapas.length}</p>
+              <p className="text-xs text-purple-600">1 concluída</p>
+            </div>
+            <Workflow className="h-8 w-8 text-purple-600" />
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-gradient-to-br from-orange-50 to-orange-100 border-orange-200">
+        <CardContent className="p-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-orange-700">Equipe</p>
+              <p className="text-2xl font-bold text-orange-900">{projeto.equipe.length}</p>
+              <p className="text-xs text-orange-600">
+                {projeto.equipe.filter(m => m.status === 'online').length} online
+              </p>
+            </div>
+            <Users className="h-8 w-8 text-orange-600" />
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+
+  // ===== RENDER PRINCIPAL =====
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* ===== LOADING OVERLAY GLOBAL ===== */}
+      <AnimatePresence>
+        {Object.values(loadingStates).some(state => state.loading) && (
+          <LoadingIndicator 
+            state={Object.values(loadingStates).find(state => state.loading)!}
+            variant="overlay"
+            size="lg"
+          />
+        )}
+      </AnimatePresence>
+
+      {/* ===== HEADER FIXO COM NAVEGAÇÃO ===== */}
+      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Informações do Projeto */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
+                <Building className="h-6 w-6 text-blue-600" />
+                <div>
+                  <h1 className="text-xl font-bold text-gray-900">{projeto.nome}</h1>
+                  <p className="text-sm text-gray-600">Cliente: {projeto.cliente}</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Controles de Navegação */}
+            <div className="flex items-center space-x-4">
+              <LevelSelector />
+              
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setModoFocoAtivo(true)}
+                  className="h-8 text-xs"
+                >
+                  <Focus className="h-3 w-3 mr-1" />
+                  Modo Foco
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ===== CONTAINER PRINCIPAL COM PROGRESSIVE DISCLOSURE ===== */}
+      <div className="max-w-7xl mx-auto px-6 py-6 space-y-6">
+
+        {/* ===== GLANCE MODE: COMMAND CENTER ===== */}
+        <AnimatePresence>
+          {disclosure.shouldShow('glance') && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="space-y-4"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <ProjectHealthCard />
+                <CriticalAlertsCard />
+                <QuickActionsCard />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* ===== FOCUS MODE: TACTICAL VIEW ===== */}
+        <AnimatePresence>
+          {disclosure.shouldShow('focus') && (
+            <motion.div
+              initial={{ opacity: 0, y: disclosure.isGlance ? 0 : -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: disclosure.isGlance ? 0.1 : 0 }}
+              className="space-y-6"
+            >
+              <AdvancedMetricsGrid />
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <ActiveTasksCard />
+                
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Columns className="h-5 w-5 text-purple-600" />
+                      <span>Kanban Inteligente</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-4 gap-3">
+                      <div className="text-center p-3 bg-gray-50 rounded-lg">
+                        <p className="text-sm font-medium text-gray-600">A Fazer</p>
+                        <p className="text-lg font-bold text-gray-900">{estatisticas.tarefasPorStatus.nao_iniciada}</p>
+                      </div>
+                      <div className="text-center p-3 bg-blue-50 rounded-lg">
+                        <p className="text-sm font-medium text-blue-600">Em Progresso</p>
+                        <p className="text-lg font-bold text-blue-900">{estatisticas.tarefasPorStatus.em_progresso}</p>
+                      </div>
+                      <div className="text-center p-3 bg-yellow-50 rounded-lg">
+                        <p className="text-sm font-medium text-yellow-600">Revisão</p>
+                        <p className="text-lg font-bold text-yellow-900">{estatisticas.tarefasPorStatus.em_revisao}</p>
+                      </div>
+                      <div className="text-center p-3 bg-green-50 rounded-lg">
+                        <p className="text-sm font-medium text-green-600">Concluído</p>
+                        <p className="text-lg font-bold text-green-900">{estatisticas.tarefasPorStatus.concluida}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* ===== DETAIL MODE: STRATEGIC INSIGHTS ===== */}
+        <AnimatePresence>
+          {disclosure.isDetail && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="space-y-6"
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <BarChart3 className="h-5 w-5 text-indigo-600" />
+                    <span>Análise Estratégica</span>
+                    <Badge variant="secondary">Detail Mode</Badge>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl">
+                      <BarChart3 className="h-8 w-8 text-indigo-600 mx-auto mb-3" />
+                      <p className="text-2xl font-bold text-indigo-900">15 pts</p>
+                      <p className="text-sm text-indigo-600">Velocity atual</p>
+                    </div>
+                    <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
+                      <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-3" />
+                      <p className="text-2xl font-bold text-green-900">On Track</p>
+                      <p className="text-sm text-green-600">Burndown status</p>
+                    </div>
+                    <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
+                      <Target className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                      <p className="text-2xl font-bold text-blue-900">94%</p>
+                      <p className="text-sm text-blue-600">Quality score</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-200">
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 bg-purple-100 rounded-lg">
+                        <Zap className="h-5 w-5 text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-purple-900">IA Prediction</h4>
+                        <p className="text-sm text-purple-700">
+                          "Projeto tem 15% de risco de atraso. Sugestão: Adicionar 1 recurso à equipe."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* ===== MODO FOCO OVERLAY ===== */}
+      <AnimatePresence>
+        {modoFocoAtivo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
+            onClick={() => setModoFocoAtivo(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="bg-white rounded-xl shadow-2xl p-6 mx-4 max-w-2xl w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-gray-900 flex items-center space-x-2">
+                  <Focus className="h-5 w-5 text-blue-600" />
+                  <span>Modo Foco</span>
+                </h2>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setModoFocoAtivo(false)}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+              
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  Interface focada em execução será implementada aqui com cronômetro expandido, 
+                  anotações em tempo real e eliminação de distrações.
+                </p>
+                
+                <div className="flex justify-end space-x-3">
+                  <Button variant="outline" onClick={() => setModoFocoAtivo(false)}>
+                    Cancelar
+                  </Button>
+                  <Button onClick={() => setModoFocoAtivo(false)}>
+                    Ativar Foco
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+} 

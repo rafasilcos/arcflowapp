@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Navegação Sincronizada</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #60a5fa;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #60a5fa;
+        }
+        
+        .test-section h2 {
+            color: #93c5fd;
+            margin-top: 0;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 15px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .status.completed {
+            background: #10b981;
+            color: white;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .navigation-demo {
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .nav-dots {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background: #60a5fa;
+            transform: scale(1.5);
+        }
+        
+        .nav-dot:hover {
+            background: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Navegação Sincronizada</h1>
+        <div class="status completed">TAREFA 11 IMPLEMENTADA</div>
+        
+        <div class="test-section">
+            <h2>📋 Funcionalidades Implementadas</h2>
+            <ul class="feature-list">
+                <li>Indicadores visuais da seção atual com animações GSAP</li>
+                <li>Navegação por clique nos indicadores (8 seções)</li>
+                <li>Transições suaves entre seções via navegação</li>
+                <li>Sincronização perfeita com useScrollController</li>
+                <li>Barra de progresso animada</li>
+                <li>Tooltips informativos com ícones</li>
+                <li>Navegação lateral para desktop</li>
+                <li>Navegação inferior para mobile</li>
+                <li>Estados de loading e feedback visual</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎮 Demonstração da Navegação</h2>
+            <div class="navigation-demo">
+                <p><strong>Seções Disponíveis:</strong></p>
+                <div class="nav-dots">
+                    <div class="nav-dot active" title="🏠 Início"></div>
+                    <div class="nav-dot" title="📖 Sobre"></div>
+                    <div class="nav-dot" title="⚡ Funcionalidades"></div>
+                    <div class="nav-dot" title="📊 Resultados"></div>
+                    <div class="nav-dot" title="💬 Depoimentos"></div>
+                    <div class="nav-dot" title="💰 Preços"></div>
+                    <div class="nav-dot" title="❓ FAQ"></div>
+                    <div class="nav-dot" title="🚀 Começar"></div>
+                </div>
+                <p style="text-align: center; font-size: 0.9rem; opacity: 0.8;">
+                    Clique nos pontos para navegar entre as seções
+                </p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>🔧 Implementação Técnica</h2>
+            <p>A navegação sincronizada foi implementada com:</p>
+            
+            <div class="code-block">
+// Configuração das 8 seções
+const navigationSections = [
+  { id: 'hero', label: 'Início', icon: '🏠' },
+  { id: 'about', label: 'Sobre', icon: '📖' },
+  { id: 'features', label: 'Funcionalidades', icon: '⚡' },
+  { id: 'results', label: 'Resultados', icon: '📊' },
+  { id: 'testimonials', label: 'Depoimentos', icon: '💬' },
+  { id: 'pricing', label: 'Preços', icon: '💰' },
+  { id: 'faq', label: 'FAQ', icon: '❓' },
+  { id: 'cta', label: 'Começar', icon: '🚀' }
+]
+            </div>
+            
+            <div class="code-block">
+// Integração com useScrollController
+&lt;Navigation 
+  currentSection={scrollState.currentSection}
+  scrollProgress={scrollState.scrollProgress}
+  onSectionClick={handleSectionClick}
+/&gt;
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>✨ Animações GSAP</h2>
+            <ul class="feature-list">
+                <li>Animação da barra de progresso com easing suave</li>
+                <li>Escala e opacidade dos indicadores ativos</li>
+                <li>Transições suaves entre seções (1.5s duration)</li>
+                <li>Efeitos de hover com feedback visual</li>
+                <li>Animações de pulso para indicadores ativos</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>📱 Responsividade</h2>
+            <ul class="feature-list">
+                <li>Navegação superior fixa para todas as telas</li>
+                <li>Navegação lateral para desktop (lg:block)</li>
+                <li>Navegação inferior para mobile (lg:hidden)</li>
+                <li>Tooltips adaptativos por posição</li>
+                <li>Indicadores de progresso por seção</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/landing-scroll-infinito" class="cta-button">
+                🚀 Testar Navegação Ao Vivo
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Simulação da navegação para demonstração
+        const dots = document.querySelectorAll('.nav-dot');
+        let currentActive = 0;
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                // Remove active de todos
+                dots.forEach(d => d.classList.remove('active'));
+                // Adiciona active no clicado
+                dot.classList.add('active');
+                currentActive = index;
+                
+                console.log(`Navegando para seção ${index}`);
+            });
+        });
+        
+        // Auto-navegação para demonstração
+        setInterval(() => {
+            dots.forEach(d => d.classList.remove('active'));
+            currentActive = (currentActive + 1) % dots.length;
+            dots[currentActive].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>

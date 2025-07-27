@@ -1,0 +1,602 @@
+/* Scroll Animations Styles */
+
+/* Global animation optimizations */
+* {
+  will-change: auto;
+}
+
+.animate-element {
+  will-change: transform, opacity;
+}
+
+/* Hero title styles */
+.hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .char {
+  display: inline-block;
+  transform-origin: center;
+}
+
+/* Section title styles */
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+/* Glass morphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient backgrounds */
+.gradient-bg-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-2 {
+  background: linear-gradient(135deg, #ff6b9d 0%, #8b5cf6 100%);
+}
+
+.gradient-bg-3 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Floating particles */
+.floating-particle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Low performance mode */
+.low-performance .floating-particle {
+  display: none;
+}
+
+.low-performance .glass-card {
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.low-performance * {
+  animation-duration: 0.3s !important;
+  transition-duration: 0.3s !important;
+}
+
+/* Optimize animations for 60fps */
+.animate-element {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Lazy loading optimization */
+.lazy-load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GSAP Animation Classes */
+.animate-element {
+  will-change: transform, opacity;
+}
+
+.feature-card {
+  will-change: transform, opacity, scale;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.features-header {
+  will-change: transform, opacity;
+  transform-origin: center top;
+}
+
+.hero-title .char {
+  display: inline-block;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+}
+
+/* Counter animation elements */
+.counter-element {
+  will-change: contents;
+}
+
+/* Enhanced feature card hover effects */
+.feature-card {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* Stagger animation optimization */
+.feature-card:nth-child(1) { animation-delay: 0ms; }
+.feature-card:nth-child(2) { animation-delay: 100ms; }
+.feature-card:nth-child(3) { animation-delay: 200ms; }
+.feature-card:nth-child(4) { animation-delay: 300ms; }
+.feature-card:nth-child(5) { animation-delay: 400ms; }
+.feature-card:nth-child(6) { animation-delay: 500ms; }
+
+/* Section-specific animation classes */
+.section-hero {
+  will-change: transform, opacity;
+}
+
+.section-about {
+  will-change: transform, opacity, scale;
+}
+
+.section-features {
+  will-change: transform, opacity;
+}
+
+.section-results {
+  will-change: transform, opacity, scale;
+}
+
+.section-testimonials {
+  will-change: transform, opacity;
+}
+
+.section-pricing {
+  will-change: transform, opacity, scale;
+}
+
+.section-faq {
+  will-change: transform, opacity, height;
+}
+
+.section-cta {
+  will-change: transform, opacity, scale;
+}
+
+/* GSAP Fallback styles - Enhanced */
+.gsap-fallback {
+  /* Ensure smooth scrolling fallback */
+  scroll-behavior: smooth;
+}
+
+.gsap-fallback .hero-title {
+  animation: fadeInUp 1.2s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gsap-fallback .hero-title .char {
+  display: inline;
+  animation: letterFadeIn 0.8s ease-out;
+}
+
+.gsap-fallback .glass-card {
+  animation: fadeInScale 1s ease-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gsap-fallback .features-header {
+  animation: slideUpFade 1s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gsap-fallback .feature-card {
+  animation: staggerFadeIn 1.2s ease-out;
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateY(0deg);
+}
+
+.gsap-fallback .feature-card:nth-child(1) { animation-delay: 0.1s; }
+.gsap-fallback .feature-card:nth-child(2) { animation-delay: 0.2s; }
+.gsap-fallback .feature-card:nth-child(3) { animation-delay: 0.3s; }
+.gsap-fallback .feature-card:nth-child(4) { animation-delay: 0.4s; }
+.gsap-fallback .feature-card:nth-child(5) { animation-delay: 0.5s; }
+.gsap-fallback .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+.gsap-fallback .counter-element {
+  animation: countUp 2s ease-out;
+}
+
+.gsap-fallback .section-hero {
+  animation: sectionFadeIn 1s ease-out;
+}
+
+.gsap-fallback .section-about {
+  animation: sectionSlideUp 1.2s ease-out 0.2s both;
+}
+
+.gsap-fallback .section-features {
+  animation: sectionSlideUp 1.2s ease-out 0.4s both;
+}
+
+.gsap-fallback .section-results {
+  animation: sectionZoomIn 1.2s ease-out 0.6s both;
+}
+
+.gsap-fallback .section-testimonials {
+  animation: sectionSlideLeft 1.2s ease-out 0.8s both;
+}
+
+.gsap-fallback .section-pricing {
+  animation: sectionFlipIn 1.2s ease-out 1s both;
+}
+
+.gsap-fallback .section-faq {
+  animation: sectionAccordion 1.2s ease-out 1.2s both;
+}
+
+.gsap-fallback .section-cta {
+  animation: sectionZoomDramatic 1.5s ease-out 1.4s both;
+}
+
+/* Minimal animations mode */
+.minimal-animations * {
+  animation-duration: 0.3s !important;
+  transition-duration: 0.3s !important;
+}
+
+.minimal-animations .floating-particle {
+  display: none;
+}
+
+.minimal-animations .glass-card {
+  backdrop-filter: blur(5px);
+}
+
+.minimal-animations .hero-title {
+  animation: simpleFadeIn 0.5s ease-out;
+}
+
+.minimal-animations .glass-card {
+  animation: simpleFadeIn 0.5s ease-out;
+}
+
+.minimal-animations .feature-card {
+  animation: simpleFadeIn 0.5s ease-out;
+}
+
+/* Animations disabled mode */
+.animations-disabled * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.animations-disabled .floating-particle {
+  display: none;
+}
+
+.animations-disabled .glass-card {
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.animations-disabled .hero-title,
+.animations-disabled .glass-card,
+.animations-disabled .feature-card {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.8) rotateY(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateY(0deg);
+  }
+}
+
+/* Additional fallback keyframes */
+@keyframes letterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sectionSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sectionZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sectionSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sectionFlipIn {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes sectionAccordion {
+  from {
+    opacity: 0;
+    transform: scaleY(0.3);
+    transform-origin: top;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes sectionZoomDramatic {
+  from {
+    opacity: 0;
+    transform: scale(0.3) rotate(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes simpleFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 8rem);
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+  }
+  
+  /* Reduce animation complexity on mobile */
+  .floating-particle {
+    display: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .glass-card:hover {
+    transform: none;
+  }
+  
+  button:hover {
+    transform: none;
+  }
+}
+
+/* Motion level classes */
+.motion-full {
+  /* Full animations enabled - default state */
+}
+
+.motion-reduced * {
+  animation-duration: 0.5s !important;
+  transition-duration: 0.3s !important;
+}
+
+.motion-reduced .floating-particle {
+  opacity: 0.3;
+}
+
+.motion-reduced .glass-card {
+  backdrop-filter: blur(10px);
+}
+
+.motion-minimal * {
+  animation-duration: 0.3s !important;
+  transition-duration: 0.2s !important;
+}
+
+.motion-minimal .floating-particle {
+  display: none;
+}
+
+.motion-minimal .glass-card {
+  backdrop-filter: blur(5px);
+}
+
+.motion-minimal .hero-title .char {
+  display: inline;
+}
+
+.motion-none * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.motion-none .floating-particle {
+  display: none;
+}
+
+.motion-none .glass-card {
+  backdrop-filter: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.motion-none .hero-title .char {
+  display: inline;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-particle {
+    display: none;
+  }
+  
+  /* Provide static fallbacks */
+  .hero-title .char {
+    display: inline;
+  }
+  
+  /* Override motion classes for system preference */
+  .motion-full * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

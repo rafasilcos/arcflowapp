@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results Section - ArcFlow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            height: 800vh;
+            position: relative;
+        }
+        
+        .section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .results-section {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: scale(0.8) rotateX(-15deg);
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            color: #bfdbfe;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(50px) scale(0.9) rotateY(15deg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .metric-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-description {
+            color: #bfdbfe;
+            font-size: 0.875rem;
+        }
+        
+        .cta {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section results-section" id="results-section">
+            <div class="content">
+                <h2 class="title">
+                    Resultados que <span style="background: linear-gradient(135deg, #93c5fd, #c4b5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Impressionam</span>
+                </h2>
+                <p class="subtitle">
+                    Dados reais de <strong>500+ escritórios</strong> que transformaram 
+                    completamente seus resultados com nossa metodologia exclusiva
+                </p>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-number">
+                            <span data-counter-target="40">0</span>%
+                        </div>
+                        <h3 class="metric-title">Produtividade Transformada</h3>
+                        <p class="metric-description">Aumento médio documentado em projetos residenciais e comerciais</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-number">
+                            <span data-counter-target="35">0</span>%
+                        </div>
+                        <h3 class="metric-title">Margem Otimizada</h3>
+                        <p class="metric-description">Melhoria através de análise de produtividade</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-number">
+                            <span data-counter-target="95">0</span>%
+                        </div>
+                        <h3 class="metric-title">Clientes Satisfeitos</h3>
+                        <p class="metric-description">NPS excepcional</p>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-number">
+                            <span data-counter-target="500">0</span>+
+                        </div>
+                        <h3 class="metric-title">Escritórios</h3>
+                        <p class="metric-description">Já transformados</p>
+                    </div>
+                </div>
+                
+                <div class="cta">
+                    <h3 style="margin-bottom: 1rem;">Pronto para estes resultados?</h3>
+                    <p style="margin-bottom: 1.5rem; color: #bfdbfe;">Descubra exatamente onde seu escritório está perdendo dinheiro</p>
+                    <button class="btn">Começar Análise Gratuita</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Initialize Results Section Animation
+        function initResultsAnimation() {
+            const section = document.getElementById('results-section');
+            const title = section.querySelector('.title');
+            const subtitle = section.querySelector('.subtitle');
+            const metricCards = section.querySelectorAll('.metric-card');
+            const cta = section.querySelector('.cta');
+            
+            // Set initial states
+            gsap.set([title, subtitle, cta], {
+                opacity: 0,
+                visibility: 'hidden'
+            });
+            
+            gsap.set(title, {
+                scale: 0.8,
+                rotationX: -15,
+                transformOrigin: 'center center'
+            });
+            
+            gsap.set(metricCards, {
+                opacity: 0,
+                scale: 0.9,
+                y: 50,
+                rotationY: 15
+            });
+            
+            gsap.set(cta, {
+                scale: 0.95,
+                y: 30
+            });
+            
+            // Setup counter animations
+            const counters = section.querySelectorAll('[data-counter-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-counter-target'));
+                const obj = { value: 0 };
+                
+                const counterAnimation = gsap.to(obj, {
+                    value: target,
+                    duration: 2,
+                    ease: 'power2.out',
+                    onUpdate: () => {
+                        counter.textContent = Math.round(obj.value).toString();
+                    },
+                    paused: true
+                });
+                
+                counter._counterAnimation = counterAnimation;
+            });
+            
+            // Create enter animation timeline
+            const enterTl = gsap.timeline({ paused: true });
+            
+            // 1. Dramatic fade in of title
+            enterTl.to(title, {
+                opacity: 1,
+                scale: 1,
+                rotationX: 0,
+                duration: 1.5,
+                ease: 'power3.out',
+                onStart: () => {
+                    gsap.set(title, { visibility: 'visible' });
+                }
+            }, 0);
+            
+            // 2. Subtitle fade in
+            enterTl.to(subtitle, {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out',
+                onStart: () => {
+                    gsap.set(subtitle, { visibility: 'visible' });
+                }
+            }, 0.3);
+            
+            // 3. Animate metric cards with stagger
+            enterTl.to(metricCards, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                rotationY: 0,
+                duration: 1.2,
+                ease: 'back.out(1.7)',
+                stagger: {
+                    amount: 0.8,
+                    from: 'start'
+                },
+                onStart: () => {
+                    // Trigger counter animations with stagger
+                    metricCards.forEach((card, index) => {
+                        const counter = card.querySelector('[data-counter-target]');
+                        if (counter && counter._counterAnimation) {
+                            gsap.delayedCall(0.5 + (index * 0.2), () => {
+                                counter._counterAnimation.restart();
+                            });
+                        }
+                    });
+                }
+            }, 0.8);
+            
+            // 4. CTA fade in
+            enterTl.to(cta, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 1,
+                ease: 'power2.out',
+                onStart: () => {
+                    gsap.set(cta, { visibility: 'visible' });
+                }
+            }, 1.5);
+            
+            // Auto-play animation after 1 second
+            setTimeout(() => {
+                enterTl.play();
+            }, 1000);
+            
+            // Test exit animation after 8 seconds
+            setTimeout(() => {
+                const exitTl = gsap.timeline();
+                
+                exitTl.to([title, subtitle], {
+                    opacity: 0,
+                    scale: 1.1,
+                    rotationX: 15,
+                    duration: 1,
+                    ease: 'power2.in'
+                }, 0);
+                
+                exitTl.to(metricCards, {
+                    opacity: 0,
+                    scale: 1.1,
+                    y: -30,
+                    rotationY: -15,
+                    duration: 0.8,
+                    ease: 'power2.in',
+                    stagger: {
+                        amount: 0.3,
+                        from: 'end'
+                    }
+                }, 0.2);
+                
+                exitTl.to(cta, {
+                    opacity: 0,
+                    scale: 1.1,
+                    y: -20,
+                    duration: 0.8,
+                    ease: 'power2.in'
+                }, 0.3);
+                
+                exitTl.set([title, subtitle, cta], { visibility: 'hidden' });
+            }, 8000);
+        }
+        
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initResultsAnimation);
+    </script>
+</body>
+</html>

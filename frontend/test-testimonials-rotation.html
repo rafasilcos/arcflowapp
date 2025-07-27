@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Testimonials Section com Rotação</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .test-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .quote-icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .author-info h4 {
+            margin: 0 0 4px 0;
+            font-size: 16px;
+        }
+        
+        .author-info p {
+            margin: 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .rotation-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: #60a5fa;
+            transform: scale(1.25);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .test-controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .animation-demo {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border-left: 4px solid #60a5fa;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-120px) translateY(30px) scale(0.9) rotateY(-15deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) translateY(0) scale(1) rotateY(0);
+            }
+        }
+        
+        @keyframes slideOutRight {
+            from {
+                opacity: 1;
+                transform: translateX(0) translateY(0) scale(1) rotateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(120px) translateY(-20px) scale(0.9) rotateY(15deg);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .slide-in {
+            animation: slideInLeft 0.9s ease-out forwards;
+        }
+        
+        .slide-out {
+            animation: slideOutRight 0.8s ease-in forwards;
+        }
+        
+        .floating {
+            animation: float 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🎬 Teste - Testimonials Section com Rotação</h1>
+            <p>Demonstração das animações implementadas na tarefa 7</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>📋 Funcionalidades Implementadas</h2>
+            <ul>
+                <li>✅ <strong>Slide in dos cards de depoimentos</strong> - Entrada lateral com stagger</li>
+                <li>✅ <strong>Rotação suave entre diferentes depoimentos</strong> - Ciclo automático de 3 em 3</li>
+                <li>✅ <strong>Fade out lateral para próxima seção</strong> - Saída lateral com stagger</li>
+                <li>✅ <strong>Indicadores de rotação</strong> - Controle manual da rotação</li>
+                <li>✅ <strong>Animação de flutuação</strong> - Efeito sutil durante visibilidade</li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 Estatísticas do ArcFlow</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Escritórios confiam</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">R$ 2,8B</div>
+                    <div class="stat-label">Em projetos gerenciados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">NPS médio</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>💬 Depoimentos com Rotação Automática</h2>
+            <div class="test-controls">
+                <button class="btn" onclick="startRotation()">▶️ Iniciar Rotação</button>
+                <button class="btn" onclick="stopRotation()">⏸️ Pausar Rotação</button>
+                <button class="btn" onclick="nextSet()">⏭️ Próximo Conjunto</button>
+                <button class="btn" onclick="resetDemo()">🔄 Reiniciar</button>
+            </div>
+            
+            <div id="testimonials-container" class="testimonials-grid">
+                <!-- Testimonials will be inserted here -->
+            </div>
+            
+            <div class="rotation-indicators" id="indicators">
+                <!-- Indicators will be inserted here -->
+            </div>
+        </div>
+        
+        <div class="animation-demo">
+            <h3>🎨 Detalhes das Animações</h3>
+            <p><strong>Entrada (Slide In):</strong></p>
+            <ul>
+                <li>Header desliza da esquerda com deslocamento Y</li>
+                <li>Stats aparecem com stagger e escala</li>
+                <li>Cards deslizam da esquerda com rotação Y e stagger avançado</li>
+                <li>Indicadores fazem fade in suave</li>
+            </ul>
+            
+            <p><strong>Durante Visibilidade:</strong></p>
+            <ul>
+                <li>Animação de flutuação sutil nos cards</li>
+                <li>Rotação automática a cada 3 segundos</li>
+                <li>Transições suaves entre conjuntos</li>
+            </ul>
+            
+            <p><strong>Saída (Fade Out Lateral):</strong></p>
+            <ul>
+                <li>Cards deslizam para direita com stagger reverso</li>
+                <li>Header e stats saem lateralmente</li>
+                <li>Indicadores fazem fade out</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const testimonials = [
+            {
+                content: "O ArcFlow transformou completamente nossa operação. Em 6 meses aumentamos nossa margem em 40% e eliminamos praticamente todo retrabalho. A análise de produtividade é revolucionária.",
+                author: "Ana Beatriz Costa",
+                role: "Arquiteta Sócia",
+                company: "Costa & Associados"
+            },
+            {
+                content: "Finalmente um sistema feito por quem entende arquitetura. O briefing estruturado sozinho já vale o investimento. Nossos clientes ficam impressionados com o profissionalismo.",
+                author: "Carlos Eduardo Silva",
+                role: "Engenheiro Civil", 
+                company: "Silva Projetos"
+            },
+            {
+                content: "Gestão financeira por projeto mudou nossa vida. Agora sabemos exatamente onde ganhamos e onde perdemos dinheiro. ROI foi 380% no primeiro ano.",
+                author: "Marina Santos",
+                role: "Diretora Executiva",
+                company: "Santos Arquitetura"
+            },
+            {
+                content: "A automação de orçamentos nos economiza 15 horas por semana. O que antes levava dias, agora fazemos em minutos. Nossos clientes recebem propostas muito mais rápido.",
+                author: "Roberto Mendes",
+                role: "Arquiteto Titular",
+                company: "Mendes Arquitetura"
+            },
+            {
+                content: "O controle de prazos e entregas mudou nossa reputação no mercado. Zero atrasos nos últimos 8 meses. Nossos clientes nos indicam constantemente.",
+                author: "Fernanda Lima",
+                role: "Engenheira de Projetos",
+                company: "Lima & Partners"
+            }
+        ];
+
+        // Divide testimonials into sets of 3
+        const testimonialSets = [];
+        for (let i = 0; i < testimonials.length; i += 3) {
+            testimonialSets.push(testimonials.slice(i, i + 3));
+        }
+
+        let currentSet = 0;
+        let rotationInterval = null;
+        let isRotating = false;
+
+        function getInitials(name) {
+            return name.split(' ').map(n => n[0]).join('');
+        }
+
+        function renderTestimonials(setIndex) {
+            const container = document.getElementById('testimonials-container');
+            const currentTestimonials = testimonialSets[setIndex] || testimonialSets[0];
+            
+            container.innerHTML = currentTestimonials.map((testimonial, index) => `
+                <div class="testimonial-card floating" style="animation-delay: ${index * 0.1}s">
+                    <div class="quote-icon">💬</div>
+                    <div class="testimonial-content">
+                        "${testimonial.content}"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            ${getInitials(testimonial.author)}
+                        </div>
+                        <div class="author-info">
+                            <h4>${testimonial.author}</h4>
+                            <p>${testimonial.role}</p>
+                            <p style="opacity: 0.6">${testimonial.company}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            updateIndicators();
+        }
+
+        function renderIndicators() {
+            const indicatorsContainer = document.getElementById('indicators');
+            indicatorsContainer.innerHTML = testimonialSets.map((_, index) => `
+                <div class="indicator ${index === currentSet ? 'active' : ''}" 
+                     onclick="goToSet(${index})"></div>
+            `).join('');
+        }
+
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.indicator');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSet);
+            });
+        }
+
+        function goToSet(setIndex) {
+            if (setIndex === currentSet) return;
+            
+            const container = document.getElementById('testimonials-container');
+            const cards = container.querySelectorAll('.testimonial-card');
+            
+            // Animate out current cards
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('slide-out');
+                }, index * 100);
+            });
+            
+            // After animation, change content and animate in
+            setTimeout(() => {
+                currentSet = setIndex;
+                renderTestimonials(currentSet);
+                
+                const newCards = container.querySelectorAll('.testimonial-card');
+                newCards.forEach((card, index) => {
+                    card.classList.remove('floating');
+                    card.classList.add('slide-in');
+                    setTimeout(() => {
+                        card.classList.remove('slide-in');
+                        card.classList.add('floating');
+                    }, 900);
+                });
+            }, 800);
+        }
+
+        function nextSet() {
+            const nextIndex = (currentSet + 1) % testimonialSets.length;
+            goToSet(nextIndex);
+        }
+
+        function startRotation() {
+            if (isRotating) return;
+            
+            isRotating = true;
+            rotationInterval = setInterval(() => {
+                nextSet();
+            }, 4000); // 4 seconds per rotation
+            
+            console.log('🔄 Rotação automática iniciada');
+        }
+
+        function stopRotation() {
+            if (rotationInterval) {
+                clearInterval(rotationInterval);
+                rotationInterval = null;
+                isRotating = false;
+                console.log('⏸️ Rotação automática pausada');
+            }
+        }
+
+        function resetDemo() {
+            stopRotation();
+            currentSet = 0;
+            renderTestimonials(0);
+            console.log('🔄 Demo reiniciada');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderIndicators();
+            renderTestimonials(0);
+            
+            // Auto-start rotation after 2 seconds
+            setTimeout(() => {
+                startRotation();
+            }, 2000);
+            
+            console.log('✅ Teste da Testimonials Section carregado');
+            console.log(`📊 ${testimonialSets.length} conjuntos de depoimentos disponíveis`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+TIPOLOGIA: residencial
+SUBTIPO: sobrado
+PADRÃO: medio
+NOME_TEMPLATE: Sobrado Residencial - Padrão Médio
+ICONE_PRINCIPAL: 🏘️
+COR_PRIMARIA: #8B5CF6
+COR_SECUNDARIA: #F3E8FF
+DISCIPLINAS: Arquitetura, Estrutural, Instalações, Paisagismo
+
+=== ETAPAS ===
+
+ETAPA_1:
+NOME: Estudos Iniciais
+STATUS: nao_iniciada
+PROGRESSO: 0
+COR_TEMA: #6B7280
+ICONE: 📋
+
+TAREFA_1.1:
+NOME: Análise do terreno
+DESCRICAO: Estudo completo das características do lote para sobrado
+RESPONSAVEL: Ana Arquiteta
+DISCIPLINA: Arquitetura
+TEMPO_ESTIMADO: 12h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-01-15
+TEMPLATE_NOTAS: Análise do terreno:\n- Dimensões e topografia: \n- Orientação solar: \n- Vizinhança: \n- Restrições construtivas: 
+CHECKLIST: Medir terreno | Estudar topografia | Analisar entorno | Verificar legislação | Fotografar local
+
+TAREFA_1.2:
+NOME: Programa de necessidades
+DESCRICAO: Definição detalhada dos ambientes necessários para sobrado
+RESPONSAVEL: Ana Arquiteta
+DISCIPLINA: Arquitetura
+TEMPO_ESTIMADO: 6h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-01-18
+TEMPLATE_NOTAS: Programa de necessidades:\n- Ambientes solicitados: \n- Áreas mínimas: \n- Relações funcionais: \n- Pavimentos: 
+CHECKLIST: Listar ambientes | Definir áreas | Estabelecer relações | Validar com cliente
+
+ETAPA_2:
+NOME: Estudo Preliminar
+STATUS: nao_iniciada
+PROGRESSO: 0
+COR_TEMA: #6B7280
+ICONE: ✏️
+
+TAREFA_2.1:
+NOME: Plantas baixas preliminares
+DESCRICAO: Desenvolvimento das plantas dos pavimentos do sobrado
+RESPONSAVEL: Ana Arquiteta
+DISCIPLINA: Arquitetura
+TEMPO_ESTIMADO: 32h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-02-01
+TEMPLATE_NOTAS: Plantas baixas:\n- Térreo desenvolvido: \n- Superior desenvolvido: \n- Circulação vertical: \n- Aprovação cliente: 
+CHECKLIST: Desenvolver térreo | Desenvolver superior | Definir escadas | Apresentar cliente
+
+TAREFA_2.2:
+NOME: Cortes e fachadas
+DESCRICAO: Estudo volumétrico e composição arquitetônica
+RESPONSAVEL: Ana Arquiteta
+DISCIPLINA: Arquitetura
+TEMPO_ESTIMADO: 24h
+PRIORIDADE: media
+DATA_VENCIMENTO: 2025-02-05
+TEMPLATE_NOTAS: Cortes e fachadas:\n- Pé-direito definido: \n- Composição fachadas: \n- Materiais conceituais: \n- Cobertura: 
+CHECKLIST: Definir pé-direito | Compor fachadas | Estudar materiais | Projetar cobertura
+
+ETAPA_3:
+NOME: Anteprojeto
+STATUS: nao_iniciada
+PROGRESSO: 0
+COR_TEMA: #6B7280
+ICONE: 🏗️
+
+TAREFA_3.1:
+NOME: Projeto estrutural preliminar
+DESCRICAO: Dimensionamento da estrutura para sobrado de 2 pavimentos
+RESPONSAVEL: Carlos Estrutural
+DISCIPLINA: Estrutural
+TEMPO_ESTIMADO: 40h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-02-15
+TEMPLATE_NOTAS: Estrutura sobrado:\n- Sistema construtivo: \n- Fundações: \n- Lajes e vigas: \n- Escada estrutural: 
+CHECKLIST: Definir sistema | Calcular fundações | Dimensionar lajes | Estruturar escada
+
+TAREFA_3.2:
+NOME: Instalações prediais
+DESCRICAO: Projeto das instalações hidráulicas e elétricas
+RESPONSAVEL: Maria Instalações
+DISCIPLINA: Instalações
+TEMPO_ESTIMADO: 36h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-02-20
+TEMPLATE_NOTAS: Instalações sobrado:\n- Hidráulica 2 pavimentos: \n- Elétrica completa: \n- Previsão ar condicionado: \n- Automação: 
+CHECKLIST: Projetar hidráulica | Projetar elétrica | Prever climatização | Planejar automação
+
+ETAPA_4:
+NOME: Projeto Executivo
+STATUS: nao_iniciada
+PROGRESSO: 0
+COR_TEMA: #6B7280
+ICONE: 📋
+
+TAREFA_4.1:
+NOME: Detalhamento arquitetônico
+DESCRICAO: Desenvolvimento de todos os detalhes construtivos
+RESPONSAVEL: Ana Arquiteta
+DISCIPLINA: Arquitetura
+TEMPO_ESTIMADO: 56h
+PRIORIDADE: alta
+DATA_VENCIMENTO: 2025-03-01
+TEMPLATE_NOTAS: Detalhamento:\n- Detalhes construtivos: \n- Especificações finais: \n- Pranchas organizadas: \n- Memorial descritivo: 
+CHECKLIST: Detalhar elementos | Finalizar especificações | Organizar pranchas | Elaborar memorial
+
+TAREFA_4.2:
+NOME: Paisagismo e área externa
+DESCRICAO: Projeto do paisagismo e áreas externas do sobrado
+RESPONSAVEL: Laura Paisagista
+DISCIPLINA: Paisagismo
+TEMPO_ESTIMADO: 28h
+PRIORIDADE: media
+DATA_VENCIMENTO: 2025-03-05
+TEMPLATE_NOTAS: Paisagismo:\n- Jardins desenvolvidos: \n- Áreas de lazer: \n- Iluminação externa: \n- Irrigação: 
+CHECKLIST: Projetar jardins | Definir lazer | Planejar iluminação | Sistema irrigação 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpar Autenticação - ArcFlow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        button {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #ff3838;
+            transform: scale(1.05);
+        }
+        .success {
+            background: #2ed573;
+        }
+        .success:hover {
+            background: #26d067;
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Limpar Autenticação ArcFlow</h1>
+        
+        <div class="info">
+            <h3>Status Atual:</h3>
+            <p id="status">Verificando...</p>
+        </div>
+
+        <div class="info">
+            <h3>Dados no localStorage:</h3>
+            <ul id="data-list">
+                <li>Carregando...</li>
+            </ul>
+        </div>
+
+        <div>
+            <button onclick="clearAuth()">🗑️ Limpar Dados de Autenticação</button>
+            <button onclick="checkAuth()" class="success">🔍 Verificar Status</button>
+            <button onclick="goToLogin()" class="success">🚪 Ir para Login</button>
+        </div>
+
+        <div class="info">
+            <h3>📋 Instruções:</h3>
+            <ol style="text-align: left;">
+                <li>Clique em "Limpar Dados de Autenticação" para remover tokens antigos</li>
+                <li>Clique em "Ir para Login" para fazer novo login</li>
+                <li>Se ainda não funcionar, feche e abra o navegador</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function checkAuth() {
+            const token = localStorage.getItem('arcflow_auth_token');
+            const user = localStorage.getItem('arcflow_user');
+            const escritorio = localStorage.getItem('arcflow_escritorio');
+            
+            const dataList = document.getElementById('data-list');
+            const status = document.getElementById('status');
+            
+            dataList.innerHTML = '';
+            
+            if (token) {
+                dataList.innerHTML += `<li>✅ Token: ${token.substring(0, 20)}...</li>`;
+            } else {
+                dataList.innerHTML += `<li>❌ Token: Não encontrado</li>`;
+            }
+            
+            if (user && user !== 'undefined') {
+                try {
+                    const userData = JSON.parse(user);
+                    dataList.innerHTML += `<li>✅ Usuário: ${userData.nome || 'Nome não encontrado'}</li>`;
+                } catch (e) {
+                    dataList.innerHTML += `<li>⚠️ Usuário: Dados corrompidos</li>`;
+                }
+            } else {
+                dataList.innerHTML += `<li>❌ Usuário: Não encontrado</li>`;
+            }
+            
+            if (escritorio && escritorio !== 'undefined') {
+                try {
+                    const escritorioData = JSON.parse(escritorio);
+                    dataList.innerHTML += `<li>✅ Escritório: ${escritorioData.nome || 'Nome não encontrado'}</li>`;
+                } catch (e) {
+                    dataList.innerHTML += `<li>⚠️ Escritório: Dados corrompidos</li>`;
+                }
+            } else {
+                dataList.innerHTML += `<li>❌ Escritório: Não encontrado</li>`;
+            }
+            
+            // Status geral
+            if (token && user && escritorio) {
+                status.innerHTML = '✅ Dados de autenticação encontrados (podem estar expirados)';
+            } else {
+                status.innerHTML = '❌ Dados de autenticação incompletos ou ausentes';
+            }
+        }
+
+        function clearAuth() {
+            // Remover todos os dados de autenticação
+            localStorage.removeItem('arcflow_auth_token');
+            localStorage.removeItem('arcflow_refresh_token');
+            localStorage.removeItem('arcflow_user');
+            localStorage.removeItem('arcflow_escritorio');
+            
+            // Limpar também qualquer sessionStorage
+            sessionStorage.clear();
+            
+            alert('🗑️ Dados de autenticação removidos com sucesso!');
+            checkAuth();
+        }
+
+        function goToLogin() {
+            window.location.href = '/auth/login';
+        }
+
+        // Verificar status ao carregar a página
+        window.onload = function() {
+            checkAuth();
+        };
+    </script>
+</body>
+</html> 

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Scroll Infinito - ArcFlow</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-x-hidden">
+    
+    <!-- Debug Info -->
+    <div id="debug-info" class="fixed top-4 right-4 z-50 bg-black/70 text-white p-3 rounded-lg text-sm font-mono">
+        <div>Progress: 0%</div>
+        <div>Section: Hero</div>
+    </div>
+
+    <!-- Scroll Container -->
+    <div id="scroll-container" class="relative w-full" style="height: 500vh;">
+        <div class="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
+            
+            <!-- Hero Section -->
+            <div id="hero-section" class="absolute inset-0 flex items-center justify-center text-center">
+                <div class="max-w-6xl mx-auto px-8">
+                    <h1 class="text-[clamp(4rem,15vw,12rem)] font-black mb-8 text-white tracking-tight">
+                        ARCFLOW
+                    </h1>
+                    <p class="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+                        A plataforma SaaS definitiva para escritórios AEC
+                    </p>
+                    <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                        Começar Agora
+                    </button>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="about-section" class="absolute inset-0 flex items-center justify-center text-center px-8" style="opacity: 0;">
+                <div class="max-w-4xl mx-auto glass-card p-12 rounded-3xl">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                        A plataforma SaaS definitiva para
+                        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            escritórios AEC
+                        </span>
+                    </h2>
+                    <p class="text-xl text-blue-100 leading-relaxed mb-6 max-w-3xl mx-auto">
+                        Gestão, produtividade, financeiro e clientes em um só lugar — com IA, segurança enterprise e resultados comprovados.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">40%</div>
+                            <div class="text-sm text-blue-200 font-medium">Mais Produtividade</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">35%</div>
+                            <div class="text-sm text-blue-200 font-medium">Mais Margem</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">95%</div>
+                            <div class="text-sm text-blue-200 font-medium">Satisfação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div id="features-section" class="absolute inset-0 flex items-center justify-center px-8" style="opacity: 0;">
+                <div class="max-w-7xl mx-auto w-full">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+                            Funcionalidades que fazem a diferença
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white text-xl">📋</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Briefing Estruturado</h3>
+                            <p class="text-blue-100">Capture necessidades com precisão através de questionários inteligentes.</p>
+                        </div>
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white text-xl">📅</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Agenda Integrada</h3>
+                            <p class="text-blue-100">Sincronize equipe e projetos com otimização automática.</p>
+                        </div>
+                        <div class="glass-card p-8">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-white text-xl">📊</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Análise de Produtividade</h3>
+                            <p class="text-blue-100">Dashboard "Onde vai seu dinheiro" exclusivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div id="cta-section" class="absolute inset-0 flex items-center justify-center px-8" style="opacity: 0;">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="glass-card p-12 rounded-3xl">
+                        <h2 class="text-4xl lg:text-6xl font-bold mb-6">
+                            <span class="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
+                                Entre no Fluxo.
+                            </span>
+                        </h2>
+                        <p class="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
+                            Junte-se a mais de 500 escritórios que já aumentaram sua margem em 35% com o ArcFlow.
+                        </p>
+                        <button class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-4 text-lg font-bold rounded-2xl shadow-xl hover:scale-110 transition-all duration-300">
+                            Começar agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        console.log('🚀 Iniciando Scroll Infinito...');
+
+        // Get elements
+        const container = document.getElementById('scroll-container');
+        const heroSection = document.getElementById('hero-section');
+        const aboutSection = document.getElementById('about-section');
+        const featuresSection = document.getElementById('features-section');
+        const ctaSection = document.getElementById('cta-section');
+        const debugInfo = document.getElementById('debug-info');
+
+        // Function to get current section name
+        function getCurrentSection(progress) {
+            if (progress < 0.25) return 'Hero';
+            if (progress < 0.5) return 'About';
+            if (progress < 0.75) return 'Features';
+            return 'CTA';
+        }
+
+        // Create main timeline
+        const mainTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1,
+                onUpdate: function(self) {
+                    const progress = self.progress;
+                    console.log('Scroll Progress:', (progress * 100).toFixed(1) + '%');
+                    
+                    // Update debug info
+                    debugInfo.innerHTML = `
+                        <div>Progress: ${(progress * 100).toFixed(1)}%</div>
+                        <div>Section: ${getCurrentSection(progress)}</div>
+                    `;
+                }
+            }
+        });
+
+        // Set initial states
+        gsap.set(heroSection, { opacity: 1 });
+        gsap.set([aboutSection, featuresSection, ctaSection], { opacity: 0 });
+
+        // Hero Section (0% - 25%)
+        mainTimeline.to(heroSection, {
+            opacity: 0,
+            scale: 2,
+            y: -200,
+            duration: 0.25,
+            ease: 'power2.inOut'
+        }, 0.2);
+
+        // About Section (25% - 50%)
+        mainTimeline.fromTo(aboutSection,
+            { opacity: 0, scale: 0.8, y: 100 },
+            { opacity: 1, scale: 1, y: 0, duration: 0.15, ease: 'power2.out' },
+            0.25
+        );
+        mainTimeline.to(aboutSection, {
+            opacity: 0,
+            scale: 0.8,
+            y: -100,
+            duration: 0.1,
+            ease: 'power2.in'
+        }, 0.45);
+
+        // Features Section (50% - 75%)
+        mainTimeline.fromTo(featuresSection,
+            { opacity: 0, y: 100 },
+            { opacity: 1, y: 0, duration: 0.15, ease: 'power2.out' },
+            0.5
+        );
+        mainTimeline.to(featuresSection, {
+            opacity: 0,
+            scale: 0.9,
+            duration: 0.1,
+            ease: 'power2.in'
+        }, 0.7);
+
+        // CTA Section (75% - 100%)
+        mainTimeline.fromTo(ctaSection,
+            { opacity: 0, scale: 3 },
+            { opacity: 1, scale: 1, duration: 0.25, ease: 'power2.out' },
+            0.75
+        );
+
+        console.log('✅ Scroll Infinito inicializado com sucesso!');
+        console.log('📱 Role a página para ver as transições!');
+    </script>
+
+</body>
+</html>
